@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: kboo_development
+
+test:
+  adapter: postgresql
+  database: kboo_test
+
+production:
+  adapter: postgresql
+  database: kboo_production
