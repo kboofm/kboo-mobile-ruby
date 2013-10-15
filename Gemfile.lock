@@ -61,6 +61,9 @@ GEM
     execjs (2.0.2)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
+    factory_girl_rails (4.2.1)
+      factory_girl (~> 4.2.0)
+      railties (>= 3.0.0)
     hike (1.2.3)
     i18n (0.6.5)
     jbuilder (1.5.2)
@@ -182,7 +185,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   devise
-  factory_girl
+  factory_girl_rails
   jbuilder (~> 1.2)
   jplayer-rails
   jquery-rails
