@@ -1,8 +1,10 @@
 <header class='navbar navbar-fixed-top navbar-inverse'>
   <div class='navbar-inner'>
     <div class='container'>
-      <%= link_to 'KBOO', root_path , id: 'logo' %>
       <nav>
+        <%= link_to root_path do %>
+          <div class='pull-left logo'></div>
+        <% end %>
         <ul class='nav pull-right'>
           <li><%= link_to 'Home', root_path %></li>
           <% if current_user %>
