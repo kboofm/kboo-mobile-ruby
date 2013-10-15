@@ -7,10 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<<<<<<< HEAD
   <%= render "layouts/header" %>
   <%= flash[:notice] %>
   <%= flash[:alert] %>
   <%= flash[:success] %>
   <%= yield %>
+=======
+
+<%= yield %>
+<%= render 'layouts/header' %>
+
+>>>>>>> 258528a... navbar
 </body>
 </html>
