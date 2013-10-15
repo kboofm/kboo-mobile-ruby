@@ -1,0 +1,24 @@
+<div class="container">
+  <h3>Save an Episode</h3>
+  <table>
+
+    <%= form_for @episode do |f| %>
+    <tr> <td> <%= f.label         :title %>              </tr> </td>
+    <tr> <td> <%= f.text_field    :title %>              </tr> </td>
+    <tr> <td> <%= f.label         :short_description %>  </tr> </td>
+    <tr> <td> <%= f.text_field    :short_description %>  </tr> </td>
+    <tr> <td> <%= f.label         :audio_promo %>        </tr> </td>
+    <tr> <td> <%= f.text_field    :audio_promo %>        </tr> </td>
+    <tr> <td> <%= f.label         :category %>           </tr> </td>
+    <tr> <td> <%= f.text_field    :category %>           </tr> </td>
+    <tr> <td> <%= f.label         :image %>              </tr> </td>
+    <tr> <td> <%= f.text_field    :image %>              </tr> </td>
+    <tr> <td> <%= f.label         :long_description %>   </tr> </td>
+    <tr> <td> <%= f.text_field    :long_description %>   </tr> </td>
+    
+    <tr> <td> <%= f.submit "All DAY" %>                  </tr> </td>
+    
+    <% end %> 
+
+  </table>
+</div>
