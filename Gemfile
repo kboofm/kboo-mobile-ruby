@@ -11,6 +11,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'will_paginate'
 gem 'cancan'
+gem 'jplayer-rails'
 
 group :test, :development do
   gem 'capybara'
