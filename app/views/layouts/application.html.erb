@@ -9,6 +9,9 @@
 <body>
 
 <%= yield %>
+<%= flash[:alert] %>
+<%= flash[:notice] %>
+
 <%= render 'layouts/header' %>
 
 </body>
