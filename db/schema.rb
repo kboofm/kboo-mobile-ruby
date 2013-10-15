@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+=======
+ActiveRecord::Schema.define(version: 20131015214203) do
+>>>>>>> cb20d0c... Finish user/program relationship
 
 ActiveRecord::Schema.define(version: 20131018225448) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "api_keys", force: true do |t|
     t.string   "access_token"
     t.datetime "created_at"
@@ -64,6 +69,8 @@ ActiveRecord::Schema.define(version: 20131018225448) do
     t.integer  "program_id"
   end
 
+=======
+>>>>>>> cb20d0c... Finish user/program relationship
   create_table "hosts", force: true do |t|
     t.integer  "user_id"
     t.integer  "program_id"
@@ -74,6 +81,7 @@ ActiveRecord::Schema.define(version: 20131018225448) do
 
   create_table "programs", force: true do |t|
     t.string   "title"
+<<<<<<< HEAD
     t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -85,6 +93,13 @@ ActiveRecord::Schema.define(version: 20131018225448) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+=======
+    t.string   "date"
+    t.string   "time"
+    t.string   "category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+>>>>>>> cb20d0c... Finish user/program relationship
   end
 
   create_table "users", force: true do |t|
