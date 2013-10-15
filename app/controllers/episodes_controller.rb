@@ -10,8 +10,9 @@ class EpisodesController < ApplicationController
       flash[:success]
       redirect_to root_path
     else
-      if errors.any?
+      if @episode.errors.any?
         flash[:error] 
+        redirect_to episodes_path
       end
     end
   end
