@@ -1,6 +1,6 @@
 Kboo::Application.routes.draw do
-  resources :users, :only => [:edit, :update, :index]
   devise_for :users
+  resources :users, :only => [:edit, :update, :index, :show]
 
   root 'static_pages#home'
 end
