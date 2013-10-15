@@ -12,6 +12,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ActiveRecord::Schema.define(version: 20131015214203) do
 >>>>>>> cb20d0c... Finish user/program relationship
@@ -41,6 +42,13 @@ ActiveRecord::Schema.define(version: 20131018225448) do
     t.datetime "updated_at"
   end
 
+=======
+ActiveRecord::Schema.define(version: 20131015004738) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+>>>>>>> ffd0ab6... Episode audio db, controller, model
   create_table "episode_audio", force: true do |t|
     t.integer "episode_id"
     t.integer "fid"
@@ -54,6 +62,7 @@ ActiveRecord::Schema.define(version: 20131018225448) do
     t.integer "status"
   end
 
+<<<<<<< HEAD
   create_table "episodes", force: true do |t|
     t.string   "title"
     t.string   "short_description"
@@ -121,4 +130,6 @@ ActiveRecord::Schema.define(version: 20131018225448) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+=======
+>>>>>>> ffd0ab6... Episode audio db, controller, model
 end

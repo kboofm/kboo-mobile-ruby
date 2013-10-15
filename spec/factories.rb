@@ -1,5 +1,4 @@
 FactoryGirl.define do
-<<<<<<< HEAD
 
   factory :program do
     title      'Build a Rails app'
@@ -32,3 +31,4 @@ FactoryGirl.define do
     role                  'admin'
   end
 end
+

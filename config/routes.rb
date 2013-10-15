@@ -1,4 +1,5 @@
 Kboo::Application.routes.draw do
+<<<<<<< HEAD
 
   devise_for :users
   resources :users, :only => [:edit, :update, :index, :show]
@@ -9,4 +10,7 @@ Kboo::Application.routes.draw do
 
   get 'static_pages/about'
   root 'static_pages#home'
+=======
+  resources :episode_audio
+>>>>>>> ffd0ab6... Episode audio db, controller, model
 end
