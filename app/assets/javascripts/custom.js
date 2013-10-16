@@ -1,3 +1,5 @@
+// Play and Pause button effect
+
 $(function() {
   $('.jp-play').click(function(){
     $('.jp-play').hide();
