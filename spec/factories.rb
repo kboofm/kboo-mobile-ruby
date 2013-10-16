@@ -1,12 +1,12 @@
 FactoryGirl.define do
-<<<<<<< HEAD
+
   factory :program do
     title     'Build a Rails app'
     date      Date.today.to_s[0..9]
     time      Time.now.to_s[11..18]
     category  'Computer Science'
   end 
-=======
+
   factory :episode_audio do
     episode_id  36833
     fid         35652
@@ -19,5 +19,5 @@ FactoryGirl.define do
     updated     1345534790
     status       0
   end
->>>>>>> master
+
 end
