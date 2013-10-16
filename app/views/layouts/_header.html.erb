@@ -7,6 +7,18 @@
         <% end %>
         <ul class='nav pull-right'>
           <li><%= link_to 'Home', root_path %></li>
+          <li id='fat-menu' class='dropdown'>
+              <a href='#' class='dropdown-toggle' data-toggle='dropdown'>
+                Programs<b class='caret'></b>
+              </a>
+              <ul class='dropdown-menu'>
+                <li><%= link_to 'List Programs', programs_path %></li>
+                <% if current_user && (current_user.admin? || current_user.staff?) %>
+                    <li><%= link_to 'New Program', new_program_path %></li>
+                <% end %>            
+              </ul>
+          </li>
+          
           <% if current_user %>
             <li id='fat-menu' class='dropdown'>
               <a href='#' class='dropdown-toggle' data-toggle='dropdown'>

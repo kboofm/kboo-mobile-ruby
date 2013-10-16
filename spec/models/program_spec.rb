@@ -7,5 +7,5 @@ describe Program do
   it { should respond_to :category }  
   it { should have_many  :hosts }
   it { should have_many(:users).through :hosts }
-
+  it { should belong_to :category }
 end
