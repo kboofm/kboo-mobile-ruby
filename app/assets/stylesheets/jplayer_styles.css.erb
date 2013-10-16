@@ -20,6 +20,7 @@
   height: 65px;
   z-index: 1;
   box-shadow: 0px 3px 5px #888888;
+  border-bottom: 1px solid #C0C0C0;
  }
 
 /* li.nav_right {
@@ -50,27 +51,43 @@ float: right;
  }
 
  .span3 {
-  border:1px solid green;
   display: inline-block;
 /*  float:right;*/
  }
 
 .player{
   float:left;
-  border: 1px solid green;
   margin-right: 2px;
+  width: auto;
+  height: auto;
 }
+
+/*.jp_container_1 {
+  width: auto;
+  height: auto;
+}*/
+
 .jp-container {
   position:relative;
   display: inline-block;
   width:50px; /* 200 - (2 * 48) */
   height:50px;
-  background:url("bgr.jpg") 0 0 no-repeat;
+  /*background:url("http://media.npr.org/chrome_svg/player.svg") 0 0 no-repeat;*/
   padding:12px;
   -webkit-tap-highlight-color:rgba(0,0,0,0);  
   float: right;
 }
 
+.jp-container {
+  position:relative;
+  display: inline-block;
+  width:50px; /* 200 - (2 * 48) */
+  height:50px;
+  /*background:url("http://media.npr.org/chrome_svg/pause.svg") 0 0 no-repeat;*/
+  padding:12px;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);  
+  float: right;
+}
 
 .jp-container :focus {
   border:none;
@@ -156,29 +173,31 @@ float: right;
 
 .jp-controls li a{
   position:relative;
+  top: -16px;
+  left: -16px;
   display:block;
-  width:12px;
-  height:12px;
+  width:50px;
+  height:50px;
   text-indent:-9999px;
   z-index:1;
   cursor:pointer;
 }
 
 .jp-controls .jp-play {
-  background:url("controls.jpg") 0 0 no-repeat;
+  background:url("http://media.npr.org/chrome_svg/player.svg") no-repeat;
 }
 
-.jp-controls .jp-play:hover {
+/*.jp-controls .jp-play:hover {
   background:url("controls.jpg") -200px 0 no-repeat;
-}
+}*/
 
 .jp-controls .jp-pause {
-  background:url("controls.jpg") 0 -200px no-repeat;
+  background:url("http://media.npr.org/chrome_svg/pause.svg") no-repeat;
 }
-
+/*
 .jp-controls .jp-pause:hover {
   background:url("controls.jpg") -200px -200px no-repeat;
-}
+}*/
 
 .jp-jplayer {
   width:0;
