@@ -12,12 +12,13 @@ gem 'devise'
 gem 'will_paginate'
 gem 'cancan'
 gem 'jplayer-rails'
+gem "paperclip", "~> 3.0"
 
 group :test, :development do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'rspec-rails'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'pry'
   gem 'better_errors'
   gem 'poltergeist'
