@@ -8,4 +8,5 @@ describe Program do
   it { should have_many  :hosts }
   it { should have_many(:users).through :hosts }
   it { should belong_to :category }
+  it { should accept_nested_attributes_for :hosts }
 end

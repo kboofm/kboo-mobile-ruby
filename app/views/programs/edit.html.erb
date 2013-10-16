@@ -4,6 +4,9 @@
   <%= f.date_field :date %><br>
   <%= f.time_field :time %><br>
   <%= f.text_area :description, placeholder: :description %><br>
-  <%= f.collection_select :category_id, Category.all, :id,:name, include_blank: :category %><br>
+  <%= f.collection_select :category_id, Category.all, :id,:name, include_blank: :category %><br> 
+  <%= f.fields_for :hosts, @program.hosts.new do |ff| %>
+    <%= ff.collection_select :user_id, User.all, :id, :email, include_blank: @program.hosts.first.user.email %><br>
+  <% end %>
   <%= f.submit "Submit" %>
 <% end %>  
