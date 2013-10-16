@@ -47,8 +47,5 @@ class ProgramsController < ApplicationController
     def program_params
       params.require(:program).permit(:title, :date, :time, :category_id, :created_by, :description, hosts_attributes: [:user_id, :id, :_destroy] )
     end
+  
 end
-
-
-
-

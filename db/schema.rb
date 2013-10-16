@@ -13,14 +13,19 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ActiveRecord::Schema.define(version: 20131015214203) do
 >>>>>>> cb20d0c... Finish user/program relationship
+=======
+ActiveRecord::Schema.define(version: 20131016004704) do
+>>>>>>> 2aa2623... Finish CRUD program/categories/host
 
 ActiveRecord::Schema.define(version: 20131018225448) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   create_table "api_keys", force: true do |t|
     t.string   "access_token"
@@ -28,12 +33,15 @@ ActiveRecord::Schema.define(version: 20131018225448) do
     t.datetime "updated_at"
   end
 
+=======
+>>>>>>> 2aa2623... Finish CRUD program/categories/host
   create_table "categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   create_table "comments", force: true do |t|
     t.string   "comment_text"
     t.string   "episode_id"
@@ -80,6 +88,8 @@ ActiveRecord::Schema.define(version: 20131015004738) do
 
 =======
 >>>>>>> cb20d0c... Finish user/program relationship
+=======
+>>>>>>> 2aa2623... Finish CRUD program/categories/host
   create_table "hosts", force: true do |t|
     t.integer  "user_id"
     t.integer  "program_id"
@@ -90,6 +100,7 @@ ActiveRecord::Schema.define(version: 20131015004738) do
 
   create_table "programs", force: true do |t|
     t.string   "title"
+<<<<<<< HEAD
 <<<<<<< HEAD
     t.string   "category"
     t.datetime "created_at"
@@ -109,6 +120,15 @@ ActiveRecord::Schema.define(version: 20131015004738) do
     t.datetime "created_at"
     t.datetime "updated_at"
 >>>>>>> cb20d0c... Finish user/program relationship
+=======
+    t.string   "category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+    t.text     "description"
+    t.time     "time"
+    t.date     "date"
+>>>>>>> 2aa2623... Finish CRUD program/categories/host
   end
 
   create_table "users", force: true do |t|

@@ -1,5 +1,6 @@
 <h1>Create new program</h1>
 <%= form_for @program do |f| %>
+<<<<<<< HEAD
   <%= f.label             :title %>
   <%= f.text_field        :title, placeholder: 'ex. A Deeper Look', autofocus: true %><br>
   <%= f.label             :date %>  
@@ -14,5 +15,12 @@
   <%= f.fields_for :hosts, @program.hosts.new do |ff| %>
     <%= render 'layouts/host_form', :f => ff %>
   <% end %><br>
+=======
+  <%= f.text_field :title, placeholder: 'Title' %><br>
+  <%= f.date_field :date,  placeholder: 'Date' %><br>
+  <%= f.time_field :time,  placeholder: 'Time' %><br>
+  <%= f.text_area   :description, placeholder: 'Description' %><br>
+  <%= f.collection_select :category_id, Category.all, :id,:name, include_blank: 'Category' %><br>
+>>>>>>> 2aa2623... Finish CRUD program/categories/host
   <%= f.submit "Submit" %>
 <% end %>  
