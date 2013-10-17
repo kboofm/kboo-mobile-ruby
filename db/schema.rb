@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20131016233327) do
+=======
+ActiveRecord::Schema.define(version: 20131016004704) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +26,7 @@ ActiveRecord::Schema.define(version: 20131016233327) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   create_table "comments", force: true do |t|
     t.string   "comment_text"
     t.string   "episode_id"
@@ -30,6 +35,8 @@ ActiveRecord::Schema.define(version: 20131016233327) do
     t.datetime "updated_at"
   end
 
+=======
+>>>>>>> master
   create_table "episode_audio", force: true do |t|
     t.integer "episode_id"
     t.integer "fid"
@@ -56,7 +63,10 @@ ActiveRecord::Schema.define(version: 20131016233327) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+<<<<<<< HEAD
     t.integer  "program_id"
+=======
+>>>>>>> master
   end
 
   create_table "hosts", force: true do |t|
