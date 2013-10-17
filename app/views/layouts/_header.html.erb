@@ -1,43 +1,99 @@
-<header class='navbar navbar-fixed-top navbar-inverse'>
-  <div class='navbar-inner'>
-    <div class='container'>
-      <nav>
-        <%= link_to root_path do %>
-          <div class='pull-left logo'></div>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="signup">
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <li class='nav-right'><%= current_user.email %> <%= link_to 'Logout', destroy_user_session_path, method: :delete %> </li>
+        <% else %>
+          <li class="nav_right"><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Login", new_user_session_path %></li>
         <% end %>
-        <ul class='nav pull-right'>
-          <li><%= link_to 'Home', root_path %></li>
-          <li id='fat-menu' class='dropdown'>
-              <a href='#' class='dropdown-toggle' data-toggle='dropdown'>
-                Programs<b class='caret'></b>
-              </a>
-              <ul class='dropdown-menu'>
-                <li><%= link_to 'List Programs', programs_path %></li>
-                <% if current_user && (current_user.admin? || current_user.staff?) %>
-                    <li><%= link_to 'New Program', new_program_path %></li>
-                <% end %>            
-              </ul>
-          </li>
-          
-          <% if current_user %>
-            <li id='fat-menu' class='dropdown'>
-              <a href='#' class='dropdown-toggle' data-toggle='dropdown'>
-                <%= current_user.email %><b class='caret'></b>
-              </a>
-              <ul class='dropdown-menu'>
-                <li><%= link_to 'My Profile', current_user %></li>
-                <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
-                <li class='divider'></li>
-                <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-              </ul>
-            </li>
-          <% else %>
-              <ul class='nav pull-right'>
-                <li><%= link_to 'Sign in', new_user_session_path %></li>
-              </ul>
-          <% end %>   
-        </ul>
-      </nav>
+      </ul>
     </div>
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+       <!-- <a class="navbar-brand" href="#"></a> -->
+       <%= link_to root_path do %>
+       <div class="navbar-brand logo"></div>
+       <% end %>    
   </div>
-</header>  
+  </nav>
+
+<div class="lowernav">
+  <nav class="navbar" role="navigation">
+  <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <!-- <a href="#">Programs</a> -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "All programs", programs_path %></li>
+              <% if current_user && (current_user.admin? || current_user.staff?) %>
+                <li><%= link_to 'Create program', new_program_path %></li>
+              <% end %>
+            </ul>
+          </li>
+          <li>
+            <!-- <a href="#">Listen</a> -->
+            <%= link_to "Schedule", root_path %>
+          </li>
+          <li>
+            <!-- <a href="#">Listen</a> -->
+            <%= link_to "Episodes", episodes_path %>
+          </li>
+       
+          <li>
+            <!-- <a href="#">Listen</a> -->
+            <%= link_to "Support", root_path %>
+          </li>
+          <li>
+            <!-- <a href="#">Listen</a> -->
+            <%= link_to "Volunteer", root_path %>
+          </li>
+          <li>
+            <!-- <a href="#">Listen</a> -->
+            <%= link_to "Listen :", root_path %>
+          </li>
+        </ul>
+    <!-- JPlayer start -->
+        <div class="player">
+
+        <!-- The jPlayer div must not be hidden. Keep it at the root of the body element to avoid any such problems. -->
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+
+              <!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
+              
+              <div id="jp_container_1" class="jp-container">
+                <div class="jp-buffer-holder"> <!-- .jp-gt50 only needed when buffer is > than 50% -->
+                  <div class="jp-buffer-1"></div>
+                  <div class="jp-buffer-2"></div>
+                </div>
+                <div class="jp-progress-holder"> <!-- .jp-gt50 only needed when progress is > than 50% -->
+                  <div class="jp-progress-1"></div>
+                  <div class="jp-progress-2"></div>
+                </div>
+                <div class="jp-circle-control"></div>
+                  <ul class="jp-controls">
+                    <li><a class="jp-play" tabindex="1">play</a></li>
+                    <li><a class="jp-pause" style='display: none;' tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+                  </ul>
+                </div>
+              </div>   
+<!-- JPlayer end -->
+
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+     </div>   
+  </nav>
+</div>

@@ -8,6 +8,5 @@ class Episode < ActiveRecord::Base
                     :long_description,
                     :audio_promo,
                     :category,
-                    # :image, 
                     :presence => true
 end
