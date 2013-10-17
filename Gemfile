@@ -13,6 +13,7 @@ gem 'will_paginate'
 gem 'cancan'
 gem 'jplayer-rails'
 gem "paperclip", "~> 3.0"
+# gem 'whenever', :require => false
 
 group :test, :development do
   gem 'capybara'

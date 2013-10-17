@@ -5,5 +5,6 @@
   <%= f.time_field :time,  placeholder: 'Time' %><br>
   <%= f.text_area   :description, placeholder: 'Description' %><br>
   <%= f.collection_select :category_id, Category.all, :id,:name, include_blank: 'Category' %><br>
+  <%= f.file_field :image %>
   <%= f.submit "Submit" %>
 <% end %>  

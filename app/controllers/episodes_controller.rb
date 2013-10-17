@@ -1,5 +1,9 @@
 class EpisodesController < ApplicationController
   
+  def index
+    @episodes = Episode.all
+  end
+
   def new
     @episode = Episode.new
   end
@@ -17,30 +21,33 @@ class EpisodesController < ApplicationController
     end
   end
 
-  def edit
-    #edit 
+  def show
+    @episode = Episode.find(params[:id])
   end
 
-  def destroy
-    if @episode.destroy
-      flash[:success]
-    else
-      flash[:error]
-    end
+  def edit
+     
   end
 
   def update
     #update
   end
 
-  def index
-    @episodes = Episode.all
+  def destroy
+    @episode = Episode.find(params[:id])
+    if @episode.destroy
+      flash[:success]
+      redirect_to programs_path
+    else
+      flash[:error]
+      redirect_to programs_path
+    end
   end
 
   private
 
   def episode_params
-    params[:episode].permit(:title, :category, :short_description, :long_description, :audio_promo, :image)
+    params.require(:episode).permit(:title, :category, :short_description, :long_description, :audio_promo, :image)
   end
 
 end

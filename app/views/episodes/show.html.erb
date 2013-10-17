@@ -1,0 +1,19 @@
+<%= @episode.title %>
+<br>
+<%= "Program: #{@episode.program.title}" %>
+<br>
+<%= "Air Date: #{@episode.created_at.to_time.strftime("%b %-d, %Y @ %-I:%M%P")}" %>
+<hr>
+<table>
+<tr>
+    <td><%= image_tag @episode.image.url(:medium) %></td>
+    <td>
+      <ul>
+        <li><%= @episode.short_description %></li>
+        <li><%= @episode.audio_promo %></li>
+        <li><%= @episode.long_description %></li>
+      </ul>
+    </td>
+  </tr>
+  <tr><td> <%= render 'layouts/new_comment' %> </tr></td>
+</table>

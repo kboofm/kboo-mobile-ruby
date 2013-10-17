@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe User do
+  it { should have_many :comments }
   it { should have_many :hosts }
   it { should have_many(:programs).through :hosts }
   it "Should set the default role to listener after creation" do
