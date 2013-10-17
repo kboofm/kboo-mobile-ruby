@@ -1,6 +1,6 @@
 $(document).ready(function (){
     $(window).scroll(function() {
-      var scrollTop = 78;
+      var scrollTop = 120;
       if($(window).scrollTop() && $(window).scrollTop() >= scrollTop ){
             $('.lowernav').css({
                 position : 'fixed',
