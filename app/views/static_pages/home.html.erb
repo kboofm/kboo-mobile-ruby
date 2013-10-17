@@ -1,45 +1,128 @@
-<div class="player">
-<h1>
-Player:
-</h1>
-  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-  <div id="jp_container_1" class="jp-audio">
-    <div class="jp-type-single">
-      <div class="jp-gui jp-interface">
-        <ul class="jp-controls">
-          <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-          <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-          <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
-          <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
-          <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
-          <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
-        </ul>
-        <div class="jp-progress">
-          <div class="jp-seek-bar">
-            <div class="jp-play-bar"></div>
-          </div>
-        </div>
-        <div class="jp-volume-bar">
-          <div class="jp-volume-bar-value"></div>
-        </div>
-        <div class="jp-time-holder">
-          <div class="jp-current-time"></div>
-          <div class="jp-duration"></div>
-          <ul class="jp-toggles">
-            <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
-            <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="signup">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav_right"><a href="#">Sign Up | Login</a></li>
+        <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
           </ul>
-        </div>
-      </div>
-      <div class="jp-title">
-        <ul>
-          <li>KBOO</li>
+        </li> -->
+      </ul>
+    </div>
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+       <a class="navbar-brand" href="#"></a>    
+  </div>
+  </nav>
+
+<div class="lowernav">
+  <nav class="navbar" role="navigation">
+  <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Programs</a></li>
+          <li><a href="#">Listen</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recent Programs <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
         </ul>
-      </div>
-      <div class="jp-no-solution">
-        <span>Update Required</span>
-        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-      </div>
+    <!-- JPlayer start -->
+        <div class="player">
+
+        <!-- The jPlayer div must not be hidden. Keep it at the root of the body element to avoid any such problems. -->
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+
+              <!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
+              
+              <div id="jp_container_1" class="jp-container">
+                <div class="jp-buffer-holder"> <!-- .jp-gt50 only needed when buffer is > than 50% -->
+                  <div class="jp-buffer-1"></div>
+                  <div class="jp-buffer-2"></div>
+                </div>
+                <div class="jp-progress-holder"> <!-- .jp-gt50 only needed when progress is > than 50% -->
+                  <div class="jp-progress-1"></div>
+                  <div class="jp-progress-2"></div>
+                </div>
+                <div class="jp-circle-control"></div>
+                  <ul class="jp-controls">
+                    <li><a class="jp-play" tabindex="1">play</a></li>
+                    <li><a class="jp-pause" style='display: none;' tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+                  </ul>
+                </div>
+              </div>   
+<!-- JPlayer end -->
+
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+     </div>   
+  </nav>
+</div>
+<!-- Billboard/Jumbotron -->
+<!-- <div class="jumbotron"> -->
+<!-- End Billboard Jumbotron -->
+
+<!-- <p>KBOO Home Banner Pics Here </p> -->
+
+</div>
+<div class="content">
+  <div class="row">
+    <div class="container">
+    <div class="col-md-9">
+      <h1>Test</h1>
+      <p>Kale chips duis try-hard, esse Neutra tempor incididunt cillum tousled umami meggings selvage. Thundercats ea messenger bag laborum sed ad, vegan disrupt delectus freegan. Ex flexitarian et, chillwave you probably haven't heard of them commodo banjo semiotics hella tofu Odd Future stumptown. Bitters Blue Bottle squid stumptown, messenger bag consequat labore ex fashion axe trust fund laboris asymmetrical ethical cupidatat. Banjo selvage slow-carb, photo booth ea ex odio fap pop-up Brooklyn swag tote bag literally messenger bag. Drinking vinegar Bushwick before they sold out, semiotics placeat salvia post-ironic deep v readymade Schlitz quis hoodie ethnic pickled paleo. Nulla culpa bicycle rights gentrify, Echo Park 90's biodiesel typewriter consequat.
+
+90's chambray Bushwick hoodie art party Brooklyn, odio cardigan street art. Four loko mustache PBR&B raw denim you probably haven't heard of them. Umami do tote bag, non labore elit kale chips Portland ennui quis small batch authentic. Shabby chic irure cardigan, dolor synth organic Odd Future farm-to-table typewriter you probably haven't heard of them labore try-hard kale chips. DIY Cosby sweater selfies seitan. Narwhal salvia sriracha plaid, labore do Neutra. Vinyl culpa American Apparel, hella voluptate fap cupidatat cliche ennui qui tousled.
+
+In banh mi Terry Richardson laboris, culpa exercitation Bushwick cred pickled scenester street art messenger bag Marfa gastropub velit. Meh church-key Tonx, Thundercats single-origin coffee 3 wolf moon post-ironic laborum consequat American Apparel you probably haven't heard of them et Intelligentsia ethical literally. Trust fund vero mollit American Apparel, pop-up put a bird on it fugiat. Pinterest +1 pop-up Thundercats Banksy, paleo dolore lomo next level master cleanse meh voluptate. Fashion axe cupidatat tempor biodiesel next level. Cillum veniam Vice eiusmod, scenester Brooklyn kale chips pickled raw denim readymade whatever. Quis PBR Carles pariatur chambray, ea Bushwick 90's YOLO veniam fixie.</p>   
+
+<p>Kale chips duis try-hard, esse Neutra tempor incididunt cillum tousled umami meggings selvage. Thundercats ea messenger bag laborum sed ad, vegan disrupt delectus freegan. Ex flexitarian et, chillwave you probably haven't heard of them commodo banjo semiotics hella tofu Odd Future stumptown. Bitters Blue Bottle squid stumptown, messenger bag consequat labore ex fashion axe trust fund laboris asymmetrical ethical cupidatat. Banjo selvage slow-carb, photo booth ea ex odio fap pop-up Brooklyn swag tote bag literally messenger bag. Drinking vinegar Bushwick before they sold out, semiotics placeat salvia post-ironic deep v readymade Schlitz quis hoodie ethnic pickled paleo. Nulla culpa bicycle rights gentrify, Echo Park 90's biodiesel typewriter consequat.
+
+90's chambray Bushwick hoodie art party Brooklyn, odio cardigan street art. Four loko mustache PBR&B raw denim you probably haven't heard of them. Umami do tote bag, non labore elit kale chips Portland ennui quis small batch authentic. Shabby chic irure cardigan, dolor synth organic Odd Future farm-to-table typewriter you probably haven't heard of them labore try-hard kale chips. DIY Cosby sweater selfies seitan. Narwhal salvia sriracha plaid, labore do Neutra. Vinyl culpa American Apparel, hella voluptate fap cupidatat cliche ennui qui tousled.
+
+In banh mi Terry Richardson laboris, culpa exercitation Bushwick cred pickled scenester street art messenger bag Marfa gastropub velit. Meh church-key Tonx, Thundercats single-origin coffee 3 wolf moon post-ironic laborum consequat American Apparel you probably haven't heard of them et Intelligentsia ethical literally. Trust fund vero mollit American Apparel, pop-up put a bird on it fugiat. Pinterest +1 pop-up Thundercats Banksy, paleo dolore lomo next level master cleanse meh voluptate. Fashion axe cupidatat tempor biodiesel next level. Cillum veniam Vice eiusmod, scenester Brooklyn kale chips pickled raw denim readymade whatever. Quis PBR Carles pariatur chambray, ea Bushwick 90's YOLO veniam fixie.</p>  
+
+<p>Kale chips duis try-hard, esse Neutra tempor incididunt cillum tousled umami meggings selvage. Thundercats ea messenger bag laborum sed ad, vegan disrupt delectus freegan. Ex flexitarian et, chillwave you probably haven't heard of them commodo banjo semiotics hella tofu Odd Future stumptown. Bitters Blue Bottle squid stumptown, messenger bag consequat labore ex fashion axe trust fund laboris asymmetrical ethical cupidatat. Banjo selvage slow-carb, photo booth ea ex odio fap pop-up Brooklyn swag tote bag literally messenger bag. Drinking vinegar Bushwick before they sold out, semiotics placeat salvia post-ironic deep v readymade Schlitz quis hoodie ethnic pickled paleo. Nulla culpa bicycle rights gentrify, Echo Park 90's biodiesel typewriter consequat.
+
+90's chambray Bushwick hoodie art party Brooklyn, odio cardigan street art. Four loko mustache PBR&B raw denim you probably haven't heard of them. Umami do tote bag, non labore elit kale chips Portland ennui quis small batch authentic. Shabby chic irure cardigan, dolor synth organic Odd Future farm-to-table typewriter you probably haven't heard of them labore try-hard kale chips. DIY Cosby sweater selfies seitan. Narwhal salvia sriracha plaid, labore do Neutra. Vinyl culpa American Apparel, hella voluptate fap cupidatat cliche ennui qui tousled.
+
+In banh mi Terry Richardson laboris, culpa exercitation Bushwick cred pickled scenester street art messenger bag Marfa gastropub velit. Meh church-key Tonx, Thundercats single-origin coffee 3 wolf moon post-ironic laborum consequat American Apparel you probably haven't heard of them et Intelligentsia ethical literally. Trust fund vero mollit American Apparel, pop-up put a bird on it fugiat. Pinterest +1 pop-up Thundercats Banksy, paleo dolore lomo next level master cleanse meh voluptate. Fashion axe cupidatat tempor biodiesel next level. Cillum veniam Vice eiusmod, scenester Brooklyn kale chips pickled raw denim readymade whatever. Quis PBR Carles pariatur chambray, ea Bushwick 90's YOLO veniam fixie.</p>     
+    </div>
+
+    <div class="col-md-3">
+      <h1>Test</h1>
+            <p>Kale chips duis try-hard, esse Neutra tempor incididunt cillum tousled umami meggings selvage. Thundercats ea messenger bag laborum sed ad, vegan disrupt delectus freegan. Ex flexitarian et, chillwave you probably haven't heard of them commodo banjo semiotics hella tofu Odd Future stumptown. Bitters Blue Bottle squid stumptown, messenger bag consequat labore ex fashion axe trust fund laboris asymmetrical ethical cupidatat. Banjo selvage slow-carb, photo booth ea ex odio fap pop-up Brooklyn swag tote bag literally messenger bag. Drinking vinegar Bushwick before they sold out, semiotics placeat salvia post-ironic deep v readymade Schlitz quis hoodie ethnic pickled paleo. Nulla culpa bicycle rights gentrify, Echo Park 90's biodiesel typewriter consequat.
+
+90's chambray Bushwick hoodie art party Brooklyn, odio cardigan street art. Four loko mustache PBR&B raw denim you probably haven't heard of them. Umami do tote bag, non labore elit kale chips Portland ennui quis small batch authentic. Shabby chic irure cardigan, dolor synth organic Odd Future farm-to-table typewriter you probably haven't heard of them labore try-hard kale chips. DIY Cosby sweater selfies seitan. Narwhal salvia sriracha plaid, labore do Neutra. Vinyl culpa American Apparel, hella voluptate fap cupidatat cliche ennui qui tousled.
+
+In banh mi Terry Richardson laboris, culpa exercitation Bushwick cred pickled scenester street art messenger bag Marfa gastropub velit. Meh church-key Tonx, Thundercats single-origin coffee 3 wolf moon post-ironic laborum consequat American Apparel you probably haven't heard of them et Intelligentsia ethical literally. Trust fund vero mollit American Apparel, pop-up put a bird on it fugiat. Pinterest +1 pop-up Thundercats Banksy, paleo dolore lomo next level master cleanse meh voluptate. Fashion axe cupidatat tempor biodiesel next level. Cillum veniam Vice eiusmod, scenester Brooklyn kale chips pickled raw denim readymade whatever. Quis PBR Carles pariatur chambray, ea Bushwick 90's YOLO veniam fixie.</p>
+<p>Kale chips duis try-hard, esse Neutra tempor incididunt cillum tousled umami meggings selvage. Thundercats ea messenger bag laborum sed ad, vegan disrupt delectus freegan. Ex flexitarian et, chillwave you probably haven't heard of them commodo banjo semiotics hella tofu Odd Future stumptown. Bitters Blue Bottle squid stumptown, messenger bag consequat labore ex fashion axe trust fund laboris asymmetrical ethical cupidatat. Banjo selvage slow-carb, photo booth ea ex odio fap pop-up Brooklyn swag tote bag literally messenger bag. Drinking vinegar Bushwick before they sold out, semiotics placeat salvia post-ironic deep v readymade Schlitz quis hoodie ethnic pickled paleo. Nulla culpa bicycle rights gentrify, Echo Park 90's biodiesel typewriter consequat.
+
+90's chambray Bushwick hoodie art party Brooklyn, odio cardigan street art. Four loko mustache PBR&B raw denim you probably haven't heard of them. Umami do tote bag, non labore elit kale chips Portland ennui quis small batch authentic. Shabby chic irure cardigan, dolor synth organic Odd Future farm-to-table typewriter you probably haven't heard of them labore try-hard kale chips. DIY Cosby sweater selfies seitan. Narwhal salvia sriracha plaid, labore do Neutra. Vinyl culpa American Apparel, hella voluptate fap cupidatat cliche ennui qui tousled.
+
+In banh mi Terry Richardson laboris, culpa exercitation Bushwick cred pickled scenester street art messenger bag Marfa gastropub velit. Meh church-key Tonx, Thundercats single-origin coffee 3 wolf moon post-ironic laborum consequat American Apparel you probably haven't heard of them et Intelligentsia ethical literally. Trust fund vero mollit American Apparel, pop-up put a bird on it fugiat. Pinterest +1 pop-up Thundercats Banksy, paleo dolore lomo next level master cleanse meh voluptate. Fashion axe cupidatat tempor biodiesel next level. Cillum veniam Vice eiusmod, scenester Brooklyn kale chips pickled raw denim readymade whatever. Quis PBR Carles pariatur chambray, ea Bushwick 90's YOLO veniam fixie.</p>           
     </div>
   </div>
 </div>
+</div>
+<div class="footer">This is the KBOO Footer</div>
