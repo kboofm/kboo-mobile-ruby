@@ -1,0 +1,6 @@
+<h1>Edit <%= @program.title %></h1>
+<%= form_for @program do |f| %>
+  <%= f.text_field :title, placeholder: :title %><br>
+  <%= f.text_area  :description, placeholder: :description %><br>
+  <%= f.submit "Submit" %>
+<% end %>   

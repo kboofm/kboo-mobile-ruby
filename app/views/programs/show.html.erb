@@ -11,7 +11,7 @@
     </ul>
   <% end %> 
 
-<% if current_user && (current_user.admin? || current_user.staff? ) %>
+<% if current_user && (current_user.admin? || current_user.staff? || current_user.programs.include?(@program) ) %>
   <%= link_to 'Edit', edit_program_path %>
   <%= link_to 'Delete', program_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
