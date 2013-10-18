@@ -7,6 +7,15 @@ FactoryGirl.define do
     category  'Computer Science'
   end 
 
+  # factory :episode do
+  #   title                   'Fighting Bears'
+  #   short_description       'Fuck up a bear'
+  #   long_description        '*book about fucking up a bear*'
+  #   audio_promo             'LINK DAT AUDIO'
+  #   category                'pants'
+  #   program_id              1
+  # end 
+
   factory :episode_audio do
     episode_id  36833
     fid         35652
