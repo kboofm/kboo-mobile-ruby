@@ -1,0 +1,12 @@
+<h1><%= @category.name %></h1>
+<h4>Episodes</h4>
+<% @category.programs.each do |program| %>
+  <li><%= link_to program.title, program_path(program.id) %></li>
+<% end %> 
+
+<br>
+
+<% if current_user && (current_user.admin? || current_user.staff?) %>
+  <%= link_to 'Edit', edit_category_path %>
+  <%= link_to 'Delete', category_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>

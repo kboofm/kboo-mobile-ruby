@@ -1,0 +1,8 @@
+<h1>Edit <%= @category.title %></h1>
+
+<%= form_for @category do |f| %>
+  <%= f.label      :name %>
+  <%= f.text_field :name, autofocus: true %><br>
+  <%= f.submit 'Submit' %>
+<% end %>
+
