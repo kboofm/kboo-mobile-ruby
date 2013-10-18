@@ -1,8 +1,6 @@
-<div class='container'>
-  <h3>Create an Episode</h3>
-  <table>
-
-    <%= form_for @episode, :html => { :multipart => true } do |f| %>
+<h3>Create an Episode</h3>
+<table>
+  <%= form_for @episode, :html => { :multipart => true } do |f| %>
     <tr> <td> <%= f.label         :program_id %>            </tr> </td>
     <tr> <td> <%= f.collection_select :program_id, Program.all, :id, :title, include_blank: :true %> </tr> </td>
     <tr> <td> <%= f.label         :title %>              </tr> </td>
@@ -20,8 +18,5 @@
     <tr> <td> <%= f.label         :image %>              </tr> </td>    
     <tr> <td> <%= f.file_field    :image %>              </tr> </td>
     <tr> <td> <%= f.submit 'Submit' %>                   </tr> </td>
-
-    
-    <% end %> 
-  </table>  
-</div>
+  <% end %> 
+</table>  
