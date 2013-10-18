@@ -1,14 +1,4 @@
 <nav class="navbar navbar-default" role="navigation">
-  <div class="signup">
-      <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
-          <li class='nav-right'><%= current_user.email %> <%= link_to 'Logout', destroy_user_session_path, method: :delete %> </li>
-        <% else %>
-          <li class="nav_right"><%= link_to "Sign Up", new_user_registration_path %></li>
-          <li><%= link_to "Login", new_user_session_path %></li>
-        <% end %>
-      </ul>
-    </div>
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -34,10 +24,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><%= link_to "All programs", programs_path %></li>
-              <% if current_user && (current_user.admin? || current_user.staff?) %>
-                <li><%= link_to 'Create program', new_program_path %></li>
-              <% end %>
+              <li><%= link_to "All programs", "#" %></li>
             </ul>
           </li>
           <li>
