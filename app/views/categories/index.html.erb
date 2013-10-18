@@ -1,0 +1,9 @@
+<h1>Categories By Genre</h1>
+
+<ul>
+<% @categories.each do |category| %>
+  <li>
+    <strong><%= link_to category.name.id, category_path %></strong>
+  </li>
+<% end %>
+</ul>  

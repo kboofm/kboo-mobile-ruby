@@ -1,0 +1,7 @@
+<h1><%= @category.title %></h1>
+<%= image_tag @category.image.url(:avatar) %>
+<p>List:</p>
+  <ul><% @programs.each do |title| %>
+    <li><%= link_to program.title, program_path %></li>
+  <% end %>
+  </ul> 
