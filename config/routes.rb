@@ -6,5 +6,7 @@ Kboo::Application.routes.draw do
   resources :episode_audio
   resources :episodes
 
+
+  get 'static_pages/about'
   root 'static_pages#home'
 end
