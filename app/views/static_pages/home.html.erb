@@ -2,40 +2,56 @@
   <div class="row">
     <div class="container">
     <div class="col-md-9">
-      <h1>Test</h1>
-      <p>Kale chips duis try-hard, esse Neutra tempor incididunt cillum tousled umami meggings selvage. Thundercats ea messenger bag laborum sed ad, vegan disrupt delectus freegan. Ex flexitarian et, chillwave you probably haven't heard of them commodo banjo semiotics hella tofu Odd Future stumptown. Bitters Blue Bottle squid stumptown, messenger bag consequat labore ex fashion axe trust fund laboris asymmetrical ethical cupidatat. Banjo selvage slow-carb, photo booth ea ex odio fap pop-up Brooklyn swag tote bag literally messenger bag. Drinking vinegar Bushwick before they sold out, semiotics placeat salvia post-ironic deep v readymade Schlitz quis hoodie ethnic pickled paleo. Nulla culpa bicycle rights gentrify, Echo Park 90's biodiesel typewriter consequat.
+</div>
+    <!-- JPlayer start -->
+        <div class="player">
 
-90's chambray Bushwick hoodie art party Brooklyn, odio cardigan street art. Four loko mustache PBR&B raw denim you probably haven't heard of them. Umami do tote bag, non labore elit kale chips Portland ennui quis small batch authentic. Shabby chic irure cardigan, dolor synth organic Odd Future farm-to-table typewriter you probably haven't heard of them labore try-hard kale chips. DIY Cosby sweater selfies seitan. Narwhal salvia sriracha plaid, labore do Neutra. Vinyl culpa American Apparel, hella voluptate fap cupidatat cliche ennui qui tousled.
+        <!-- The jPlayer div must not be hidden. Keep it at the root of the body element to avoid any such problems. -->
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 
-In banh mi Terry Richardson laboris, culpa exercitation Bushwick cred pickled scenester street art messenger bag Marfa gastropub velit. Meh church-key Tonx, Thundercats single-origin coffee 3 wolf moon post-ironic laborum consequat American Apparel you probably haven't heard of them et Intelligentsia ethical literally. Trust fund vero mollit American Apparel, pop-up put a bird on it fugiat. Pinterest +1 pop-up Thundercats Banksy, paleo dolore lomo next level master cleanse meh voluptate. Fashion axe cupidatat tempor biodiesel next level. Cillum veniam Vice eiusmod, scenester Brooklyn kale chips pickled raw denim readymade whatever. Quis PBR Carles pariatur chambray, ea Bushwick 90's YOLO veniam fixie.</p>   
+              <!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
+              
+              <div id="jp_container_1" class="jp-container">
+                <div class="jp-buffer-holder"> <!-- .jp-gt50 only needed when buffer is > than 50% -->
+                  <div class="jp-buffer-1"></div>
+                  <div class="jp-buffer-2"></div>
+                </div>
+                <div class="jp-progress-holder"> <!-- .jp-gt50 only needed when progress is > than 50% -->
+                  <div class="jp-progress-1"></div>
+                  <div class="jp-progress-2"></div>
+                </div>
+                <div class="jp-circle-control"></div>
+                  <ul class="jp-controls">
+                    <li><a class="jp-play" tabindex="1">play</a></li>
+                    <li><a class="jp-pause" style='display: none;' tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+                  </ul>
+                </div>
+              </div>   
+<!-- JPlayer end -->
 
-<p>Kale chips duis try-hard, esse Neutra tempor incididunt cillum tousled umami meggings selvage. Thundercats ea messenger bag laborum sed ad, vegan disrupt delectus freegan. Ex flexitarian et, chillwave you probably haven't heard of them commodo banjo semiotics hella tofu Odd Future stumptown. Bitters Blue Bottle squid stumptown, messenger bag consequat labore ex fashion axe trust fund laboris asymmetrical ethical cupidatat. Banjo selvage slow-carb, photo booth ea ex odio fap pop-up Brooklyn swag tote bag literally messenger bag. Drinking vinegar Bushwick before they sold out, semiotics placeat salvia post-ironic deep v readymade Schlitz quis hoodie ethnic pickled paleo. Nulla culpa bicycle rights gentrify, Echo Park 90's biodiesel typewriter consequat.
+</div>
+    <% @episodes.each do |episode| %>
+      <div class="episode">
+        <ul>
+          <li><%= image_tag episode.image.url(:mini) %><%= episode.title %></li>
+          <li><%= "Host: #{episode.host}" %>
 
-90's chambray Bushwick hoodie art party Brooklyn, odio cardigan street art. Four loko mustache PBR&B raw denim you probably haven't heard of them. Umami do tote bag, non labore elit kale chips Portland ennui quis small batch authentic. Shabby chic irure cardigan, dolor synth organic Odd Future farm-to-table typewriter you probably haven't heard of them labore try-hard kale chips. DIY Cosby sweater selfies seitan. Narwhal salvia sriracha plaid, labore do Neutra. Vinyl culpa American Apparel, hella voluptate fap cupidatat cliche ennui qui tousled.
+              <div class="jp-circle-control"></div>
+                <ul class="jp-controls">
+                  <li><%= link_to "Play", episode.url, {:class => "jp-play"}%></li>
+                    <script>$('a.html5').click(function() {
 
-In banh mi Terry Richardson laboris, culpa exercitation Bushwick cred pickled scenester street art messenger bag Marfa gastropub velit. Meh church-key Tonx, Thundercats single-origin coffee 3 wolf moon post-ironic laborum consequat American Apparel you probably haven't heard of them et Intelligentsia ethical literally. Trust fund vero mollit American Apparel, pop-up put a bird on it fugiat. Pinterest +1 pop-up Thundercats Banksy, paleo dolore lomo next level master cleanse meh voluptate. Fashion axe cupidatat tempor biodiesel next level. Cillum veniam Vice eiusmod, scenester Brooklyn kale chips pickled raw denim readymade whatever. Quis PBR Carles pariatur chambray, ea Bushwick 90's YOLO veniam fixie.</p>  
+                      var url = $(this).attr('href');  
 
-<p>Kale chips duis try-hard, esse Neutra tempor incididunt cillum tousled umami meggings selvage. Thundercats ea messenger bag laborum sed ad, vegan disrupt delectus freegan. Ex flexitarian et, chillwave you probably haven't heard of them commodo banjo semiotics hella tofu Odd Future stumptown. Bitters Blue Bottle squid stumptown, messenger bag consequat labore ex fashion axe trust fund laboris asymmetrical ethical cupidatat. Banjo selvage slow-carb, photo booth ea ex odio fap pop-up Brooklyn swag tote bag literally messenger bag. Drinking vinegar Bushwick before they sold out, semiotics placeat salvia post-ironic deep v readymade Schlitz quis hoodie ethnic pickled paleo. Nulla culpa bicycle rights gentrify, Echo Park 90's biodiesel typewriter consequat.
+                      $("#jquery_jplayer_1").jPlayer("setMedia", mp3: url).jPlayer("play");
 
-90's chambray Bushwick hoodie art party Brooklyn, odio cardigan street art. Four loko mustache PBR&B raw denim you probably haven't heard of them. Umami do tote bag, non labore elit kale chips Portland ennui quis small batch authentic. Shabby chic irure cardigan, dolor synth organic Odd Future farm-to-table typewriter you probably haven't heard of them labore try-hard kale chips. DIY Cosby sweater selfies seitan. Narwhal salvia sriracha plaid, labore do Neutra. Vinyl culpa American Apparel, hella voluptate fap cupidatat cliche ennui qui tousled.
-
-In banh mi Terry Richardson laboris, culpa exercitation Bushwick cred pickled scenester street art messenger bag Marfa gastropub velit. Meh church-key Tonx, Thundercats single-origin coffee 3 wolf moon post-ironic laborum consequat American Apparel you probably haven't heard of them et Intelligentsia ethical literally. Trust fund vero mollit American Apparel, pop-up put a bird on it fugiat. Pinterest +1 pop-up Thundercats Banksy, paleo dolore lomo next level master cleanse meh voluptate. Fashion axe cupidatat tempor biodiesel next level. Cillum veniam Vice eiusmod, scenester Brooklyn kale chips pickled raw denim readymade whatever. Quis PBR Carles pariatur chambray, ea Bushwick 90's YOLO veniam fixie.</p>     
-    </div>
-
-    <div class="col-md-3">
-      <h1>Test</h1>
-            <p>Kale chips duis try-hard, esse Neutra tempor incididunt cillum tousled umami meggings selvage. Thundercats ea messenger bag laborum sed ad, vegan disrupt delectus freegan. Ex flexitarian et, chillwave you probably haven't heard of them commodo banjo semiotics hella tofu Odd Future stumptown. Bitters Blue Bottle squid stumptown, messenger bag consequat labore ex fashion axe trust fund laboris asymmetrical ethical cupidatat. Banjo selvage slow-carb, photo booth ea ex odio fap pop-up Brooklyn swag tote bag literally messenger bag. Drinking vinegar Bushwick before they sold out, semiotics placeat salvia post-ironic deep v readymade Schlitz quis hoodie ethnic pickled paleo. Nulla culpa bicycle rights gentrify, Echo Park 90's biodiesel typewriter consequat.
-
-90's chambray Bushwick hoodie art party Brooklyn, odio cardigan street art. Four loko mustache PBR&B raw denim you probably haven't heard of them. Umami do tote bag, non labore elit kale chips Portland ennui quis small batch authentic. Shabby chic irure cardigan, dolor synth organic Odd Future farm-to-table typewriter you probably haven't heard of them labore try-hard kale chips. DIY Cosby sweater selfies seitan. Narwhal salvia sriracha plaid, labore do Neutra. Vinyl culpa American Apparel, hella voluptate fap cupidatat cliche ennui qui tousled.
-
-In banh mi Terry Richardson laboris, culpa exercitation Bushwick cred pickled scenester street art messenger bag Marfa gastropub velit. Meh church-key Tonx, Thundercats single-origin coffee 3 wolf moon post-ironic laborum consequat American Apparel you probably haven't heard of them et Intelligentsia ethical literally. Trust fund vero mollit American Apparel, pop-up put a bird on it fugiat. Pinterest +1 pop-up Thundercats Banksy, paleo dolore lomo next level master cleanse meh voluptate. Fashion axe cupidatat tempor biodiesel next level. Cillum veniam Vice eiusmod, scenester Brooklyn kale chips pickled raw denim readymade whatever. Quis PBR Carles pariatur chambray, ea Bushwick 90's YOLO veniam fixie.</p>
-<p>Kale chips duis try-hard, esse Neutra tempor incididunt cillum tousled umami meggings selvage. Thundercats ea messenger bag laborum sed ad, vegan disrupt delectus freegan. Ex flexitarian et, chillwave you probably haven't heard of them commodo banjo semiotics hella tofu Odd Future stumptown. Bitters Blue Bottle squid stumptown, messenger bag consequat labore ex fashion axe trust fund laboris asymmetrical ethical cupidatat. Banjo selvage slow-carb, photo booth ea ex odio fap pop-up Brooklyn swag tote bag literally messenger bag. Drinking vinegar Bushwick before they sold out, semiotics placeat salvia post-ironic deep v readymade Schlitz quis hoodie ethnic pickled paleo. Nulla culpa bicycle rights gentrify, Echo Park 90's biodiesel typewriter consequat.
-
-90's chambray Bushwick hoodie art party Brooklyn, odio cardigan street art. Four loko mustache PBR&B raw denim you probably haven't heard of them. Umami do tote bag, non labore elit kale chips Portland ennui quis small batch authentic. Shabby chic irure cardigan, dolor synth organic Odd Future farm-to-table typewriter you probably haven't heard of them labore try-hard kale chips. DIY Cosby sweater selfies seitan. Narwhal salvia sriracha plaid, labore do Neutra. Vinyl culpa American Apparel, hella voluptate fap cupidatat cliche ennui qui tousled.
-
-In banh mi Terry Richardson laboris, culpa exercitation Bushwick cred pickled scenester street art messenger bag Marfa gastropub velit. Meh church-key Tonx, Thundercats single-origin coffee 3 wolf moon post-ironic laborum consequat American Apparel you probably haven't heard of them et Intelligentsia ethical literally. Trust fund vero mollit American Apparel, pop-up put a bird on it fugiat. Pinterest +1 pop-up Thundercats Banksy, paleo dolore lomo next level master cleanse meh voluptate. Fashion axe cupidatat tempor biodiesel next level. Cillum veniam Vice eiusmod, scenester Brooklyn kale chips pickled raw denim readymade whatever. Quis PBR Carles pariatur chambray, ea Bushwick 90's YOLO veniam fixie.</p>           
-    </div>
-  </div>
+                      return false;  
+                    }); 
+                  </script>
+              </ul>
+            </div>  
+          <% end %>
+            
 </div>
 </div>
-<div class="footer">This is the KBOO Footer</div>
+<!-- <div class="footer">This is the KBOO Footer</div> -->

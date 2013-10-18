@@ -11,15 +11,24 @@ class EpisodesController < ApplicationController
   def create
     @episode = Episode.new(episode_params)
     if @episode.save
-      flash[:success]
-      redirect_to root_path
+      format.html do
+        flash[:success] = "Episode saved"
+        redirect_to @episode
+      end
+      format.json do
+        render :json => @episode
+      end
     else
-      if @episode.errors.any?
-        flash[:error] 
-        redirect_to episodes_path
+      format.html do
+        flash[:alert] = "Episode not saved"
+        render 'new'
+      end
+      format.json do
+        render :json => @episode.errors
       end
     end
   end
+
 
   def show
     @episode = Episode.find(params[:id])
@@ -47,7 +56,7 @@ class EpisodesController < ApplicationController
   private
 
   def episode_params
-    params.require(:episode).permit(:title, :category, :short_description, :long_description, :audio_promo, :image)
+    params.require(:episode).permit(:title, :category, :short_description, :host, :url, :long_description, :audio_promo, :image)
   end
 
 end

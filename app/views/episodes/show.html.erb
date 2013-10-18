@@ -1,6 +1,6 @@
 <%= @episode.title %>
 <br>
-<%= "Program: #{@episode.program.title}" %>
+<%= "Program: #{@episode.title}" %>
 <br>
 <%= "Air Date: #{@episode.created_at.to_time.strftime("%b %-d, %Y @ %-I:%M%P")}" %>
 <hr>
@@ -12,8 +12,8 @@
         <li><%= @episode.short_description %></li>
         <li><%= @episode.audio_promo %></li>
         <li><%= @episode.long_description %></li>
+        <li><%= link_to "MP3", @episode.url %></li>
       </ul>
     </td>
   </tr>
-  <tr><td> <%= render 'layouts/new_comment' %> </tr></td>
 </table>
