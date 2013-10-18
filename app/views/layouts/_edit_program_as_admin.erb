@@ -1,12 +1,16 @@
 <h1>Edit <%= @program.title %></h1>
 <%= form_for @program do |f| %>
-  <%= f.text_field :title, placeholder: :title %><br>
-  <%= f.date_field :date %><br>
-  <%= f.time_field :time %><br>
-  <%= f.text_area  :description, placeholder: :description %><br>
-  <%= f.label :category %>
+  <%= f.label             :title %>
+  <%= f.text_field        :title, autofocus: true %><br>
+  <%= f.label             :date %>
+  <%= f.date_field        :date %><br>
+  <%= f.label             :time %>
+  <%= f.time_field        :time %><br>
+  <%= f.label             :description %>
+  <%= f.text_area         :description %><br>
+  <%= f.label             :category %>
   <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: :true %><br>
-  <%= f.label :host %>
+  <%= f.label             :host %>
   <%= f.fields_for :hosts, @program.hosts do |ff| %>
     <%= render 'layouts/host_form', :f => ff %>
     <%= ff.check_box :_destroy %>Remove Host<br>

@@ -1,0 +1,11 @@
+<h1>Episodes</h1>
+
+<ul>
+<% @episodes.each do |episode| %>
+  <li>
+    <strong><%= link_to episode.title, episode %></strong>
+    <br><small><%= episode.short_description %></small>
+  </li>
+<% end %>
+</ul>  
+

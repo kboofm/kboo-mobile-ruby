@@ -1,14 +1,18 @@
 <h1>Create new program</h1>
 <%= form_for @program do |f| %>
-  <%= f.text_field :title, placeholder: 'Title' %><br>
-  <%= f.date_field :date,  placeholder: 'Date' %><br>
-  <%= f.time_field :time,  placeholder: 'Time' %><br>
-  <%= f.text_area  :description, placeholder: 'Description' %><br>
-  <%= f.label :category %>
+  <%= f.label             :title %>
+  <%= f.text_field        :title, placeholder: 'ex. A Deeper Look', autofocus: true %><br>
+  <%= f.label             :date %>  
+  <%= f.date_field        :date %><br>
+  <%= f.label             :time %>
+  <%= f.time_field        :time %><br>
+  <%= f.label             :description %>
+  <%= f.text_area         :description, placeholder: 'ex. Interview show focusing on challenging social...' %><br>
+  <%= f.label             :category %>
   <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: :true %><br>
-  <%= f.label :host %>
+  <%= f.label             :host %>
   <%= f.fields_for :hosts, @program.hosts.new do |ff| %>
     <%= render 'layouts/host_form', :f => ff %>
-  <% end %>
+  <% end %><br>
   <%= f.submit "Submit" %>
 <% end %>  
