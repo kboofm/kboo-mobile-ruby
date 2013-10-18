@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131016004704) do
+ActiveRecord::Schema.define(version: 20131018215819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", force: true do |t|
+    t.string   "comment_text"
+    t.string   "episode_id"
+    t.string   "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -48,6 +56,8 @@ ActiveRecord::Schema.define(version: 20131016004704) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.date     "date"
+    t.time     "time"
   end
 
   create_table "hosts", force: true do |t|
