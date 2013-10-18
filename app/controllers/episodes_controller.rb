@@ -17,7 +17,7 @@ class EpisodesController < ApplicationController
       flash[:success] = 'Episode created'
       redirect_to @episode
     else
-      flash[:alert] = 'Invalid entry'
+      flash[:alert].now = 'Invalid entry'
       redirect_to 'new'
     end
   end
@@ -46,7 +46,7 @@ class EpisodesController < ApplicationController
   private
 
   def episode_params
-    params.require(:episode).permit(:title, :category, :short_description, :long_description, :audio_promo, :image)
+    params.require(:episode).permit(:title, :short_description, :long_description, :audio_promo, :date, :time, :program_id, :image)
   end
 
 end

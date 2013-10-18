@@ -13,3 +13,5 @@ categories = %w[Technology Politics Arts Books Music News]
 categories.each do |category|
   Category.create(:name => category)
 end  
+
+programs = Program.create(:title => "Classical Music", :category_id => 2, :description => "Lost symphonies of Mozart", :date => Date.today, :time => Time.now)
