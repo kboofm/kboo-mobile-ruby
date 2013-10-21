@@ -14,16 +14,27 @@ describe EpisodesController do
                               }  }
       let(:valid_parameters) { { :episode => valid_attributes, :format => :json } }
 
+      let(:api_key) { ApiKey.create! }
+      
+
       it 'creates a new episode' do
-        expect { post :create, valid_parameters }.to change(Episode, :count).by(1)
+        request.env['HTTP_AUTHORIZATION'] = "Token token=#{api_key.access_token}" 
+        expect { post :create, valid_parameters}.to change(Episode, :count).by(1)
       end
 
-      # describe 'response' do
-      #   before { post :create, valid_parameters }
-
-      #   it { should respond_with 201 }
-      # end
+      describe 'response' do
+        
+        before { post :create, valid_parameters}
+        it { should respond_with 201 }
+      end
       
+      # describe "POST 'new'" do
+      #   it "should be successful" do
+      #     api_key = ApiKey.create
+      #     post 'new', nil
+      #     response.should be_success
+      #   end
+      # end
     end
   end
 end

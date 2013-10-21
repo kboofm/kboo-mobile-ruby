@@ -4,8 +4,6 @@ class Episode < ActiveRecord::Base
 
   validates :title, :short_description,
                     :long_description,
-                    :audio_promo,
-                    :category,
-                    :url, 
+                    :audio_url, 
                     :presence => true
 end
