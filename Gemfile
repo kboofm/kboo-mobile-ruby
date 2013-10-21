@@ -24,6 +24,7 @@ group :test, :development do
   gem 'better_errors'
   gem 'poltergeist'
   gem 'quiet_assets'
+  gem 'curl'
 end
 
 group :production do

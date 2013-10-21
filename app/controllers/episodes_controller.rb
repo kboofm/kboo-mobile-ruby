@@ -1,4 +1,5 @@
 class EpisodesController < ApplicationController
+  before_filter :restrict_access, :except => [:index, :show]
   
   def index
     @episodes = Episode.all
@@ -11,20 +12,24 @@ class EpisodesController < ApplicationController
   def create
     @episode = Episode.new(episode_params)
     if @episode.save
-      format.html do
-        flash[:success] = "Episode saved"
-        redirect_to @episode
-      end
-      format.json do
-        render :json => @episode
-      end
+      respond_to do |format|
+        format.html do
+          flash[:success] = "Episode saved"
+          redirect_to @episode
+        end
+        format.json do
+          render :json => @episode, :status => :created
+        end
+      end  
     else
-      format.html do
-        flash[:alert] = "Episode not saved"
-        render 'new'
-      end
-      format.json do
-        render :json => @episode.errors
+      respond_to do |format|
+        format.html do
+          flash[:alert] = "Episode not saved"
+          render 'new'
+        end
+        format.json do
+          render :json => @episode.errors
+        end
       end
     end
   end
@@ -59,4 +64,9 @@ class EpisodesController < ApplicationController
     params.require(:episode).permit(:title, :category, :short_description, :host, :url, :long_description, :audio_promo, :image)
   end
 
+  def restrict_access
+    authenticate_or_request_with_http_token do |token, options|
+      ApiKey.exists?(access_token: token)
+    end
+  end
 end
