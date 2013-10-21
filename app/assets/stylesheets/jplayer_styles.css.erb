@@ -13,13 +13,19 @@
 
   /********************* MOBILE HEADER ************************
 */
+
+html body {
+  background-color: #7DD3F6 !important;
+}
+
 .divbar {
   height: 30%;
   padding-bottom: 90%;
   padding-top: 0%;
   position: relative;
   padding-left: 5%;
-  border-bottom: 1px solid #aaa;
+  border: none;
+  border: 2px solid red;
 }
 
 .listenlive {
@@ -36,8 +42,26 @@
   height: 50%;
 }
 
+ .container {
+  width: 
+ }
+
 .navbar-form{
   float:right !important;
+ }
+
+ .nav { 
+  background-color: #7DD3F6;
+ }
+
+.navbar {
+  background-color: #7DD3F6 !important;
+  margin-bottom: none;
+  border: none;
+ }
+
+ .divbar {
+  background-color: #7DD3F6;
  }
 
  .lowernav {
@@ -47,29 +71,20 @@
   z-index: 1;
   box-shadow: 0px 3px 5px #F0F0F5;
   border-bottom: 2px solid #909093;
+  background-color: #7DD3F6;
  }
 
- .navbar-brand {
-  background-image: url('kboo1.png');
-  background-repeat: no-repeat;
-  height:99px;
-  width: 196px;
-  margin: 5% 5% 5% 15% !important;
-}
 
 .navbar-nav {
   margin-left: 11%;
+  background-color: #7DD3F6;
 }
 
 .signup {
-  float: right; 
+float: right; 
 }
-.navbar-brand {
-  font-size: 4em;
-  margin-top: 15px;
-  margin-left: 5%;
-}
- .jumbotron {
+
+.jumbotron {
   height: 250px;
  }
 
@@ -94,19 +109,18 @@
   margin-right: 2px;
   width: auto;
   height: auto;
+  background-color: #7DD3F6;
+  border: 2px solid green;
 }
 
 .body {
   display: none;
+  background-color: #7DD3F6;
 }
-
-/*.jp_container_1 {
-  width: auto;
-  height: auto;
-}*/
 
 .jp-container {
   position:relative;
+  background-color: #7DD3F6;;
   display: inline-block;
   width:50px; /* 200 - (2 * 48) */
   height:50px;
@@ -220,18 +234,80 @@
   cursor:pointer;
 }
 
-.jp-controls .jp-play {
-  background:url('play_button.png') no-repeat;
+
+@media (max-width: 640px) {
+   .navbar-brand {
+    background-image: url('cartoon_logo_sm.png');
+    background-position:center; 
+    height:89px;
+    width: 130px;
+    background-repeat: no-repeat;
+    background-color: #7DD3F6;
+  }
+
+    .jp-controls .jp-play {
+    background:url('play_btn_sm.png') no-repeat;
+    height: 45px;
+    width: 45px;
+    float: center;
+  }
+
+  .jp-controls .jp-pause {
+    background:url('pause_btn_sm.png') no-repeat;
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    float: center;
+  }
 }
+
+@media (min-width: 451px) {
+ .navbar-brand {
+    background-image: url('cartoon_logo_medium.png');
+    background-position:center; 
+    height:192px;
+    width: 280px;
+    background-repeat: no-repeat;
+    background-color: #7DD3F6;
+  }
+
+    .jp-controls .jp-play {
+    background:url('play_btn_medium.png') no-repeat;
+    background-position:center; 
+    height: 101px;
+    width: 102px;
+    margin-left: 30%;
+  }
+
+    .jp-controls .jp-pause {
+    background:url('pause_btn_medium.png') no-repeat;
+    background-position:center; 
+    height: 101px;
+    width: 102px;
+    margin-left: 30%;
+  }
+}
+
+
+/*.jp-controls .jp-play {
+  background:url('play_btn_sm.png') no-repeat;
+  height: 101px;
+  width: 102px;
+  margin-left: auto;
+  margin-right: auto;
+}*/
 
 /*.jp-controls .jp-play:hover {
   background:url("controls.jpg") -200px 0 no-repeat;
 }*/
 
-.jp-controls .jp-pause {
-  background:url('pause_button1.png') no-repeat;
-  
-}
+/*.jp-controls .jp-pause {
+  background:url('pause_btn_sm.png') no-repeat;
+  height: 101px;
+  width: 102px;
+  margin-left: auto;
+  margin-right: auto;
+}*/
 /*
 .jp-controls .jp-pause:hover {
   background:url("controls.jpg") -200px -200px no-repeat;
