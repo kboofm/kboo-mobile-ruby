@@ -2,10 +2,6 @@ require 'spec_helper'
 
 
 describe EpisodesController do
-  before(:each) do
-    authorize "admin", "kboo"
-  end  
-
 
   context "POST create" do
     context "with valid parameters" do
@@ -28,12 +24,6 @@ describe EpisodesController do
       #   it { should respond_with 201 }
       # end
       
-      describe "POST 'new'" do
-        it "should be successful" do
-          post 'new'
-          response.should be_success
-        end
-      end
     end
   end
 end
