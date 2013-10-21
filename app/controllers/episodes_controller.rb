@@ -1,5 +1,5 @@
 class EpisodesController < ApplicationController
-  before_filter :restrict_access, :except => [:index, :show]
+  before_filter :restrict_access, :except => [:index, :show, :new, :create]
   
   def index
     @episodes = Episode.all
@@ -61,7 +61,7 @@ class EpisodesController < ApplicationController
   private
 
   def episode_params
-    params.require(:episode).permit(:title, :category, :short_description, :host, :url, :long_description, :audio_promo, :image)
+    params.require(:episode).permit(:title, :short_description, :audio_url, :long_description, :image)
   end
 
   def restrict_access
