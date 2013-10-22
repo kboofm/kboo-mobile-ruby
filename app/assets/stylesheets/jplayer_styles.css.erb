@@ -19,13 +19,7 @@ html body {
 }
 
 .divbar {
-  height: 30%;
-  padding-bottom: 90%;
-  padding-top: 0%;
-  position: relative;
-  padding-left: 5%;
-  border: none;
-  border: 2px solid red;
+  height: 50px;
 }
 
 .listenlive {
@@ -57,12 +51,12 @@ html body {
 .navbar {
   background-color: #7DD3F6 !important;
   margin-bottom: none;
-  border: none;
+  /*border: 2px solid blue;*/
  }
 
- .divbar {
+/* .divbar {
   background-color: #7DD3F6;
- }
+ }*/
 
  .lowernav {
   background-color: white;
@@ -70,7 +64,7 @@ html body {
   height: 65px;
   z-index: 1;
   box-shadow: 0px 3px 5px #F0F0F5;
-  border-bottom: 2px solid #909093;
+/*  border-bottom: 2px solid #909093;*/  
   background-color: #7DD3F6;
  }
 
@@ -88,10 +82,10 @@ float: right;
   height: 250px;
  }
 
- .footer {
+/* .footer {
   border: 1px solid red;
   height: 200px;
- }
+ }*/
 
  .span9 {
   border:1px solid blue;
@@ -110,7 +104,7 @@ float: right;
   width: auto;
   height: auto;
   background-color: #7DD3F6;
-  border: 2px solid green;
+  /*border: 2px solid green;*/
 }
 
 .body {
@@ -121,24 +115,10 @@ float: right;
 .jp-container {
   position:relative;
   background-color: #7DD3F6;;
-  display: inline-block;
-  width:50px; /* 200 - (2 * 48) */
-  height:50px;
-  /*background:url("http://media.npr.org/chrome_svg/player.svg") 0 0 no-repeat;*/
-  padding:12px;
-  -webkit-tap-highlight-color:rgba(0,0,0,0);  
-  float: right;
-}
+ }
 
 .jp-container {
-  position:relative;
-  display: inline-block;
-  width:50px; /* 200 - (2 * 48) */
-  height:50px;
-  /*background:url("http://media.npr.org/chrome_svg/pause.svg") 0 0 no-repeat;*/
-  padding:12px;
-  -webkit-tap-highlight-color:rgba(0,0,0,0);  
-  float: right;
+
 }
 
 .jp-container :focus {
@@ -237,27 +217,66 @@ float: right;
 
 @media (max-width: 640px) {
    .navbar-brand {
-    background-image: url('cartoon_logo_2.png');
+    background-image: url('cartoon_logo_sm.png');
     background-position:center; 
-    height:192px;
-    width: 280px;
+    height:152px;
+    width: 222px;
     background-repeat: no-repeat;
     background-color: #7DD3F6;
+    margin: auto;
   }
 
     .jp-controls .jp-play {
-    background:url('play_btn_sm.png') no-repeat;
+    background: url('play_btn_sm.png') no-repeat;
     height: 45px;
     width: 45px;
-    float: center;
+    margin-top: -7px;
+    margin-left: 156%;
+    /*border: 2px solid red;*/
   }
 
   .jp-controls .jp-pause {
-    background:url('pause_btn_sm.png') no-repeat;
-    display: inline-block;
+    background: url('pause_btn_sm.png') no-repeat;
     height: 45px;
     width: 45px;
+    margin-top: -7px;
+    margin-left: 156%;
     float: center;
+  /*  border: 2px solid red;*/
+
+  }
+
+  .hdr_text {
+    background: url('hdr_text_sm.png') no-repeat;
+/*    border: 1px solid green;*/
+    height: 20px;
+    width: 180px;
+    margin-top: 20px;
+    margin-left: 8%;
+  }
+
+  .recent_programs {
+    height: auto;
+    width:auto;
+    margin-top: 30px;
+  }
+
+  .mobile_container {
+   /* border: 2px dashed green;*/
+  }
+
+  .panel {
+    background: url('panel.png') no-repeat;
+    height: 52px;
+    width: 222px;
+    margin-top: -21px;
+  }
+
+  footer {
+    background: url('footer_sm.jpg');
+    height: 41px;
+    width: 222px;
+    margin-top: 25px;
   }
 }
 
@@ -269,6 +288,7 @@ float: right;
     width: 280px;
     background-repeat: no-repeat;
     background-color: #7DD3F6;
+    padding: none;
   }
 
     .jp-controls .jp-play {
@@ -277,6 +297,8 @@ float: right;
     height: 101px;
     width: 102px;
     margin-left: 30%;
+   /* border: 2px solid red;*/
+
   }
 
     .jp-controls .jp-pause {
@@ -285,6 +307,32 @@ float: right;
     height: 101px;
     width: 102px;
     margin-left: 30%;
+  /*  border: 2px solid red;*/
+  }
+
+  .hdr_text {
+    background: url('hdr_text_sm.png') no-repeat;
+/*    border: 1px solid green;*/
+    height: 20px;
+    width: 180px;
+    margin-top: 20px;
+  }
+
+  .recent_programs { 
+    height: auto;
+    width:auto;
+    margin-top: 30px;
+  }
+
+  .mobile_container {
+/*    border: 2px dashed green;
+*/  }
+
+  .panel {
+    background: url('panel.png') no-repeat;
+    height: 52px;
+    width: 222px;
+    margin-top: -18px;
   }
 }
 
