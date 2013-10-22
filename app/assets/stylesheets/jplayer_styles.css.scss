@@ -20,91 +20,20 @@ html body {
   background-color: #7DD3F6 !important;
 }
 
-.divbar {
-  height: 50px;
-}
-
-.listenlive {
-  /*border-top: 1px solid #aaa;*/
-  border-bottom: 2px solid #aaa;
-  text-align: center;
-  font-family: sans-serif;
-}
 
 /**********************************************************************/
 .jplayer-1 {
   margin: 0 auto;
-  /*position: center; HUNTER*/
   width: 50%;
   height: 50%;
 }
 
-.navbar-form{
-  float:right !important;
- }
-
-.nav { 
-  background-color: #7DD3F6;
- }
-
-.navbar {
-  background-color: #7DD3F6 !important;
-  margin-bottom: none;
-  /*border: 2px solid blue;*/
- }
-
-/* .divbar {
-  background-color: #7DD3F6;
- }*/
-
-.lowernav {
-  background-color: white;
-  width: 100%;
-  height: 65px;
-  z-index: 1;
-  box-shadow: 0px 3px 5px #F0F0F5;
-/*  border-bottom: 2px solid #909093;*/  
-  background-color: #7DD3F6;
- }
-
-
-.navbar-nav {
-  margin-left: 11%;
-  background-color: #7DD3F6;
-}
-
-.signup {
-float: right; 
-}
-
-.jumbotron {
-  height: 250px;
- }
-
-/* .footer {
-  border: 1px solid red;
-  height: 200px;
- }*/
-
- .span9 {
-  border:1px solid blue;
-  display: inline-block;
-/*  float:left;*/
- }
-
- .span3 {
-  display: inline-block;
-/*  float:right;*/
- }
 
 .player{
   margin: 0 auto;
-  /*float:left; HUNTER*/ 
-  /*margin-right: 2px; HUNTER*/
   width: auto;
   height: auto;
   background-color: #7DD3F6;
-  /*border: 2px solid green;*/
 }
 
 .body {
@@ -114,7 +43,6 @@ float: right;
 
 .jp-container {
   margin: 0 auto;
-  /*position:relative; HUNTER*/
   background-color: #7DD3F6;;
  }
 
@@ -123,47 +51,9 @@ float: right;
   outline:0;
 }
 
-.jp-buffer-1,
-.jp-buffer-2,
-.jp-progress-1,
-.jp-progress-2 {
-  position:absolute;
-  top:0;
-  left:0;
-  width:26px;
-  height:26px;
-  clip:rect(0px,13px,26px,0px);
-
-  -moz-border-radius:13px;
-  -webkit-border-radius:13px;
-  border-radius:13px;
-}
-
-.jp-buffer-1,
-.jp-buffer-2 {
-  background:image-url("buffer.png") 0 0 no-repeat;
-}
-
-
-/* FALLBACK for .progress
- * (24 steps starting from 1hr filled progress, Decrease second value by 104px for next step)
- * (It needs the container selector to work. Or use div)
- */
-
-.jp-container .jp-fallback {
-  background:image-url("progress_sprite.jpg") no-repeat;
-  background-position:0 26px; 
-}
-
-.jp-progress-1,
-.jp-progress-2 {
-  background:image-url("progress.png") 0 0 no-repeat;
-}
-
 .jp-buffer-holder,
 .jp-progress-holder,
 .jp-circle-control {
-  /*position:absolute; HUNTER*/
   margin: 0 auto;
   width:26px;
   height:26px;
@@ -171,27 +61,6 @@ float: right;
 
 .jp-circle-control {
   cursor:pointer;
-}
-
-.jp-buffer-holder,
-.jp-progress-holder {
-  clip:rect(0px,26px,26px,13px);
-  display:none;
-}
-
-
-/* This is needed when progress is greater than 50% or for fallback */
-
-.jp-buffer-holder.jp-gt50,
-.jp-progress-holder.jp-gt50,
-.jp-progress-1.jp-fallback{
-  clip:rect(auto, auto, auto, auto);
-}
-
-.jp-controls {
-  /*margin: 0 auto;*/
-
-  /*padding:6px; HUNTER*/
 }
 
 .jp-controls li{
@@ -203,7 +72,6 @@ float: right;
 }
 
 .jp-controls li a{
-  /*position:center; HUNTER*/
   margin: 0 auto;
   top: -100%;
   display:block;
@@ -216,119 +84,73 @@ float: right;
 
 
 @media (max-width: 640px) {
-   .navbar-brand {
-    background-image: image-url('cartoon_logo_sm.png');
-    background-position:center; 
-    height:152px;
-    width: 222px;
-    background-repeat: no-repeat;
-    background-color: #7DD3F6;
-    margin: auto;
-  }
-
   .jp-controls .jp-play {
-    background: image-url('play_btn_sm.png') no-repeat;
-    height: 45px;
-    width: 45px;
-    /*margin-top: 90px; HUNTER */
-    /*margin-left: 156%; HUNTER*/
-    /*border: 2px solid red;*/
+    background: image-url('play_btn_medium.png') no-repeat;
+    height: 71px;
+    width: 71px;
   }
 
   .jp-controls .jp-pause {
-    background: image-url('pause_btn_sm.png') no-repeat;
-    height: 45px;
-    width: 45px;
-    /*margin-top: 90px; HUNTER */
-    /*margin-left: 156% HUNTER;*/
-    /*float: center; HUNTER*/
-  /*  border: 2px solid red;*/
-
+    background: image-url('pause_btn_medium.png') no-repeat;
+    height: 71px;
+    width: 71px;
   }
 
   .hdr_text {
     font-family: 'Marvel', sans-serif;
-    font-size: 1.5rem;
-    height: 20px;
-    width: 180px;
-    margin-top: 40px;
+    font-size: 3rem;
+    text-shadow:4px 4px 6px white;
     text-align: center;
+    height: 90px;
+    width: 100%;
     margin: 0 auto;
-    /*margin-left: 8%;*/
   }
 
   .recent_programs {
     height: auto;
     width:100%;
-    /*margin-top: 90px;*/
-  }
-
-  .mobile_container {
-   /* border: 2px dashed green;*/
   }
 
   .panel {
     background: image-url('panel.png') no-repeat;
     height: 102px;
+    margin:3%;
     margin-top: -21px;
   }
 
-  footer {
-    background: image-url('footer_sm.jpg');
-    height: 41px;
-    width: 222px;
-    margin-top: 25px;
-  }
-
   .jp-controls {
-    margin-left: -8px;
+    margin-left: -22px;
   }
 
   .player {
-    margin-bottom: 35px;
+    margin-bottom: 65px;
+  }
+
+  footer {
+    height: 20px;
+    font-size: 1rem;
   }
 }
 
-@media (min-width: 451px) {
-  .jp-controls {
-    margin-left: -35px;
-  }
-
-  .navbar-brand {
-    background-image: image-url('cartoon_logo_medium.png');
-    background-position:center; 
-    height:192px;
-    width: 280px;
-    background-repeat: no-repeat;
-    background-color: #7DD3F6;
-    padding: none;
-  }
-
+@media (min-width: 609px) {
   .jp-controls .jp-play {
-    background: image-url('play_btn.png') no-repeat;
+    background: image-url('play_btn_lg.png') no-repeat;
     background-position:center; 
-    height: 101px;
-    width: 102px;
-    /*margin-top: 80px; HUNTER */
-    /*margin-left: 30%; HUNTER*/
-   /* border: 2px solid red;*/
-
+    height: 136px;
+    width: 136px;
   }
 
   .jp-controls .jp-pause {
-    background: image-url('pause_btn.png') no-repeat;
+    background: image-url('pause_btn_lg.png') no-repeat;
     background-position:center; 
-    height: 101px;
-    width: 102px;
-    /*margin-top: 80px; HUNTER */
-    /*margin-left: 30%; HUNTER */
-  /*  border: 2px solid red;*/
+    height: 136px;
+    width: 136px;
   }
 
   .hdr_text {
-    /*background: image-url('hdr_text_sm.png') no-repeat;*/
     font-family: 'Marvel', sans-serif;
-    font-size: 3rem;
+    font-size: 5rem;
+    text-shadow:4px 4px 6px white;
     text-align: center;
     height: 90px;
     width: 100%;
@@ -338,18 +160,13 @@ float: right;
   .recent_programs { 
     height: auto;
     width: 100%;
-    /*margin-top: 120px;*/
   }
 
-  .mobile_container {
-/*    border: 2px dashed green;
-*/  }
-
   .panel {
-    /*background: image-url('panel.png') no-repeat; GABE */
     background-color: white;
     height: 102px;
-    margin-top: -18px;
+    margin:3%;
+    margin-top: -16px;
   }
 
   .logo {
@@ -357,36 +174,14 @@ float: right;
   }
 
   .player {
-    margin-bottom: 120px;
+    margin-bottom: 160px;
   }
-}
+  
+  .jp-controls {
+    margin-left: -54px;
+  }
 
-
-/*.jp-controls .jp-play {
-  background:image-url('play_btn_sm.png') no-repeat;
-  height: 101px;
-  width: 102px;
-  margin-left: auto;
-  margin-right: auto;
-}*/
-
-/*.jp-controls .jp-play:hover {
-  background:image-url("controls.jpg") -200px 0 no-repeat;
-}*/
-
-/*.jp-controls .jp-pause {
-  background:image-url('pause_btn_sm.png') no-repeat;
-  height: 101px;
-  width: 102px;
-  margin-left: auto;
-  margin-right: auto;
-}*/
-/*
-.jp-controls .jp-pause:hover {
-  background:image-url("controls.jpg") -200px -200px no-repeat;
-}*/
-
-.jp-jplayer {
-  width:0;
-  height:0;
+  footer {
+    font-size: 2rem;
+  }
 }
