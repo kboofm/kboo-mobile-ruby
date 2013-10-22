@@ -118,6 +118,8 @@ p {
     text-align: center;
     width: 100%;
     margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   .recent_programs {
@@ -155,9 +157,9 @@ p {
   }
 
   footer {
-    height: 35px;
-    font-size: 1rem;    
+    font-size: 1rem;
   }
+
 }
 
 @media (min-width: 609px) {
@@ -210,7 +212,7 @@ p {
   }
 
   .player {
-    margin-bottom: 220px;
+    margin-bottom: 240px;
   }
   
   .jp-controls {
@@ -219,7 +221,7 @@ p {
 
   .more_btm_text {
     font-family: 'Marvel', sans-serif;
-    font-size: 2.5rem;
+    font-size: 4rem;
     text-shadow:-3px 0px 5px white;
     text-align: center;
     width: 100%;
@@ -228,6 +230,7 @@ p {
   }
 
   footer {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
+
 }

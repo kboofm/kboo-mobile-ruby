@@ -1,6 +1,6 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
-@import url(http://fonts.googleapis.com/css?family=Marvel:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Marvel:700);
 
 /* Page Wrapper */
 .wrapper {
@@ -19,13 +19,12 @@
 
 footer {
   background-color: #FD882B;
-  height: 102px;
-  margin:3%;
-  margin-top: -21px;
+  height: auto;
+  padding: 10px;
+/*  margin-top: -21px;*/
   font-family: 'Marvel', sans-serif;
   text-shadow: -3px 0px 5px white;
   text-align: center;
-  height: 90px;
   width: 100%;
   margin: 0 auto;
 }
