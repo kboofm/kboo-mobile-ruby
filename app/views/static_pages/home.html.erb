@@ -7,7 +7,7 @@
 
               <div class="jp-circle-control"></div>
                 <ul class="jp-controls">
-                  <li><%= link_to "Play", episode.url, {:class => "jp-play"}%></li>
+                  <li><%= link_to "Play", episode.audio_url, {:class => "jp-play"}%></li>
                     <script>$('a.html5').click(function() {
 
                       var url = $(this).attr('href');  
