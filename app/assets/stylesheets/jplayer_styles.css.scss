@@ -90,10 +90,6 @@ html body {
   box-shadow:         1px 1px 2px 2px #636363;
 }
 
-h3 {
-  text-align: center;
-}
-
 h4 {
   text-align: center;
 }
@@ -118,7 +114,7 @@ p {
   .hdr_text {
     font-family: 'Marvel', sans-serif;
     font-size: 2.5rem;
-    text-shadow:4px 4px 6px white;
+    text-shadow:1px 3px 5px white;
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -131,9 +127,12 @@ p {
   }
 
   .panel {
-/*    background: image-url('panel.png') no-repeat;
-*/  margin:3%;
+    margin: 3%;
     margin-top: -3px;
+  }
+
+  .panel-header {
+    font-size: 1.5rem;
   }
 
   .jp-controls {
@@ -142,13 +141,13 @@ p {
   }
 
   .player {
-    margin-bottom: 65px;
+    margin-bottom: 75px;
   }
 
   .more_btm_text {
     font-family: 'Marvel', sans-serif;
     font-size: 2.5rem;
-    text-shadow:4px 4px 6px white;
+    text-shadow:1px 3px 5px white;
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -157,7 +156,7 @@ p {
 
   footer {
     height: 35px;
-    font-size: 1rem;
+    font-size: 1rem;    
   }
 }
 
@@ -201,12 +200,17 @@ p {
     margin-top: -13px;
   }
 
+  .panel-header {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
   .logo {
     margin-bottom: 33px;
   }
 
   .player {
-    margin-bottom: 190px;
+    margin-bottom: 220px;
   }
   
   .jp-controls {
@@ -216,7 +220,7 @@ p {
   .more_btm_text {
     font-family: 'Marvel', sans-serif;
     font-size: 2.5rem;
-    text-shadow:4px 4px 6px white;
+    text-shadow:-3px 0px 5px white;
     text-align: center;
     width: 100%;
     margin: 0 auto;
