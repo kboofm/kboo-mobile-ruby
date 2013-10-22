@@ -62,6 +62,8 @@ ActiveRecord::Schema.define(version: 20131021224437) do
     t.integer  "program_id"
     t.string   "host"
     t.string   "audio_url"
+    t.time     "time"
+    t.date     "date"
   end
 
   create_table "hosts", force: true do |t|
