@@ -84,6 +84,7 @@ html body {
 
 .panel {
   height: auto;
+  padding: 5px;
   -moz-box-shadow:    1px 1px 2px 2px #636363;
   -webkit-box-shadow: 1px 1px 2px 2px #636363;
   box-shadow:         1px 1px 2px 2px #636363;
@@ -126,7 +127,7 @@ p {
   .recent_programs {
     height: auto;
     width:100%;
-    margin-top: 30px;
+    margin-top: 50px;
   }
 
   .panel {
@@ -164,15 +165,15 @@ p {
   .jp-controls .jp-play {
     background: image-url('play_btn_lg.png') no-repeat;
     background-position:center; 
-    height: 136px;
-    width: 136px;
+    height: 201px;
+    width: 200px;
   }
 
   .jp-controls .jp-pause {
     background: image-url('pause_btn_lg.png') no-repeat;
     background-position:center; 
-    height: 136px;
-    width: 136px;
+    height: 201px;
+    width: 200px;
   }
 
   .hdr_text {
@@ -205,11 +206,11 @@ p {
   }
 
   .player {
-    margin-bottom: 160px;
+    margin-bottom: 190px;
   }
   
   .jp-controls {
-    margin-left: -54px;
+    margin-left: -94px;
   }
 
   .more_btm_text {
