@@ -141,7 +141,7 @@ float: right;
 
 .jp-buffer-1,
 .jp-buffer-2 {
-  background:url("buffer.png") 0 0 no-repeat;
+  background:image-url("buffer.png") 0 0 no-repeat;
 }
 
 
@@ -151,13 +151,13 @@ float: right;
  */
 
 .jp-container .jp-fallback {
-  background:url("progress_sprite.jpg") no-repeat;
+  background:image-url("progress_sprite.jpg") no-repeat;
   background-position:0 26px; 
 }
 
 .jp-progress-1,
 .jp-progress-2 {
-  background:url("progress.png") 0 0 no-repeat;
+  background:image-url("progress.png") 0 0 no-repeat;
 }
 
 .jp-buffer-holder,
@@ -217,7 +217,7 @@ float: right;
 
 @media (max-width: 640px) {
    .navbar-brand {
-    background-image: url('cartoon_logo_sm.png');
+    background-image: image-url('cartoon_logo_sm.png');
     background-position:center; 
     height:152px;
     width: 222px;
@@ -227,7 +227,7 @@ float: right;
   }
 
   .jp-controls .jp-play {
-    background: url('play_btn_sm.png') no-repeat;
+    background: image-url('play_btn_sm.png') no-repeat;
     height: 45px;
     width: 45px;
     /*margin-top: 90px; HUNTER */
@@ -236,7 +236,7 @@ float: right;
   }
 
   .jp-controls .jp-pause {
-    background: url('pause_btn_sm.png') no-repeat;
+    background: image-url('pause_btn_sm.png') no-repeat;
     height: 45px;
     width: 45px;
     /*margin-top: 90px; HUNTER */
@@ -259,8 +259,8 @@ float: right;
 
   .recent_programs {
     height: auto;
-    width:auto;
-    margin-top: 90px;
+    width:100%;
+    /*margin-top: 90px;*/
   }
 
   .mobile_container {
@@ -268,14 +268,13 @@ float: right;
   }
 
   .panel {
-    background: url('panel.png') no-repeat;
-    height: 52px;
-    width: 222px;
+    background: image-url('panel.png') no-repeat;
+    height: 102px;
     margin-top: -21px;
   }
 
   footer {
-    background: url('footer_sm.jpg');
+    background: image-url('footer_sm.jpg');
     height: 41px;
     width: 222px;
     margin-top: 25px;
@@ -296,7 +295,7 @@ float: right;
   }
 
   .navbar-brand {
-    background-image: url('cartoon_logo_medium.png');
+    background-image: image-url('cartoon_logo_medium.png');
     background-position:center; 
     height:192px;
     width: 280px;
@@ -306,7 +305,7 @@ float: right;
   }
 
   .jp-controls .jp-play {
-    background:url('play_btn_medium.png') no-repeat;
+    background: image-url('play_btn.png') no-repeat;
     background-position:center; 
     height: 101px;
     width: 102px;
@@ -317,7 +316,7 @@ float: right;
   }
 
   .jp-controls .jp-pause {
-    background:url('pause_btn_medium.png') no-repeat;
+    background: image-url('pause_btn.png') no-repeat;
     background-position:center; 
     height: 101px;
     width: 102px;
@@ -327,7 +326,7 @@ float: right;
   }
 
   .hdr_text {
-    /*background: url('hdr_text_sm.png') no-repeat;*/
+    /*background: image-url('hdr_text_sm.png') no-repeat;*/
     font-family: 'Marvel', sans-serif;
     font-size: 1.5rem;
     text-align: center;
@@ -338,8 +337,8 @@ float: right;
 
   .recent_programs { 
     height: auto;
-    width:222px;
-    margin-top: 120px;
+    width:100%;
+    /*margin-top: 120px;*/
   }
 
   .mobile_container {
@@ -347,9 +346,9 @@ float: right;
 */  }
 
   .panel {
-    /*background: url('panel.png') no-repeat; GABE */
+    /*background: image-url('panel.png') no-repeat; GABE */
     background-color: white;
-    height: 52px;
+    height: 102px;
     margin-top: -18px;
   }
 
@@ -360,7 +359,7 @@ float: right;
 
 
 /*.jp-controls .jp-play {
-  background:url('play_btn_sm.png') no-repeat;
+  background:image-url('play_btn_sm.png') no-repeat;
   height: 101px;
   width: 102px;
   margin-left: auto;
@@ -368,11 +367,11 @@ float: right;
 }*/
 
 /*.jp-controls .jp-play:hover {
-  background:url("controls.jpg") -200px 0 no-repeat;
+  background:image-url("controls.jpg") -200px 0 no-repeat;
 }*/
 
 /*.jp-controls .jp-pause {
-  background:url('pause_btn_sm.png') no-repeat;
+  background:image-url('pause_btn_sm.png') no-repeat;
   height: 101px;
   width: 102px;
   margin-left: auto;
@@ -380,7 +379,7 @@ float: right;
 }*/
 /*
 .jp-controls .jp-pause:hover {
-  background:url("controls.jpg") -200px -200px no-repeat;
+  background:image-url("controls.jpg") -200px -200px no-repeat;
 }*/
 
 .jp-jplayer {
