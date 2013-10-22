@@ -14,6 +14,8 @@
   /********************* MOBILE HEADER ************************
 */
 
+
+
 html body {
   background-color: #7DD3F6 !important;
 }
@@ -31,14 +33,11 @@ html body {
 
 /**********************************************************************/
 .jplayer-1 {
-  position: center;
+  margin: 0 auto;
+  /*position: center; HUNTER*/
   width: 50%;
   height: 50%;
 }
-
- .container {
-  width: 
- }
 
 .navbar-form{
   float:right !important;
@@ -99,8 +98,9 @@ float: right;
  }
 
 .player{
-  float:left;
-  margin-right: 2px;
+  margin: 0 auto;
+  /*float:left; HUNTER*/ 
+  /*margin-right: 2px; HUNTER*/
   width: auto;
   height: auto;
   background-color: #7DD3F6;
@@ -113,13 +113,10 @@ float: right;
 }
 
 .jp-container {
-  position:relative;
+  margin: 0 auto;
+  /*position:relative; HUNTER*/
   background-color: #7DD3F6;;
  }
-
-.jp-container {
-
-}
 
 .jp-container :focus {
   border:none;
@@ -166,7 +163,8 @@ float: right;
 .jp-buffer-holder,
 .jp-progress-holder,
 .jp-circle-control {
-  position:absolute;
+  /*position:absolute; HUNTER*/
+  margin: 0 auto;
   width:26px;
   height:26px;
 } 
@@ -191,8 +189,9 @@ float: right;
 }
 
 .jp-controls {
-  margin:0;
-  padding:6px;
+  /*margin: 0 auto;*/
+
+  /*padding:6px; HUNTER*/
 }
 
 .jp-controls li{
@@ -204,7 +203,8 @@ float: right;
 }
 
 .jp-controls li a{
-  position:center;
+  /*position:center; HUNTER*/
+  margin: 0 auto;
   top: -100%;
   display:block;
   width:200px;
@@ -230,8 +230,8 @@ float: right;
     background: url('play_btn_sm.png') no-repeat;
     height: 45px;
     width: 45px;
-    margin-top: -7px;
-    margin-left: 156%;
+    margin-top: 90px;
+    /*margin-left: 156%; HUNTER*/
     /*border: 2px solid red;*/
   }
 
@@ -239,16 +239,17 @@ float: right;
     background: url('pause_btn_sm.png') no-repeat;
     height: 45px;
     width: 45px;
-    margin-top: -7px;
-    margin-left: 156%;
-    float: center;
+    margin-top: 90px;
+    /*margin-left: 156% HUNTER;*/
+    /*float: center; HUNTER*/
   /*  border: 2px solid red;*/
 
   }
 
   .hdr_text {
-    background: url('hdr_text_sm.png') no-repeat;
-/*    border: 1px solid green;*/
+    /*background: url('hdr_tex t_sm.png') no-repeat;*/
+    font-family: 'Marvel', sans-serif;
+    font-size: 1.5rem;
     height: 20px;
     width: 180px;
     margin-top: 20px;
@@ -258,7 +259,7 @@ float: right;
   .recent_programs {
     height: auto;
     width:auto;
-    margin-top: 30px;
+    margin-top: 90px;
   }
 
   .mobile_container {
@@ -278,10 +279,18 @@ float: right;
     width: 222px;
     margin-top: 25px;
   }
+
+  .jp-controls {
+    margin-left: -8px;
+  }
 }
 
 @media (min-width: 451px) {
- .navbar-brand {
+  .jp-controls {
+    margin-left: -35px;
+  }
+
+  .navbar-brand {
     background-image: url('cartoon_logo_medium.png');
     background-position:center; 
     height:192px;
@@ -296,7 +305,8 @@ float: right;
     background-position:center; 
     height: 101px;
     width: 102px;
-    margin-left: 30%;
+    margin-top: 80px;
+    /*margin-left: 30%; HUNTER*/
    /* border: 2px solid red;*/
 
   }
@@ -306,22 +316,25 @@ float: right;
     background-position:center; 
     height: 101px;
     width: 102px;
-    margin-left: 30%;
+    margin-top: 80px;
+    /*margin-left: 30%; HUNTER */
   /*  border: 2px solid red;*/
   }
 
   .hdr_text {
-    background: url('hdr_text_sm.png') no-repeat;
-/*    border: 1px solid green;*/
+    /*background: url('hdr_text_sm.png') no-repeat;*/
+    font-family: 'Marvel', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
     height: 20px;
     width: 180px;
-    margin-top: 20px;
+    margin: 0 auto;
   }
 
   .recent_programs { 
     height: auto;
-    width:auto;
-    margin-top: 30px;
+    width:222px;
+    margin-top: 120px;
   }
 
   .mobile_container {
@@ -329,9 +342,9 @@ float: right;
 */  }
 
   .panel {
-    background: url('panel.png') no-repeat;
+    /*background: url('panel.png') no-repeat; GABE */
+    background-color: white;
     height: 52px;
-    width: 222px;
     margin-top: -18px;
   }
 }
