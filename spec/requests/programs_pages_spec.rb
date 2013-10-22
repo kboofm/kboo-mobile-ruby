@@ -6,11 +6,12 @@ describe 'Program pages' do
       FactoryGirl.create(:category) 
       FactoryGirl.create(:user) 
       visit new_program_path
-      fill_in 'Title',         with: 'How to build a Rails app'
-      fill_in 'Date',          with: '10-16-2013'
-      fill_in 'Time',          with: '12:45 PM'
-      select 'Technology',     from: 'program_category_id'
-      select 'admin@kboo.org', from: 'program_hosts_attributes_0_user_id'
+      save_and_open_page
+      fill_in 'Title',                 with: 'How to build a Rails app'
+      fill_in 'Date',                  with: '10-16-2013'
+      fill_in 'Time',                  with: '12:45 PM'
+      select 'Technology',             from: 'program_category_id'
+      select 'admin@kboo.org',         from: 'program_hosts_attributes_0_user_id'
       click_button 'Submit'
       page.should have_content 'Date'
     end

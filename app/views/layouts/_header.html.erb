@@ -1,42 +1,4 @@
-<<<<<<< HEAD
-<header class='navbar navbar-fixed-top navbar-inverse'>
-  <div class='navbar-inner'>
-    <div class='container'>
-      <nav>
-        <%= link_to root_path do %>
-          <div class='pull-left logo'></div>
-        <% end %>
-        <ul class='nav pull-right'>
-          <li><%= link_to 'Home', root_path %></li>
-          <li id='fat-menu' class='dropdown'>
-              <a href='#' class='dropdown-toggle' data-toggle='dropdown'>
-                Programs<b class='caret'></b>
-              </a>
-              <ul class='dropdown-menu'>
-                <li><%= link_to 'List Programs', programs_path %></li>
-                <% if current_user && (current_user.admin? || current_user.staff?) %>
-                    <li><%= link_to 'New Program', new_program_path %></li>
-                <% end %>            
-              </ul>
-          </li>
-          
-          <% if current_user %>
-            <li id='fat-menu' class='dropdown'>
-              <a href='#' class='dropdown-toggle' data-toggle='dropdown'>
-                <%= current_user.email %><b class='caret'></b>
-              </a>
-              <ul class='dropdown-menu'>
-                <li><%= link_to 'My Profile', current_user %></li>
-                <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
-                <li class='divider'></li>
-                <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-              </ul>
-            </li>
-          <% else %>
-              <ul class='nav pull-right'>
-                <li><%= link_to 'Sign in', new_user_session_path %></li>
-              </ul>
-=======
+
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
@@ -68,13 +30,9 @@
                 <li class="divider"></li>
               </ul>
             </li>
->>>>>>> 258528a... navbar
           <% end %>   
         </ul>
       </nav>
     </div>
   </div>
-<<<<<<< HEAD
-=======
 </header>  
->>>>>>> 258528a... navbar

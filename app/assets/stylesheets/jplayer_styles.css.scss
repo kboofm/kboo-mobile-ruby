@@ -1,0 +1,187 @@
+/*
+ * Project: CirclePlayer
+ * http://www.jplayer.org
+ *
+ * Copyright (c) 2012 Happyworm Ltd
+ *
+ * Author: Silvia Benvenuti
+ * Edited by: Mark J Panaghiston
+ * Date: 2nd October 2012
+ * Artwork inspired by: http://forrst.com/posts/Untitled-CJz
+ */
+
+
+  /********************* MOBILE HEADER ************************
+*/
+
+
+
+html body {
+  background-color: #7DD3F6 !important;
+}
+
+
+/**********************************************************************/
+.jplayer-1 {
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+}
+
+
+.player{
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  background-color: #7DD3F6;
+}
+
+.body {
+  display: none;
+  background-color: #7DD3F6;
+}
+
+.jp-container {
+  margin: 0 auto;
+  background-color: #7DD3F6;;
+ }
+
+.jp-container :focus {
+  border:none;
+  outline:0;
+}
+
+.jp-buffer-holder,
+.jp-progress-holder,
+.jp-circle-control {
+  margin: 0 auto;
+  width:26px;
+  height:26px;
+} 
+
+.jp-circle-control {
+  cursor:pointer;
+}
+
+.jp-controls li{
+  list-style-type:none;
+  display:block;
+
+  /*IE Fix*/
+  position:absolute;
+}
+
+.jp-controls li a{
+  margin: 0 auto;
+  top: -100%;
+  display:block;
+  width:200px;
+  height:200px;
+  text-indent:-9999px;
+  z-index:1;
+  cursor:pointer;
+}
+
+
+@media (max-width: 640px) {
+  .jp-controls .jp-play {
+    background: url('play_btn_medium.png') no-repeat;
+    height: 71px;
+    width: 71px;
+  }
+
+  .jp-controls .jp-pause {
+    background: url('pause_btn_medium.png') no-repeat;
+    height: 71px;
+    width: 71px;
+  }
+
+  .hdr_text {
+    font-family: 'Marvel', sans-serif;
+    font-size: 3rem;
+    text-shadow:4px 4px 6px white;
+    text-align: center;
+    height: 90px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .recent_programs {
+    height: auto;
+    width:100%;
+  }
+
+  .panel {
+    background: url('panel.png') no-repeat;
+    height: 102px;
+    margin:3%;
+    margin-top: -21px;
+  }
+
+  .jp-controls {
+    margin-left: -22px;
+  }
+
+  .player {
+    margin-bottom: 65px;
+  }
+
+  footer {
+    height: 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 609px) {
+  .jp-controls .jp-play {
+    background: url('play_btn_lg.png') no-repeat;
+    background-position:center; 
+    height: 136px;
+    width: 136px;
+  }
+
+  .jp-controls .jp-pause {
+    background: url('pause_btn_lg.png') no-repeat;
+    background-position:center; 
+    height: 136px;
+    width: 136px;
+  }
+
+  .hdr_text {
+    font-family: 'Marvel', sans-serif;
+    font-size: 5rem;
+    text-shadow:4px 4px 6px white;
+    text-align: center;
+    height: 90px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .recent_programs { 
+    height: auto;
+    width: 100%;
+  }
+
+  .panel {
+    background-color: white;
+    height: 102px;
+    margin:3%;
+    margin-top: -16px;
+  }
+
+  .logo {
+    margin-bottom: 33px;
+  }
+
+  .player {
+    margin-bottom: 160px;
+  }
+  
+  .jp-controls {
+    margin-left: -54px;
+  }
+
+  footer {
+    font-size: 2rem;
+  }
+}

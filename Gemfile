@@ -26,7 +26,7 @@ end
 
 group :test do
   gem 'better_errors'
-  gem 'quiet_assets'
+  # gem 'quiet_assets'
   gem 'curl'
 end
 
