@@ -1,3 +1,4 @@
+
 <p>Current Episodes</p>
 
 <ul>
@@ -5,3 +6,16 @@
   <li><%= episode.title %><li>
 <% end %>
 </ul>
+<h1>Upcoming episodes</h1>
+
+<ul>
+<% @episodes.each do |episode| %>
+  <li>
+    <strong><%= link_to episode.title, episode %></strong>
+    <br><small><%= episode.date.strftime('%a %m/%d/%Y') %> at <%= episode.time.strftime('%I:%M%p') %></small>
+    <br><small><%= episode.short_description %></small>
+    <br><small><%= link_to episode.program.title, program_path(episode.program.id) %></small>
+  </li>
+<% end %>
+</ul>  
+

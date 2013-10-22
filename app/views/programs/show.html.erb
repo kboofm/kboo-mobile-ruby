@@ -1,0 +1,17 @@
+<h1><%= @program.title %></h1>
+<p>Date: <strong><%= @program.date %></strong></p>
+<p>Time: <strong><%= @program.time.to_s[11..15] %></strong></p>
+<p>Category: <strong><%= @program.category.name %></strong></p>
+<p>Description: <strong><%= @program.description %></strong></p>
+<p>Hosts:</p>
+  <% if @program.hosts.any? %>
+    <ul><% @program.hosts.each do |host| %>
+      <li><%= link_to host.user.email, user_path(host.user_id) %></li>
+    <% end %>
+    </ul>
+  <% end %> 
+
+<% if current_user && (current_user.admin? || current_user.staff? || current_user.programs.include?(@program) ) %>
+  <%= link_to 'Edit', edit_program_path %>
+  <%= link_to 'Delete', program_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>

@@ -12,7 +12,7 @@ gem 'devise'
 gem 'will_paginate'
 gem 'cancan'
 gem 'jplayer-rails'
-gem "paperclip", "~> 3.0"
+gem 'paperclip', '~> 3.0'
 
 group :test, :development do
   gem 'capybara'
@@ -20,8 +20,12 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'pry'
-  gem 'better_errors'
   gem 'poltergeist'
+  gem 'launchy'
+end
+
+group :test do
+  gem 'better_errors'
   gem 'quiet_assets'
   gem 'curl'
 end

@@ -10,3 +10,4 @@ $(function() {
     $('.jp-play').show();
   });
 });
+
