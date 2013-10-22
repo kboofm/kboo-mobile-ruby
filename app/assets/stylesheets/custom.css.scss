@@ -4,8 +4,8 @@
 
 /* Page Wrapper */
 .wrapper {
-  max-width: 600px;
-  width: 80%;
+  /*max-width: 600px;*/
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -17,3 +17,6 @@
   height: auto;
 }
 
+.jp-controls .jp-play {
+  width: 10%;
+}

@@ -328,16 +328,16 @@ float: right;
   .hdr_text {
     /*background: image-url('hdr_text_sm.png') no-repeat;*/
     font-family: 'Marvel', sans-serif;
-    font-size: 1.5rem;
+    font-size: 3rem;
     text-align: center;
     height: 90px;
-    width: 180px;
+    width: 100%;
     margin: 0 auto;
   }
 
   .recent_programs { 
     height: auto;
-    width:100%;
+    width: 100%;
     /*margin-top: 120px;*/
   }
 
@@ -352,8 +352,12 @@ float: right;
     margin-top: -18px;
   }
 
+  .logo {
+    margin-bottom: 33px;
+  }
+
   .player {
-    margin-bottom: 90px;
+    margin-bottom: 120px;
   }
 }
 
