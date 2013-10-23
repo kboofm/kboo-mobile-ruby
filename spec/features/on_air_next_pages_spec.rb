@@ -1,8 +1,10 @@
 require 'spec_helper'
 
-describe 'OnAirNext' do
-  it 'should show the next episode', :vcr do
-    visit root_path
-    it should have_content 'On Air Next' 
+describe 'static pages' do
+  describe 'home page' do
+    it 'should show the next episode' do
+      visit root_path
+      expect(page).to have_content 'ON AIR NEXT' 
+    end
   end 
 end

@@ -208,26 +208,26 @@ DEPENDENCIES
   bootstrap-sass
   cancan
   capybara
-  coffee-rails (~> 4.0.0)
+  coffee-rails
   curl
   devise
   factory_girl_rails
-  jbuilder (~> 1.2)
+  jbuilder
   jplayer-rails
   jquery-rails
   lograge
-  paperclip (~> 3.0)
+  paperclip
   pg
   poltergeist
   pry
   quiet_assets
-  rails (= 4.0.0)
+  rails
   rails_12factor
   rspec-rails
-  sass-rails (~> 4.0.0)
+  sass-rails
   shoulda-matchers
   turbolinks
-  uglifier (>= 1.3.0)
+  uglifier
   vcr
   webmock
   will_paginate
