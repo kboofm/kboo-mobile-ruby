@@ -1,11 +1,27 @@
-class ApiKey < ActiveRecord::Base
-  before_create :generate_access_token
+require 'singleton'
 
+class ApiKey < ActiveRecord::Base
+  include ActiveRecord::Singleton
+  before_create :generate_access_token
+  
+  
+
+  def hashed_token
+    Digest::HMAC.new((self.access_token +
+                      Date.today.strftime('%Y%m%d') +
+                      Time.now.strftime('%H%M')), Digest::SHA1)                                
+  end  
+
+  def authenticate_with(token)
+    token == self.hashed_token
+  end
+ 
 private
 
   def generate_access_token
-    begin
-      self.access_token = SecureRandom.hex
-    end while self.class.exists?(access_token: access_token)
-  end  
-end
+    self.access_token = SecureRandom.hex
+  end 
+end  
+
+
+

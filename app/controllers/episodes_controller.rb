@@ -1,5 +1,5 @@
 class EpisodesController < ApplicationController
-  before_filter :restrict_access, :except => [:index, :show, :new, :create]
+  before_filter :restrict_access, :except => [:index, :show]
   def index
     @episodes = Episode.all
   end
@@ -63,7 +63,7 @@ class EpisodesController < ApplicationController
 
   def restrict_access
     authenticate_or_request_with_http_token do |token, options|
-      ApiKey.exists?(access_token: token)
+      ApiKey.instance.hashed_token.to_s == token
     end
   end
 end

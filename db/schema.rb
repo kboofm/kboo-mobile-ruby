@@ -11,37 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-ActiveRecord::Schema.define(version: 20131015214203) do
->>>>>>> cb20d0c... Finish user/program relationship
-=======
-ActiveRecord::Schema.define(version: 20131016004704) do
->>>>>>> 2aa2623... Finish CRUD program/categories/host
+ActiveRecord::Schema.define(version: 20131021224437) do
 
-ActiveRecord::Schema.define(version: 20131018225448) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   create_table "api_keys", force: true do |t|
     t.string   "access_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-=======
->>>>>>> 2aa2623... Finish CRUD program/categories/host
   create_table "categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
   create_table "comments", force: true do |t|
     t.string   "comment_text"
     t.string   "episode_id"
@@ -50,13 +36,6 @@ ActiveRecord::Schema.define(version: 20131018225448) do
     t.datetime "updated_at"
   end
 
-=======
-ActiveRecord::Schema.define(version: 20131015004738) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
->>>>>>> ffd0ab6... Episode audio db, controller, model
   create_table "episode_audio", force: true do |t|
     t.integer "episode_id"
     t.integer "fid"
@@ -70,7 +49,6 @@ ActiveRecord::Schema.define(version: 20131015004738) do
     t.integer "status"
   end
 
-<<<<<<< HEAD
   create_table "episodes", force: true do |t|
     t.string   "title"
     t.string   "short_description"
@@ -81,15 +59,11 @@ ActiveRecord::Schema.define(version: 20131015004738) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.date     "date"
-    t.time     "time"
     t.integer  "program_id"
+    t.string   "host"
+    t.string   "audio_url"
   end
 
-=======
->>>>>>> cb20d0c... Finish user/program relationship
-=======
->>>>>>> 2aa2623... Finish CRUD program/categories/host
   create_table "hosts", force: true do |t|
     t.integer  "user_id"
     t.integer  "program_id"
@@ -98,10 +72,16 @@ ActiveRecord::Schema.define(version: 20131015004738) do
     t.datetime "updated_at"
   end
 
+  create_table "issues", force: true do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.boolean  "fixed",       default: false
+  end
+
   create_table "programs", force: true do |t|
     t.string   "title"
-<<<<<<< HEAD
-<<<<<<< HEAD
     t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -113,22 +93,6 @@ ActiveRecord::Schema.define(version: 20131015004738) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-=======
-    t.string   "date"
-    t.string   "time"
-    t.string   "category"
-    t.datetime "created_at"
-    t.datetime "updated_at"
->>>>>>> cb20d0c... Finish user/program relationship
-=======
-    t.string   "category"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "category_id"
-    t.text     "description"
-    t.time     "time"
-    t.date     "date"
->>>>>>> 2aa2623... Finish CRUD program/categories/host
   end
 
   create_table "users", force: true do |t|
@@ -150,6 +114,4 @@ ActiveRecord::Schema.define(version: 20131015004738) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-=======
->>>>>>> ffd0ab6... Episode audio db, controller, model
 end

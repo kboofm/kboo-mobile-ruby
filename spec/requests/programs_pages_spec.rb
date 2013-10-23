@@ -6,7 +6,7 @@ describe 'Program pages' do
       FactoryGirl.create(:category) 
       FactoryGirl.create(:user) 
       visit new_program_path
-      save_and_open_page
+      # save_and_open_page
       fill_in 'Title',                 with: 'How to build a Rails app'
       fill_in 'Date',                  with: '10-16-2013'
       fill_in 'Time',                  with: '12:45 PM'
