@@ -1,6 +1,6 @@
 $(document).ready(function (){
     // $(window).scroll(function() {
-    //   var scrollTop = 120;
+    //   var scrollTop = 78;
     //   if($(window).scrollTop() && $(window).scrollTop() >= scrollTop ){
     //         $('.lowernav').css({
     //             position : 'fixed',
@@ -12,11 +12,9 @@ $(document).ready(function (){
     //             }
     // });
 
-
-      // $(".jp-container").click(function() {        
-      //   $("jp-controls.jp-play").toggle();
-      //   $(".jp-pause").toggle();
-      //   alert("hello");
-      // });
-  
+      $('a.html5').click(function() {
+        var url = $(this).attr('href');  
+        $("#jquery_jplayer_1").jPlayer("setMedia", {mp3: url}).jPlayer("play");
+        return false;  
+      }); 
 });
