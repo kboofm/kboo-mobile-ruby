@@ -12,10 +12,13 @@ gem 'devise'
 gem 'will_paginate'
 gem 'cancan'
 gem 'jplayer-rails'
-gem "paperclip", "~> 3.0"
+gem 'paperclip', '~> 3.0'
 gem 'acts_as_singleton'
-gem 'whenever', :require => false
-# gem 'whenever', :require => false
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+end
 
 group :test, :development do
   gem 'capybara'
