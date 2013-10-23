@@ -1,7 +1,14 @@
-<h1>Create new category</h1>
+
+<h1>Create category</h1>
+
+<h4>Current categories</h4>
+<p><% @categories.each do |category| %>
+  <li><%= category.name %></li>
+  <% end %>
+</p>
+
 <%= form_for @category do |f| %>
-  <%= f.text_label :name %><br>
-  <%= f.text_field :name %><br>
-  <%= f.submit "Submit" %>
+  <%= f.label      :name %>
+  <%= f.text_field :name, autofocus: true %><br>
+  <%= f.submit 'Submit' %>
 <% end %>
-  

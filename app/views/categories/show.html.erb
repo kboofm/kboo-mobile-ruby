@@ -1,7 +1,12 @@
-<h1><%= @category.title %></h1>
-<%= image_tag @category.image.url(:avatar) %>
-<p>List:</p>
-  <ul><% @programs.each do |title| %>
-    <li><%= link_to program.title, program_path %></li>
-  <% end %>
-  </ul> 
+<h1><%= @category.name %></h1>
+<h4>Episodes</h4>
+<% @category.programs.each do |program| %>
+  <li><%= link_to program.title, program_path(program.id) %></li>
+<% end %> 
+
+<br>
+
+<% if current_user && (current_user.admin? || current_user.staff?) %>
+  <%= link_to 'Edit', edit_category_path %>
+  <%= link_to 'Delete', category_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>

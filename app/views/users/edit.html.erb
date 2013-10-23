@@ -1,5 +1,8 @@
 <%= @user.email %>
 <%= form_for @user do |f| %> 
+  <% if current_user.staff? %>
+    <div>Create new contributor:</div>
+  <% end %>
 
   <% if current_user.admin? %> 
     <div><%= f.collection_select :role, User::ROLES, :to_s, :humanize %></div>

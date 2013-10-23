@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Kboo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Kboo</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class='wrapper'>
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/jplayer' %>
+      <%= render 'layouts/episodes' %>
+      
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+      <%= flash[:success] %>
 
-<div class='wrapper'>
-  <%= render 'layouts/header' %>
-  <%= render 'layouts/jplayer' %>
-  <%= render 'layouts/episodes' %>
-  <%= render 'layouts/footer' %>
-  <%= flash[:notice] %>
-  <%= flash[:alert] %>
-  <%= flash[:success] %>
-  <%= yield %>
-</div>
+      <%= yield %>
 
-
-</body>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
 </html>
