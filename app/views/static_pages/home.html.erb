@@ -1,4 +1,7 @@
-<div>
+<div class="container">
+
+<%= render 'layouts/ads' %>
+<%= render '/layouts/recent_shots' %>
   <% @episodes.each do |episode| %>
     <div class="episode">
       <ul>
@@ -10,6 +13,7 @@
           </ul>
         </div>  
       </ul>
+
     </div> 
   <% end %>          
 </div>
