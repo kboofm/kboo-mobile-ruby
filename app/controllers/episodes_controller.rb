@@ -63,7 +63,8 @@ class EpisodesController < ApplicationController
 
   def restrict_access
     authenticate_or_request_with_http_token do |token, options|
-      ApiKey.instance.hashed_token.to_s == token
+      ApiKey.instance.authenticate_with(token)
+
     end
   end
 end

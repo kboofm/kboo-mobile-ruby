@@ -4,12 +4,10 @@ class ApiKey < ActiveRecord::Base
   include ActiveRecord::Singleton
   before_create :generate_access_token
   
-  
-
   def hashed_token
     Digest::HMAC.new((self.access_token +
                       Date.today.strftime('%Y%m%d') +
-                      Time.now.strftime('%H%M')), Digest::SHA1)                                
+                      Time.now.strftime('%H%M')), Digest::SHA1).to_s                                
   end  
 
   def authenticate_with(token)
@@ -22,6 +20,3 @@ private
     self.access_token = SecureRandom.hex
   end 
 end  
-
-
-
