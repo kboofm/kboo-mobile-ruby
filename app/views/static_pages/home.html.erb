@@ -7,12 +7,6 @@
         <div class="jp-circle-control">
           <ul class="jp-controls">
             <li><%= link_to "Play", episode.url, {:class => "jp-play"}%></li>
-            <script>$('a.html5').click(function() {
-              var url = $(this).attr('href');  
-              $("#jquery_jplayer_1").jPlayer("setMedia", mp3: url).jPlayer("play");
-              return false;  
-              }); 
-            </script>
           </ul>
         </div>  
       </ul>
