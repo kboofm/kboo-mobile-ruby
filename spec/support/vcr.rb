@@ -11,3 +11,4 @@ RSpec.configure do |c|
     VCR.use_cassette(name, options) { example.call }
   end
 end
+
