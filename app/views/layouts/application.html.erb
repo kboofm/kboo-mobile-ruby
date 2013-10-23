@@ -10,13 +10,13 @@
 
 <div class='wrapper'>
   <%= render 'layouts/header' %>
-  <br><br><br>
   <%= render 'layouts/jplayer' %>
+  <%= render 'layouts/episodes' %>
+  <%= render 'layouts/footer' %>
   <%= flash[:notice] %>
   <%= flash[:alert] %>
   <%= flash[:success] %>
   <%= yield %>
-  <%= render 'layouts/footer' %>
 </div>
 
 

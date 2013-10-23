@@ -82,16 +82,36 @@ html body {
   cursor:pointer;
 }
 
+.panel {
+  height: auto;
+  padding: 5px;
+  -moz-box-shadow:    1px 1px 2px 2px #636363;
+  -webkit-box-shadow: 1px 1px 2px 2px #636363;
+  box-shadow:         1px 1px 2px 2px #636363;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
 
 @media (max-width: 640px) {
   .jp-controls .jp-play {
-    background: url('play_btn_medium.png') no-repeat;
+    background: image-url('play_btn_medium.png') no-repeat;
     height: 71px;
     width: 71px;
   }
 
   .jp-controls .jp-pause {
-    background: url('pause_btn_medium.png') no-repeat;
+
+    background: image-url('pause_btn_medium.png') no-repeat;
     height: 71px;
     width: 71px;
   }
@@ -102,6 +122,9 @@ html body {
     text-shadow:4px 4px 6px white;
     text-align: center;
     height: 90px;
+    font-size: 2.5rem;
+    text-shadow:4px 4px 6px white;
+    text-align: center;
     width: 100%;
     margin: 0 auto;
   }
@@ -109,42 +132,53 @@ html body {
   .recent_programs {
     height: auto;
     width:100%;
+    margin-top: 50px;
   }
 
   .panel {
-    background: url('panel.png') no-repeat;
-    height: 102px;
-    margin:3%;
-    margin-top: -21px;
+/*    background: image-url('panel.png') no-repeat;
+*/  margin:3%;
+    margin-top: -3px;
   }
 
   .jp-controls {
     margin-left: -22px;
+    margin-top: 30px;
   }
 
   .player {
     margin-bottom: 65px;
   }
 
+  .more_btm_text {
+    font-family: 'Marvel', sans-serif;
+    font-size: 2.5rem;
+    text-shadow:4px 4px 6px white;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+
   footer {
-    height: 20px;
+    height: 35px;
     font-size: 1rem;
   }
 }
 
 @media (min-width: 609px) {
   .jp-controls .jp-play {
-    background: url('play_btn_lg.png') no-repeat;
+    background: image-url('play_btn_lg.png') no-repeat;
     background-position:center; 
-    height: 136px;
-    width: 136px;
+    height: 201px;
+    width: 200px;
   }
 
   .jp-controls .jp-pause {
-    background: url('pause_btn_lg.png') no-repeat;
+    background: image-url('pause_btn_lg.png') no-repeat;
     background-position:center; 
-    height: 136px;
-    width: 136px;
+    height: 201px;
+    width: 200px;
   }
 
   .hdr_text {
@@ -154,7 +188,11 @@ html body {
     text-align: center;
     height: 90px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto;    
+  }
+
+  hr {
+    margin-bottom: 50px;
   }
 
   .recent_programs { 
@@ -164,9 +202,8 @@ html body {
 
   .panel {
     background-color: white;
-    height: 102px;
     margin:3%;
-    margin-top: -16px;
+    margin-top: -13px;
   }
 
   .logo {
@@ -174,11 +211,21 @@ html body {
   }
 
   .player {
-    margin-bottom: 160px;
+    margin-bottom: 190px;
   }
   
   .jp-controls {
-    margin-left: -54px;
+    margin-left: -94px;
+  }
+
+  .more_btm_text {
+    font-family: 'Marvel', sans-serif;
+    font-size: 2.5rem;
+    text-shadow:4px 4px 6px white;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 35px;
   }
 
   footer {

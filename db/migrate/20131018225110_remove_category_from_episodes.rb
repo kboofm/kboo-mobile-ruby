@@ -1,5 +1,5 @@
 class RemoveCategoryFromEpisodes < ActiveRecord::Migration
   def change
-    remove_column :episodes, :category
+    # remove_column :episodes, :category
   end
 end
