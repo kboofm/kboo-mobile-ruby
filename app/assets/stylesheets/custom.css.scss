@@ -1,16 +1,29 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
+@import url(http://fonts.googleapis.com/css?family=Marvel:700);
 
-
-
-.logo {
-  margin-top: 2px;
-  width: 180px;
-  height: 40px;
-  background: url('../assets/logo.jpg') no-repeat;
-  background-size: 70%;
+/* Page Wrapper */
+.wrapper {
+  /*max-width: 600px;*/
+  width: 100%;
+  margin: 0 auto;
 }
 
-.attachment {
-  float:left
+/* Header Logo */
+.logo {
+  margin: 0 auto;
+  margin-top: 2px;
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #FD882B;
+  height: auto;
+  padding: 10px;
+  font-family: 'Marvel', sans-serif;
+  text-shadow: -3px 0px 5px white;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }

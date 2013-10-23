@@ -1,25 +1,21 @@
-</div>
-    <% @episodes.each do |episode| %>
-      <div class="episode">
-        <ul>
-          <li><%= image_tag episode.image.url(:mini) %><%= episode.title %></li>
-          <li><%= "Host: #{episode.host}" %>
-
-              <div class="jp-circle-control"></div>
-                <ul class="jp-controls">
-                  <li><%= link_to "Play", episode.url, {:class => "jp-play"}%></li>
-                    <script>$('a.html5').click(function() {
-
-                      var url = $(this).attr('href');  
-
-                      $("#jquery_jplayer_1").jPlayer("setMedia", mp3: url).jPlayer("play");
-
-                      return false;  
-                    }); 
-                  </script>
-              </ul>
-            </div>  
-          <% end %>
-            
-</div>
+<div>
+  <% @episodes.each do |episode| %>
+    <div class="episode">
+      <ul>
+        <li><%= image_tag episode.image.url(:mini) %><%= episode.title %></li>
+        <li><%= "Host: #{episode.host}" %></li>
+        <div class="jp-circle-control">
+          <ul class="jp-controls">
+            <li><%= link_to "Play", episode.url, {:class => "jp-play"}%></li>
+            <script>$('a.html5').click(function() {
+              var url = $(this).attr('href');  
+              $("#jquery_jplayer_1").jPlayer("setMedia", mp3: url).jPlayer("play");
+              return false;  
+              }); 
+            </script>
+          </ul>
+        </div>  
+      </ul>
+    </div> 
+  <% end %>          
 </div>
