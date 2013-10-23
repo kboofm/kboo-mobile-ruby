@@ -28,14 +28,6 @@ ActiveRecord::Schema.define(version: 20131022175345) do
     t.datetime "updated_at"
   end
 
-  create_table "comments", force: true do |t|
-    t.string   "comment_text"
-    t.string   "episode_id"
-    t.string   "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "episode_audio", force: true do |t|
     t.integer "episode_id"
     t.integer "fid"
@@ -52,10 +44,7 @@ ActiveRecord::Schema.define(version: 20131022175345) do
   create_table "episodes", force: true do |t|
     t.string   "title"
     t.string   "short_description"
-    t.string   "image"
     t.text     "long_description"
-    t.string   "audio_promo"
-    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -63,8 +52,10 @@ ActiveRecord::Schema.define(version: 20131022175345) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "program_id"
-    t.string   "url"
     t.string   "host"
+    t.time     "time"
+    t.date     "date"
+    t.string   "audio_url"
   end
 
   create_table "hosts", force: true do |t|
@@ -107,8 +98,6 @@ ActiveRecord::Schema.define(version: 20131022175345) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "role"
   end
 

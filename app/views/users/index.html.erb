@@ -1,6 +1,5 @@
 <h1>User List</h1>
 
-
 <% if current_user.admin? %>
   <ul>
   <% @users.each do |user| %>
@@ -9,6 +8,7 @@
   </ul>
 <% else %>
   <% redirect_to new_user_session_path %>  
+
 <% end %>
 
 <% if current_user.staff? %>
