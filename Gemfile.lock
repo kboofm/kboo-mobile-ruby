@@ -217,6 +217,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   lograge
+  nokogiri
   paperclip
   pg
   poltergeist
