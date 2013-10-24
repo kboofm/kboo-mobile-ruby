@@ -17,6 +17,7 @@ gem 'cancan'
 gem 'jplayer-rails'
 gem 'paperclip'
 gem 'acts_as_singleton'
+gem 'nokogiri'
 
 group :test do
   gem 'vcr'
