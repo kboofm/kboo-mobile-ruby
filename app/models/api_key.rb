@@ -7,7 +7,7 @@ class ApiKey < ActiveRecord::Base
   def hashed_token
     Digest::HMAC.new((self.access_token +
                       Date.today.strftime('%Y%m%d') +
-                      Time.now.strftime('%H%M')), Digest::SHA1).to_s                                
+                      Time.now.strftime('%H%M')), Digest::SHA1).to_s
   end  
 
   def authenticate_with(token)
