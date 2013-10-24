@@ -1,21 +1,24 @@
-
-<p>Current Episodes</p>
-
-<ul>
-<% @episodes.each do |episode| %>
-  <li><%= episode.title %><li>
-<% end %>
-</ul>
-<h1>Upcoming episodes</h1>
-
-<ul>
-<% @episodes.each do |episode| %>
-  <li>
-    <strong><%= link_to episode.title, episode %></strong>
-    <br><small><%= episode.date.strftime('%a %m/%d/%Y') %> at <%= episode.time.strftime('%I:%M%p') %></small>
-    <br><small><%= episode.short_description %></small>
-    <br><small><%= link_to episode.program.title, program_path(episode.program.id) %></small>
-  </li>
-<% end %>
-</ul>  
-
+<div class='hdr_text'>RECENT PROGRAMS</div>
+<div class='recent_programs'>
+  <% @episodes.each do |episode| %>
+    <div class='panel'>
+      <p class='panel-header'><%= episode.title %></p>
+      <h4><%= episode.short_description %></h4>
+      <p><%= "Host: #{episode.host}"%></p>
+      <div class='player'>
+        <div id='jquery_jplayer_1' class='jp-jplayer' data-audio-url='<%= episode.audio_url %>'></div>
+        <div id='jp_container_1' class='jp-container'>
+          <div class='jp-circle-control'>
+            <ul class='jp-controls'>
+              <li><a class='jp-play' tabindex='1'>play</a></li>
+              <li><a class='jp-pause' style='display: none;' tabindex='1'>pause</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>   
+    </div>
+  <% end %>   
+ </div>
+ <br>
+ <div class='more_btm_text'>More...</div>
+</div>

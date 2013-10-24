@@ -1,5 +1,12 @@
-$(document).ready(function(){
-  $('.jp-jplayer').jPlayer({
+<% @episodes.each do |episode| %>
+  <div class='player' data-audio-url='<%= episode.audio_url %>'>
+    <span class='play'>Play <%= episode.title %>!</span>
+  </div>
+<% end %>
+
+
+<script>
+  $('.player').jPlayer({
     ready: function () {
       $(this).jPlayer("setMedia", {
         m4a: $(this).data('audio-url'),
@@ -9,4 +16,4 @@ $(document).ready(function(){
     swfPath: "js",
     supplied: "m4a, oga"
   });
-});
+</script>

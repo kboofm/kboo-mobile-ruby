@@ -19,7 +19,8 @@ Kboo::Application.routes.draw do
   resources :programs
   resources :categories
   resources :episodes
+  
   get "static_pages/faq"
   get 'static_pages/about'
-  root 'static_pages#home'
+  root 'episodes#index'
 end

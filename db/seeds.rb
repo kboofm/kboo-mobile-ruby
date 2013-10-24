@@ -12,9 +12,7 @@ episode = Episode.create(
   title: 'test title',
   short_description: 'lorem ipsum',
   long_description: 'lorem ipsum and more',
-  program_id: 1,
-  category: "Tech",
-  audio_promo: "test"
+  host: "Jenka"
   ) 
 
 categories = %w[Technology Politics Arts Books Music News]
