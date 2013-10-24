@@ -1,22 +1,28 @@
 source 'https://rubygems.org'
 
 ruby '2.0.0'
+gem 'rails'
 
-gem 'rails', '4.0.0'
 gem 'pg'
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'will_paginate'
 gem 'cancan'
 gem 'jplayer-rails'
-gem 'paperclip', '~> 3.0'
+gem 'paperclip'
 gem 'acts_as_singleton'
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+end
+
 
 group :test, :development do
   gem 'capybara'
@@ -30,7 +36,6 @@ end
 
 group :test do
   gem 'better_errors'
-  # gem 'quiet_assets'
   gem 'curl'
 end
 
