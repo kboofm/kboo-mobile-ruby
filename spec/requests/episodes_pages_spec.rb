@@ -7,5 +7,10 @@ describe 'Episodes pages' do
       visit root_path
       page.should have_content 'jenka'
     end
+    it 'should play the recent episode' do
+      FactoryGirl.create(:episode)
+      visit root_path
+      click_link('play')
+      
   end
 end
