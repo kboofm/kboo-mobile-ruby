@@ -221,7 +221,6 @@ DEPENDENCIES
   pg
   poltergeist
   pry
-  quiet_assets
   rails
   rails_12factor
   rspec-rails
