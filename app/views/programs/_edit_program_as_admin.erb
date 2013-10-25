@@ -12,7 +12,7 @@
   <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: :true %><br>
   <%= f.label             :host %>
   <%= f.fields_for :hosts, @program.hosts do |ff| %>
-    <%= render 'layouts/host_form', :f => ff %>
+    <%= render 'host_form', :f => ff %>
     <%= ff.check_box :_destroy %>Remove Host<br>
   <% end %>
   
