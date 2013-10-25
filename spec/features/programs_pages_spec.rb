@@ -54,7 +54,6 @@ describe 'Program pages' do
       login
       program = FactoryGirl.create(:program)
       visit program_path(program.id)
-      save_and_open_page
       click_link 'Delete'
       page.should_not have_content program.title
     end
