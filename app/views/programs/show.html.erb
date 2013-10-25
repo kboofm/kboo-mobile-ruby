@@ -1,6 +1,6 @@
 <h1><%= @program.title %></h1>
-<p>Date: <strong><%= @program.date %></strong></p>
-<p>Time: <strong><%= @program.time.to_s[11..15] %></strong></p>
+<p>Date: <strong><%= @program.date.strftime('%a %b %d, %Y') %></strong></p>
+<p>Time: <strong><%= @program.time.strftime('%l:%M %p') %></strong></p>
 <% if @program.category %>
   <p>Category: <strong><%= @program.category.name %></strong></p>
 <% end %>
