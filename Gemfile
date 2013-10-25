@@ -1,19 +1,23 @@
 source 'https://rubygems.org'
-gem 'rails', '4.0.0'
+
+ruby '2.0.0'
+gem 'rails'
+
 gem 'pg'
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'will_paginate'
 gem 'cancan'
 gem 'jplayer-rails'
-gem 'paperclip', '~> 3.0'
+gem 'paperclip'
 gem 'acts_as_singleton'
+gem 'nokogiri'
 
 group :test do
   gem 'vcr'
@@ -32,7 +36,6 @@ end
 
 group :test do
   gem 'better_errors'
-  # gem 'quiet_assets'
   gem 'curl'
 end
 

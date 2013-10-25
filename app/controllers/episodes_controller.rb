@@ -1,7 +1,7 @@
 class EpisodesController < ApplicationController
-  before_filter :restrict_access, :except => [:index, :show, :new, :create]
+  before_filter :restrict_access, :except => [:index, :show]
   def index
-    @episodes = Episode.all
+    @episodes = Episode.limit(20)
   end
 
   def show
@@ -55,15 +55,15 @@ class EpisodesController < ApplicationController
     end
   end
 
-  private
+private
 
   def episode_params
-    params.require(:episode).permit(:title, :short_description, :long_description, :audio_promo, :date, :time, :program_id, :image)
+    params.require(:episode).permit(:title, :short_description, :long_description, :audio_url, :date, :time, :program_id, :image)
   end
 
   def restrict_access
     authenticate_or_request_with_http_token do |token, options|
-      ApiKey.exists?(access_token: token)
+      ApiKey.instance.authenticate_with(token)
     end
   end
 end

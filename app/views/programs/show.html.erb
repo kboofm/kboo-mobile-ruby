@@ -3,24 +3,16 @@
 <p>Time: <strong><%= @program.time.to_s[11..15] %></strong></p>
 <p>Category: <strong><%= @program.category.name %></strong></p>
 <p>Description: <strong><%= @program.description %></strong></p>
-<p>Hosts:</p>
-<<<<<<< HEAD
-  <% if @program.hosts.any? %>
-    <ul><% @program.hosts.each do |host| %>
-      <li><%= link_to host.user.email, user_path(host.user_id) %></li>
-    <% end %>
-    </ul>
-  <% end %> 
+
+<% if @program.hosts.any? %>
+  <p>Hosts:</p>
+  <ul><% @program.hosts.each do |host| %>
+    <li><%= link_to host.user.email, user_path(host.user_id) %></li>
+  <% end %>
+  </ul>
+<% end %> 
 
 <% if current_user && (current_user.admin? || current_user.staff? || current_user.programs.include?(@program) ) %>
-=======
-  <ul><% @program.hosts.each do |host| %>
-    <li><%= link_to host.email, host %></li>
-  <% end %>
-  </ul> 
-
-<% if current_user && (current_user.admin? || current_user.staff? ) %>
->>>>>>> 2aa2623... Finish CRUD program/categories/host
   <%= link_to 'Edit', edit_program_path %>
   <%= link_to 'Delete', program_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>

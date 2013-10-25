@@ -20,7 +20,6 @@
   }
 
   footer {
-
     background-color: #FD882B;
     height: 102px;
     margin:3%;
@@ -69,5 +68,15 @@
     background-color: white;
     border-radius: 5px;
     box-shadow: 10px 10px 5px #888888;
+  }
+  footer {
+    background-color: #FD882B;
+    height: auto;
+    padding: 10px;
+    font-family: 'Marvel', sans-serif;
+    text-shadow: -3px 0px 5px white;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
   }
 }

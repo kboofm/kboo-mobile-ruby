@@ -13,6 +13,8 @@ episode = Episode.create(
   short_description: 'lorem ipsum',
   long_description: 'lorem ipsum and more',
   program_id: 1
+  host: "Jenka"
+  audio_url: 'kboo_episode.2.131010.0930.14557.mp3'
   ) 
 
 categories = %w[Technology Politics Arts Books Music News]
@@ -21,5 +23,4 @@ categories.each do |category|
   Category.create(:name => category)
 end  
 
-programs = Program.create(:title => "Classical Music", :category_id => 2, :description => "Lost symphonies of Mozart", :date => Date.today, :time => Time.now)
-
+Program.create(:title => "Classical Music", :category_id => 2, :description => "Lost symphonies of Mozart", :date => Date.today, :time => Time.now)

@@ -30,5 +30,13 @@ FactoryGirl.define do
     password_confirmation '12345678'
     role                  'admin'
   end
+
+  factory :episode do
+    title    'title test'
+    short_description 'lorem ipsum'
+    long_description 'morem lorem ipsum'
+    host 'jenka'
+    audio_url 'kboo_episode.2.131010.0930.14557.mp3'
+  end  
 end
 

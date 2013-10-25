@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $("#jquery_jplayer_1").jPlayer({
+  $("div[data-audio-url= ]").jPlayer({
     ready: function () {
       $(this).jPlayer("setMedia", {
         m4a: "http://live.kboo.fm:8000/high",
@@ -10,3 +10,8 @@ $(document).ready(function(){
     supplied: "m4a, oga"
   });
 });
+
+
+$('.player').each(function() {
+  $(this).select("div[data-audio-url")
+})
