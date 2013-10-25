@@ -4,7 +4,7 @@
 <% @programs.each do |program| %>
   <li>
     <span class='program-title'><%= link_to program.title, program %></span>
-    <small><%= program.date.to_s[0..9] + " " + program.time.to_s[11..15] %>
+    <small><%= program.date.strftime('%a %b %d, %Y') + ' at ' + program.time.strftime('%l:%M %p') %>
     <% if program.category %>
       <em><%= program.category.name %></em></small>
     <% end %>
