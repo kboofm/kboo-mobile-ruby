@@ -4,14 +4,11 @@
 
 
 @media (max-width: 640px) {
-  /* Page Wrapper */
   .wrapper {
-    /*max-width: 600px;*/
     width: 100%;
     margin: 0 auto;
   }
 
-  /* Header Logo */
   .logo {
     margin: 0 auto;
     margin-top: 2px;
@@ -69,6 +66,7 @@
     border-radius: 5px;
     box-shadow: 10px 10px 5px #888888;
   }
+  
   footer {
     background-color: #FD882B;
     height: auto;

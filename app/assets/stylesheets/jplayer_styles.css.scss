@@ -1,5 +1,3 @@
-/* mobile player styles */
-@media(max-width: 800px){
   /*
    * Project: CirclePlayer
    * http://www.jplayer.org
@@ -17,29 +15,23 @@
   */
 
 
+/* mobile player styles */
+@media(max-width: 800px) {
 
   html body {
     background-color: #7DD3F6 !important;
   }
 
-
-  /**********************************************************************/
   .jplayer-1 {
     margin: 0 auto;
     width: 50%;
     height: 50%;
   }
 
-
-  .player{
+  .player {
     margin: 0 auto;
     width: auto;
     height: auto;
-    background-color: #7DD3F6;
-  }
-
-  .body {
-    display: none;
     background-color: #7DD3F6;
   }
 
@@ -65,7 +57,7 @@
     cursor:pointer;
   }
 
-  .jp-controls li{
+  .jp-controls li {
     list-style-type:none;
     display:block;
   }
@@ -78,7 +70,7 @@
     box-shadow:         1px 1px 2px 2px #636363;
   }
 
-  .jp-controls li a{
+  .jp-controls li a {
     margin: 0 auto;
     top: -100%;
     display:block;
@@ -101,67 +93,67 @@
     text-align: center;
   }
 
-  @media (max-width: 640px) {
-    .jp-controls .jp-play {
-      background: image-url('play_btn_medium.png') no-repeat;
-      height: 71px;
-      width: 71px;
-    }
-
-    .jp-controls .jp-pause {
-      background: image-url('pause_btn_medium.png') no-repeat;
-      height: 71px;
-      width: 71px;
-    }
-
-    .hdr_text {
-      font-family: 'Marvel', sans-serif;
-      font-size: 3rem;
-      text-shadow:4px 4px 6px white;
-      text-align: center;
-      height: 90px;
-      font-size: 2.5rem;
-      text-shadow:4px 4px 6px white;
-      text-align: center;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .recent_programs {
-      height: auto;
-      width:100%;
-      margin-top: 50px;
-    }
-
-    .panel {
-      margin:3%;
-      margin-top: -3px;
-    }
-
-    .jp-controls {
-      margin-left: -22px;
-      margin-top: 30px;
-    }
-
-    .player {
-      margin-bottom: 65px;
-    }
-
-    .more_btm_text {
-      font-family: 'Marvel', sans-serif;
-      font-size: 2.5rem;
-      text-shadow:4px 4px 6px white;
-      text-align: center;
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 35px;
-    }
-
-    footer {
-      height: 35px;
-      font-size: 1rem;
-    }
+@media (max-width: 640px) {
+  .jp-controls .jp-play {
+    background: image-url('play_btn_medium.png') no-repeat;
+    height: 71px;
+    width: 71px;
   }
+
+  .jp-controls .jp-pause {
+    background: image-url('pause_btn_medium.png') no-repeat;
+    height: 71px;
+    width: 71px;
+  }
+
+  .hdr_text {
+    font-family: 'Marvel', sans-serif;
+    font-size: 3rem;
+    text-shadow:4px 4px 6px white;
+    text-align: center;
+    height: 90px;
+    font-size: 2.5rem;
+    text-shadow:4px 4px 6px white;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .recent_programs {
+    height: auto;
+    width:100%;
+    margin-top: 50px;
+  }
+
+  .panel {
+    margin:3%;
+    margin-top: -3px;
+  }
+
+  .jp-controls {
+    margin-left: -22px;
+    margin-top: 30px;
+  }
+
+  .player {
+    margin-bottom: 65px;
+  }
+
+  .more_btm_text {
+    font-family: 'Marvel', sans-serif;
+    font-size: 2.5rem;
+    text-shadow:4px 4px 6px white;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+
+  footer {
+    height: 35px;
+    font-size: 1rem;
+  }
+}
 
 @media (min-width: 609px) {
   .jp-controls .jp-play {
@@ -276,7 +268,7 @@
 }
 
 /* desktop player styles */
-@media(min-width: 800px){
+@media(min-width: 800px) {
 
   html body {
     background-color: 'white' !important;
@@ -404,4 +396,5 @@
     margin: 0 auto;
     margin-bottom: 35px;
   }
+}
 }
