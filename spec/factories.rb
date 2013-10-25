@@ -2,8 +2,8 @@ FactoryGirl.define do
 
   factory :program do
     title       'Build a Rails app'
-    date        Date.today.to_s[0..9]
-    time        Time.now.to_s[11..15]
+    date        Date.today
+    time        Time.now
     description 'Multi-threaded integration testing for humans'
   end 
 
