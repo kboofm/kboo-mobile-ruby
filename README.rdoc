@@ -1,28 +1,17 @@
-== README
+== KBOO.FM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+KBOO is Portland's premier community radio station. This is their new rails page
 
-Things you may want to cover:
+* Rails 4/Ruby 2.0
 
-* Ruby version
+* To Run:
 
-* System dependencies
+* rake db:create
 
-* Configuration
+* rake db:schema:load
 
-* Database creation
+* rake db:seed
 
-* Database initialization
+* rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* admin login: admin@kboo.org , 12345678

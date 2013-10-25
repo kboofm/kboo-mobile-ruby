@@ -1,0 +1,19 @@
+<div class="container">
+
+<%= render 'layouts/ads' %>
+<%= render '/layouts/recent_shows' %>
+  <% @episodes.each do |episode| %>
+    <div class="episode">
+      <ul>
+        <li><%= image_tag episode.image.url(:mini) %><%= episode.title %></li>
+        <li><%= "Host: #{episode.host}" %></li>
+        <div class="jp-circle-control">
+          <ul class="jp-controls">
+            <li><%= link_to "Play", episode.url, {:class => "jp-play"}%></li>
+          </ul>
+        </div>  
+      </ul>
+
+    </div> 
+  <% end %>          
+</div>

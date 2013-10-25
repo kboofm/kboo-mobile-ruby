@@ -12,9 +12,19 @@
       <%= render 'layouts/jplayer' %>
       <%= render 'layouts/on_air_next' %>
 
+<<<<<<< HEAD
       <%= flash[:notice] %>
       <%= flash[:alert] %>
       <%= flash[:success] %>
+=======
+<div class='wrapper'>
+  <%= render 'layouts/header' %>
+  <%= flash[:notice] %>
+  <%= flash[:alert] %>
+  <%= flash[:success] %>
+  <%= yield %>
+</div>
+>>>>>>> origin
 
       <%= yield %>
 

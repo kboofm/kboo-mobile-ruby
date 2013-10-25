@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 20131022175345) do
     t.datetime "image_updated_at"
     t.integer  "program_id"
     t.string   "host"
+    t.time     "time"
+    t.date     "date"
     t.string   "audio_url"
   end
 
@@ -70,14 +72,6 @@ ActiveRecord::Schema.define(version: 20131022175345) do
     t.string   "created_by"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "issues", force: true do |t|
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-    t.boolean  "fixed",       default: false
   end
 
   create_table "on_air_next", force: true do |t|
@@ -112,8 +106,6 @@ ActiveRecord::Schema.define(version: 20131022175345) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "role"
   end
 
