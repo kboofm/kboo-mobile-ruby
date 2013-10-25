@@ -12,7 +12,8 @@ episode = Episode.create(
   title: 'test title',
   short_description: 'lorem ipsum',
   long_description: 'lorem ipsum and more',
-  host: "Jenka"
+  host: "Jenka",
+  audio_url: "http://www.kboo.fm/sites/default/files/episode_audio/kboo_episode.2.131025.0800.2709.mp3"
   ) 
 
 categories = %w[Technology Politics Arts Books Music News]

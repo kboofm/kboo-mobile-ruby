@@ -10,13 +10,5 @@ $(document).ready(function (){
         if($(window).scrollTop() < scrollTop){
                     $('.lowernav').removeAttr('style');  
                 }
-    });
-
-
-      // $(".jp-container").click(function() {        
-      //   $("jp-controls.jp-play").toggle();
-      //   $(".jp-pause").toggle();
-      //   alert("hello");
-      // });
-  
+    });  
 });

@@ -12,10 +12,13 @@
       <%= render 'layouts/header' %>
       <%= render 'layouts/jplayer' %>
       <%= render 'layouts/on_air_next' %>
+
       <%= flash[:notice] %>
       <%= flash[:alert] %>
       <%= flash[:success] %>
+
       <%= yield %>
+      
       <%= render 'layouts/footer' %>
     </div>
   </body>
