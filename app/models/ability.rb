@@ -8,13 +8,17 @@ class Ability
       if user.admin? 
         can :manage, :all
       elsif user.staff?
-        can :create, User, :role => 'contributor'
+        can :create, User, role: 'contributor'
+        can :manage, Program
       else
+        # can :update, Program, :hosts => { :user_id => user.id } NEEDS MORE TESTING
         can :read, :all
       end  
 
 
-
+# can :read, Article, Article.published do |article|
+#   article.published_at <= Time.now
+# end
 
 
     # The first argument to `can` is the action you are giving the user 

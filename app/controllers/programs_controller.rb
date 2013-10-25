@@ -1,4 +1,6 @@
 class ProgramsController < ApplicationController
+  # authorize_resource
+
   def index
     @programs = Program.all
   end
@@ -17,7 +19,6 @@ class ProgramsController < ApplicationController
       flash[:success] = 'Program created'
       redirect_to @program
     else
-      flash[:alert].now = 'Invalid entry'
       render 'new'
     end
   end
@@ -32,7 +33,6 @@ class ProgramsController < ApplicationController
       flash[:success] = 'Program updated'
       redirect_to @program
     else
-      flash[:alert].now = 'Invalid entry'
       render 'edit'
     end
   end
@@ -43,9 +43,8 @@ class ProgramsController < ApplicationController
     redirect_to programs_path
   end
 
-  private
-    def program_params
-      params.require(:program).permit(:title, :date, :time, :category_id, :created_by, :description, hosts_attributes: [:user_id, :id, :_destroy] )
-    end
-  
+private
+  def program_params
+    params.require(:program).permit(:title, :date, :time, :category_id, :created_by, :description, hosts_attributes: [:user_id, :id, :_destroy] )
+  end
 end
