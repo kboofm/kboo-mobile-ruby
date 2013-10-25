@@ -1,13 +1,15 @@
 <div class='hdr_text'>STREAM LIVE</div>
 <div class='player'>
-  <div id='jquery_jplayer_1' class='jp-jplayer'></div>
+  <div id='jquery_jplayer_1' data-audio-url="http://live.kboo.fm:8000/high"></div>
   <div id='jp_container_1' class='jp-container'>      
     <div class='jp-circle-control'>
       <ul class='jp-controls'>
-        <li><a class='jp-play' tabindex='1'>play</a></li>
-        <li><a class='jp-pause' style='display: none;' tabindex='1'>pause</a></li>
+        <li><a class='jp-play' tabindex='1' value="Play" onclick="updatePlayer('http://live.kboo.fm:8000/high');">play</a></li>
+        <li><a class='jp-pause' style='display: none;' tabindex='1' value="Stop" onclick="stop();">pause</a></li>
       </ul>
     </div>
   </div>
 </div>   
 <hr>
+
+
