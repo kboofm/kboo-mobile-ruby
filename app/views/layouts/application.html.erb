@@ -8,18 +8,19 @@
   </head>
   <body>
 
-    <div class='wrapper'>
+    <div class='wrapper' id="mobile-wrapper">
       <%= render 'layouts/header' %>
       <%= render 'layouts/jplayer' %>
       <%= render 'layouts/on_air_next' %>
+    </div>
 
+    <div class='container'>
+      <%= render 'layouts/header' %>
       <%= flash[:notice] %>
       <%= flash[:alert] %>
       <%= flash[:success] %>
-
       <%= yield %>
-      
-      <%= render 'layouts/footer' %>
-    </div>
+    </div>      
+    <%= render 'layouts/footer' %>
   </body>
 </html>

@@ -24,7 +24,6 @@ group :test do
   gem 'webmock'
 end
 
-
 group :test, :development do
   gem 'capybara'
   gem 'shoulda-matchers'

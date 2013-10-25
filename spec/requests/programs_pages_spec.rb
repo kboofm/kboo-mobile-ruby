@@ -11,7 +11,7 @@ describe 'Program pages' do
       fill_in 'Time',                  with: '12:45 PM'
       select 'Technology',             from: 'program_category_id'
       select 'admin@kboo.org',         from: 'program_hosts_attributes_0_user_id'
-      click_button 'Submit'
+      click_button 'Save Program'
       page.should have_content 'Date'
     end
   end

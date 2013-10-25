@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20131022175345) do
     t.string   "title"
     t.string   "short_description"
     t.text     "long_description"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -53,8 +54,6 @@ ActiveRecord::Schema.define(version: 20131022175345) do
     t.datetime "image_updated_at"
     t.integer  "program_id"
     t.string   "host"
-    t.date     "date"
-    t.time     "time"
     t.string   "audio_url"
   end
 
