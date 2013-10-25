@@ -3,7 +3,6 @@
 <p>Time: <strong><%= @program.time.to_s[11..15] %></strong></p>
 <p>Category: <strong><%= @program.category.name %></strong></p>
 <p>Description: <strong><%= @program.description %></strong></p>
-
 <% if @program.hosts.any? %>
   <p>Hosts:</p>
   <ul><% @program.hosts.each do |host| %>
