@@ -4,8 +4,19 @@
     <div class='panel'>
       <p class='panel-header'><%= episode.title %></p>
       <h4><%= episode.short_description %></h4>
+<<<<<<< HEAD
       <p><%= "Host: #{episode.host}"%></p>
       <a value="Play" onclick="updatePlayer('<%= episode.audio_url %>');" class="btn btn-primary">Play</a>
     </div>
   <% end %>   
+=======
+      <p>Host: <%= episode.host %></p>
+      <div class='player'>
+        <div id='jquery_jplayer_1' class='jp-jplayer' data-audio-url ='<%= episode.audio_url %>'></div>
+      </div>   
+    </div>
+  <% end %>   
+ </div>
+ <div class='more_btm_text'>More...</div>
+>>>>>>> origin/mvp-mobile
 </div>
