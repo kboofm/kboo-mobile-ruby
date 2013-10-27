@@ -7,7 +7,7 @@ class ApiKey < ActiveRecord::Base
   def hashed_token
     Digest::SHA1.hexdigest(self.access_token +
                            Date.today.strftime('%Y%m%d') +
-                           Time.now.strftime('%H%M')).to_s
+                           Time.zone.now.strftime('%H%M'))
   end  
 
   def authenticate_with(token)
