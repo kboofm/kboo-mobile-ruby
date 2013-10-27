@@ -24,8 +24,10 @@
     height: auto;
   }
 
-@media (min-width: 800px) #logo {
-  display: none;
+@media (min-width: 800px) {
+  #logo {
+    display: none;
+  }
 }
 
 footer {
@@ -40,18 +42,17 @@ footer {
 }
 
 .btn btn-primary {
-  text-align: center
-    background-color: #FD882B;
-    height: 102px;
-    margin:3%;
-    margin-top: -21px;
-    font-family: 'Marvel', sans-serif;
-    text-shadow:4px 4px 6px white;
-    text-align: center;
-    height: 90px;
-    width: 100%;
-    margin: 0 auto;
-  }
+  text-align: center;
+  background-color: #FD882B;
+  height: 102px;
+  margin:3%;
+  margin-top: -21px;
+  font-family: 'Marvel', sans-serif;
+  text-shadow:4px 4px 6px white;
+  text-align: center;
+  height: 90px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 @media (min-width: 641px) {
