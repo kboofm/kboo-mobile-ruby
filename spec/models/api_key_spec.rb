@@ -11,7 +11,7 @@ describe ApiKey do
     unhashed_token = api_key.access_token +
                      Date.today.strftime('%Y%m%d') +
                      Time.now.strftime('%H%M')
-    test_hashed_token = Digest::HMAC.new(unhashed_token, Digest::SHA1).to_s
+    test_hashed_token = Digest::SHA1.hexdigest(unhashed_token).to_s
     api_key.hashed_token.should eq test_hashed_token
   end
 
