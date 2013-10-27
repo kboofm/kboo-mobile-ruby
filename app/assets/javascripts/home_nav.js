@@ -1,5 +1,4 @@
 $(document).ready(function (){
-<<<<<<< HEAD
     $(window).scroll(function() {
       var scrollTop = 120;
       if($(window).scrollTop() && $(window).scrollTop() >= scrollTop ){
@@ -12,8 +11,6 @@ $(document).ready(function (){
                     $('.lowernav').removeAttr('style');  
                 }
     });  
-});
-=======
     // $(window).scroll(function() {
     //   var scrollTop = 78;
     //   if($(window).scrollTop() && $(window).scrollTop() >= scrollTop ){
@@ -33,4 +30,3 @@ $(document).ready(function (){
         return false;  
       }); 
 });
->>>>>>> master
