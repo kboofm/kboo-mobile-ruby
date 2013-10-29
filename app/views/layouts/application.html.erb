@@ -8,12 +8,14 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-
+    
+    <%= render 'layouts/header' %>
+    
+    <div class="banner"></div>
+    
     <div class='wrapper' id="mobile-wrapper">
-      <%= render 'layouts/header' %>
-      <%= image_tag 'banner.png', id: 'banner' %>
-      <%= image_tag 'cartoon_logo.png', id: 'logo' %>
       <%= render 'layouts/on_air_next' %>
+      
     </div>
 
     <div class='container'>
