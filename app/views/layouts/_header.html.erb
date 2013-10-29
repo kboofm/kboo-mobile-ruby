@@ -13,16 +13,15 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse navbar-fixed-top">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
+      <li class="active"><%= link_to "KBOO", root_path %></li>
+<!--       <li><a href="#">Link</a></li> -->
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li>
+          <li><%= link_to "All programs", programs_path %></li>
+          <% if current_user && (current_user.admin? || current_user.staff?) %>
+            <li><%= link_to 'Create program', new_program_path %></li>
+          <% end %>
         </ul>
       </li>
     </ul>
@@ -34,15 +33,17 @@
     </form>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="javascript:;" onclick="updatePlayer('http://live.kboo.fm:8000/high');">Live Radio</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
+      <% if current_user %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %> <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class='nav-right'><%= link_to 'Logout', destroy_user_session_path, method: :delete %> </li>
+          </ul>
+        </li>
+      <% else %>
+        <li class="nav_right"><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
+      <% end %>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
