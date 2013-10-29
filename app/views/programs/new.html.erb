@@ -12,7 +12,7 @@
   <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: :true %><br>
   <%= f.label             :host %>
   <%= f.fields_for :hosts, @program.hosts.new do |ff| %>
-    <%= render 'layouts/host_form', :f => ff %>
+    <%= render 'host_form', :f => ff %>
   <% end %><br>
-  <%= f.submit "Save Program" %>
+  <%= f.submit 'Save Program' %>
 <% end %>  

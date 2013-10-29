@@ -35,4 +35,31 @@ describe Ability do
     user = User.new(:email => 'admin@test.com', :password => 'password', :password_confirmation => 'password', :role => 'admin')
     ability.should be_able_to(:create, admin)
   end
+
+  # NEEDS MORE TESTING
+  # it "lets hosts edit their own programs" do
+  #   user = FactoryGirl.create(:user)
+  #   program = FactoryGirl.create(:program)
+  #   Host.new(program_id: program.id, user_id: user.id)
+  #   ability = Ability.new(user)
+  #   ability.should be_able_to(:update, program)
+  # end
+
+  # it "doesn't let hosts edit somebody else's programs" do
+
+  # end
+
+  it "lets staff edit anybody's programs" do
+    staff = User.create(:email => 'staff@test.com', :password => 'password', :password_confirmation => 'password', :role => 'staff')
+    ability = Ability.new(staff)
+    program = Program.new(:title => 'This is a test program', :description => 'A program to test functionality')
+    ability.should be_able_to(:edit, program)
+  end
+
+  it "lets admins edit anybody's programs" do
+    admin = User.create(:email => 'admin@test.com', :password => 'password', :password_confirmation => 'password', :role => 'admin')
+    ability = Ability.new(admin)
+    program = Program.new(:title => 'This is a test program', :description => 'A program to test functionality')
+    ability.should be_able_to(:edit, program)
+  end
 end

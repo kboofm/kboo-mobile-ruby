@@ -1,10 +1,10 @@
 FactoryGirl.define do
 
   factory :program do
-    title      'Build a Rails app'
-    date       Date.today.to_s[0..9]
-    time       Time.now.to_s[11..18]
-    category
+    title       'Build a Rails app'
+    date        Date.today
+    time        Time.now
+    description 'Multi-threaded integration testing for humans'
   end 
 
   factory :episode_audio do
@@ -28,7 +28,9 @@ FactoryGirl.define do
     email                 'admin@kboo.org'
     password              '12345678' 
     password_confirmation '12345678'
-    role                  'admin'
+    factory :admin do
+      role                'admin'
+    end
   end
 
   factory :episode do
