@@ -22,5 +22,14 @@ Kboo::Application.routes.draw do
   
   get "static_pages/faq"
   get 'static_pages/about'
+  get 'static_pages/board'
+  get 'static_pages/committees'
+  get 'static_pages/faq'
+  get 'static_pages/home'
+  get 'static_pages/press'
+  get 'static_pages/staff'
+  get 'static_pages/story'
+  get 'static_pages/strategic_plan'
+
   root 'episodes#index'
 end

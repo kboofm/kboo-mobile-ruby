@@ -10,7 +10,7 @@ describe ApiKey do
     api_key = ApiKey.instance
     unhashed_token = api_key.access_token +
                      Date.today.strftime('%Y%m%d') +
-                     Time.now.strftime('%H%M')
+                     Time.zone.now.strftime('%H%M')
     test_hashed_token = Digest::SHA1.hexdigest(unhashed_token).to_s
     api_key.hashed_token.should eq test_hashed_token
   end
@@ -25,3 +25,4 @@ describe ApiKey do
     api_key.authenticate_with(api_key.hashed_token).should be_true
   end  
 end  
+

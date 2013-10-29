@@ -12,8 +12,22 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse navbar-fixed-top">
     <ul class="nav navbar-nav">
-      <li class="active"><%= link_to "KBOO", root_path %></li>
-<!--       <li><a href="#">Link</a></li> -->
+      <li class="dropdown active">
+        <%= link_to root_path, :class => "dropdown-toggle", :data => {:toggle=>"dropdown"} do %>
+          KBOO <b class="caret"></b>
+        <% end %>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Story", static_pages_story_path %></li>
+          <li><%= link_to "Staff", static_pages_staff_path %></li>
+          <li><%= link_to "Press", static_pages_press_path %></li>
+          <li><%= link_to "Board", static_pages_board_path %></li>
+          <li><%= link_to "Strategic Plan", static_pages_strategic_plan_path %></li>
+          <li><%= link_to "Committees", static_pages_committees_path %></li>
+          <li><%= link_to "FAQ", static_pages_faq_path %></li>
+          <li><%= link_to "About", static_pages_about_path %></li>
+        </ul>
+      </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs <b class="caret"></b></a>
         <ul class="dropdown-menu">
