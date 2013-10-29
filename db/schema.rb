@@ -28,14 +28,6 @@ ActiveRecord::Schema.define(version: 20131028183706) do
     t.datetime "updated_at"
   end
 
-  create_table "comments", force: true do |t|
-    t.string   "comment_text"
-    t.string   "episode_id"
-    t.string   "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "episode_audio", force: true do |t|
     t.integer "episode_id"
     t.integer "fid"
@@ -73,14 +65,6 @@ ActiveRecord::Schema.define(version: 20131028183706) do
     t.datetime "updated_at"
   end
 
-  create_table "issues", force: true do |t|
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-    t.boolean  "fixed",       default: false
-  end
-
   create_table "on_air_next", force: true do |t|
     t.string   "program_title"
     t.datetime "created_at"
@@ -89,7 +73,6 @@ ActiveRecord::Schema.define(version: 20131028183706) do
 
   create_table "programs", force: true do |t|
     t.string   "title"
-    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"

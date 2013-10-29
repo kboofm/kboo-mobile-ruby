@@ -1,7 +1,8 @@
 class EpisodesController < ApplicationController
   before_filter :restrict_access, :except => [:index, :show]
+  
   def index
-    @episodes = Episode.all
+    @episodes = Episode.limit(20)
   end
 
   def show
