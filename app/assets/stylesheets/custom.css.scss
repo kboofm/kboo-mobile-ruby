@@ -1,95 +1,76 @@
 @import 'bootstrap';
-@import 'bootstrap-responsive';
 @import url(http://fonts.googleapis.com/css?family=Marvel:400,400italic);
 
-@media (max-width: 800px) {
-  .desktop {
-    display: none;
-  }
-}
-
-@media (max-width: 800px) {
-  /* Page Wrapper */
-  .wrapper {
-    /*max-width: 600px;*/
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-  /* Header Logo */
-  .logo {
-    margin: 0 auto;
-    margin-top: 2px;
-    width: 100%;
-    height: auto;
+@media (max-width: 767px) /* @grid-float-breakpoint -1 */
+{
+  .navbar-fixed-top
+  {
+  position: relative;
+  top: auto;
   }
 
-@media (min-width: 800px) {
-  #logo {
-    display: none;
+  .navbar-fixed-bottom
+  {
+  position: relative;
+  top: auto;
   }
+
+  html body {
+  background-color: #7DD3F6 !important;
+  }
+  h3 {
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+
 }
+
+html body {
+  background-color: #7DD3F6 !important;
+  margin-bottom: 30px;
+  }
 
 footer {
-  background-color: #FD882B;
-  height: auto;
-  padding: 10px;
-  font-family: 'Marvel', sans-serif;
-  text-shadow: -3px 0px 5px white;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
+  height: 30px;
+}  
+
+#logo {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+#banner {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+  }  
+
+@media (max-width: 743px) {
+   #banner { 
+      display: none;
+      margin-top: -10px;
+   }
+}  
+
+@media (min-width: 743px) {
+   #logo { 
+      display: none;
+   }
+/*   .panel {
+     margin-top: 40px;
+   }*/
+}  
+
+.btnplay {
+  background: image-url('play_btn_sm.png');
 }
 
-.btn btn-primary {
-  text-align: center;
-  background-color: #FD882B;
-  height: 102px;
-  margin:3%;
-  margin-top: -21px;
-  font-family: 'Marvel', sans-serif;
-  text-shadow:4px 4px 6px white;
-  text-align: center;
-  height: 90px;
-  width: 100%;
-  margin: 0 auto;
-}
 
-@media (min-width: 641px) {
-  /* desktop stylings */
 
-  .up_bar {
-    background-image: image-url('cartoon_logo.png');
-    height: 276px;
-    width: 100%;
-    padding-top: 100px;
-    background-color: white;
-    margin-top: 60px;
-  }
 
-  .lower_bar {
-    width: 100%;
-    background-color: white !important;
-  }
-
-  #donate {
-    background-color: white;
-    border-radius: 5px;
-    height: 150px;
-    margin: auto;
-  }
-
-  .right {
-    float: right;
-    background-color: white;
-    margin-top: 10px;
-    border-radius: 5px
-  }
-
-  .shows {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 10px 10px 5px #888888;
-  }
-}

@@ -1,11 +1,18 @@
-<div class='hdr_text'>RECENT PROGRAMS</div>
+
+
+
+<div class="banner"
+
+<h3>RECENT PROGRAMS</h3>
 <div class='recent_programs'>
   <% @episodes.each do |episode| %>
     <div class='panel'>
       <p class='panel-header'><%= episode.title %></p>
       <h4><%= episode.short_description %></h4>
-      <p><%= "Host: #{episode.host}"%></p>
-      <a value="Play" onclick="updatePlayer('<%= episode.audio_url %>');" class="btn btn-primary">Play</a>
+      <p><%= "Host: #{episode.host}"%>
+        <a  value="Play" onclick="updatePlayer('<%= episode.audio_url %>');" class="btnplay"></a>
+      </p>
+      
     </div>
   <% end %>   
 </div>
