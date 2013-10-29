@@ -1,15 +1,13 @@
-<div class='hdr_text'>RECENT PROGRAMS</div>
+
+
+<h3>RECENT PROGRAMS</h3>
 <div class='recent_programs'>
   <% @episodes.each do |episode| %>
     <div class='panel'>
       <p class='panel-header'><%= episode.title %></p>
       <h4><%= episode.short_description %></h4>
-      <p>Host: <%= episode.host %></p>
-      <div class='player'>
-        <div id='jquery_jplayer_1' class='jp-jplayer' data-audio-url ='<%= episode.audio_url %>'></div>
-      </div>   
+      <p><%= "Host: #{episode.host}"%></p>
+      <a  value="Play" onclick="updatePlayer('<%= episode.audio_url %>');" class="btnplay"></a>
     </div>
   <% end %>   
- </div>
- <div class='more_btm_text'>More...</div>
 </div>

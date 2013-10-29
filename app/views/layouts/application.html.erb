@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=0.75;">
 <html>
   <head>
     <title>Kboo</title>
@@ -7,15 +8,22 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class='wrapper'>
-      <%= render 'layouts/header' %>
-      <%= render 'layouts/jplayer' %>
-      <%= render 'layouts/on_air_next' %>
+    <%= render 'layouts/header' %>
+    
+    <div class="banner"></div>    
+    <div class='wrapper' id="mobile-wrapper">
+      <%= render 'layouts/on_air_next' %>     
+    </div>
+
+    <div class='container'>
       <%= flash[:notice] %>
       <%= flash[:alert] %>
       <%= flash[:success] %>
+      
       <%= yield %>
+
       <%= render 'layouts/footer' %>
-    </div>
+    </div>      
+    
   </body>
 </html>

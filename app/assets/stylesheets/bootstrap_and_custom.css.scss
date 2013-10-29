@@ -1,0 +1,58 @@
+@import 'bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Marvel:400,400italic);
+
+
+html body {
+  background-color: #7DD3F6 !important;
+  margin-bottom: 30px;
+}
+
+footer {
+  height: 30px;
+}
+
+.btnplay {
+  content: image-url('play_btn_sm.png');
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-fixed-top {
+    position: relative;
+    top: auto;
+  }
+
+  .navbar-fixed-bottom {
+    position: relative;
+    top: auto;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 743px) {
+   .banner { 
+      content: image-url('cartoon_logo.png');
+      text-align: center;
+      margin: 0 auto;
+   }
+}  
+
+@media (min-width: 743px) {
+   .banner { 
+      content: image-url('banner.png');
+      text-align: center;
+      margin: 50px auto;
+   }
+}  

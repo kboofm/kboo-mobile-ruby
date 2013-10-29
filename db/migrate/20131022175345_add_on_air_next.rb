@@ -1,4 +1,4 @@
-class OnAirNext < ActiveRecord::Migration
+class AddOnAirNext < ActiveRecord::Migration
   def change
     create_table :on_air_next do |t|
       t.string :program_title
