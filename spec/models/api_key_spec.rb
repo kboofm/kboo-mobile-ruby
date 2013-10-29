@@ -25,4 +25,3 @@ describe ApiKey do
     api_key.authenticate_with(api_key.hashed_token).should be_true
   end  
 end  
-
