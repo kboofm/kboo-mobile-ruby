@@ -146,7 +146,7 @@
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .jp-play {
-    background-image: url('play@2x.png');
+    background-image: url('play_2x.png');
     background-size: auto auto;
   }
 }
@@ -156,7 +156,7 @@
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .jp-pause {
-    background-image: image-url('pause@2x.png');
+    background-image: image-url('pause_2x.png');
     background-size: auto auto;
   }
 }
@@ -172,7 +172,7 @@
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .jp-mute {
-    background-image: image-url('mute-off@2x.png');
+    background-image: image-url('mute-off_2x.png');
     background-size: auto auto;
   }
 }
@@ -181,7 +181,7 @@
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .jp-unmute {
-    background-image: image-url('mute-on@2x.png');
+    background-image: image-url('mute-on_2x.png');
     background-size: auto auto;
   }
 }
