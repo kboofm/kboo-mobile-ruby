@@ -34,9 +34,9 @@ group :test, :development do
   gem 'launchy'
 end
 
-group :test do
+group :development do
   gem 'better_errors'
-  gem 'curl'
+  gem 'quiet_assets'
 end
 
 group :production do

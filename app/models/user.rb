@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
 
   def staff?
     role == 'staff'
-  end  
+  end
 
 private
   def set_default_role

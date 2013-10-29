@@ -11,6 +11,9 @@ class Ability
         can :create, User, role: 'contributor'
         can :manage, Program
       else
+        can :manage, Program do |program|
+          program.hosts.any? { |host| host.user == user }
+        end
         # can :update, Program, :hosts => { :user_id => user.id } NEEDS MORE TESTING
         can :read, :all
       end  

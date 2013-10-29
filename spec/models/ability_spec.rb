@@ -37,13 +37,13 @@ describe Ability do
   end
 
   # NEEDS MORE TESTING
-  # it "lets hosts edit their own programs" do
-  #   user = FactoryGirl.create(:user)
-  #   program = FactoryGirl.create(:program)
-  #   Host.new(program_id: program.id, user_id: user.id)
-  #   ability = Ability.new(user)
-  #   ability.should be_able_to(:update, program)
-  # end
+  it "lets hosts edit their own programs" do
+    user = FactoryGirl.create(:user)
+    program = FactoryGirl.create(:program)
+    Host.create(program_id: program.id, user_id: user.id)
+    ability = Ability.new(user)
+    ability.should be_able_to(:manage, program)
+  end
 
   # it "doesn't let hosts edit somebody else's programs" do
 
