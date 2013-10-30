@@ -1,9 +1,6 @@
 class EpisodesController < ApplicationController
   before_filter :restrict_access, :unless => :format_html?
-  load_and_authorize_resource :except => [:show, :index], :unless => :format_json?
-  rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, :alert => exception.message
-  end
+  authorize_resource :except => [:show, :index], :unless => :format_json?
   
   def index
     @episodes = Episode.limit(20)
@@ -25,14 +22,15 @@ class EpisodesController < ApplicationController
           flash[:success] = "Episode saved"
           redirect_to @episode
         else
-          flash[:alert] = 'Invalid entry'
-          redirect_to 'new'
+          render 'new'
         end    
       end
       format.json do
         @episode = Episode.new(episode_params)
-        if @episode.save
+        if @episode.save(:validate => false)
           render :json => @episode, :status => :created
+        else
+          render :json => @episode.errors, :status => 400 
         end 
       end
     end 
@@ -48,7 +46,6 @@ class EpisodesController < ApplicationController
       flash[:success] = 'Episode updated'
       redirect_to @episode
     else
-      flash.now[:alert] = 'Invalid entry'
       render 'edit'
     end
   end

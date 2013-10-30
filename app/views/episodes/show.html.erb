@@ -4,7 +4,7 @@
       <%= image_tag @episode.image.url %>
     <% end %>
 </p>
-<p>Airs: <strong><%= "#{@episode.program.date.strftime('%a %m/%d/%Y')}" %> at <%= "#{@episode.program.time.strftime('%I:%M%p')}" %></strong></p>
+<p>Airs: <strong><%= @episode.program.date.strftime('%a %m/%d/%Y')} %> at <%= @episode.program.time.strftime('%I:%M%p')} %></strong></p>
 <p>Short: <strong><%= @episode.short_description %></strong></p>
 <p>Program: <strong><%= @episode.program.title %></strong></p>
 <p>Description: <strong><%= @episode.long_description %></strong></p>
