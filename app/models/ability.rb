@@ -8,6 +8,7 @@ class Ability
       elsif user.staff?
         can :create, User, role: 'contributor'
         can :manage, Program
+        can :manage, Episode
       else
         can :manage, Program do |program|
           program.hosts.any? { |host| host.user == user }
