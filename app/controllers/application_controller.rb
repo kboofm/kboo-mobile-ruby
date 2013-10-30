@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
   def on_air_next
     OnAirNext.instance
   end  
+
+  def format_html?
+    request.format.html?
+  end
+
+  def format_json?
+  	request.format.json?
+  end	
 end

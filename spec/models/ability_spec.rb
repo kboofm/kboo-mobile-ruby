@@ -69,4 +69,18 @@ describe Ability do
     program = Program.new(:title => 'This is a test program', :description => 'A program to test functionality')
     ability.should be_able_to(:edit, program)
   end
+
+  it "lets admins create episodes" do
+    admin = User.create(:email => 'admin@test.com', :password => 'password', :password_confirmation => 'password', :role => 'admin')
+    ability = Ability.new(admin)
+    episode = Episode.new(title: 'test title',short_description: 'lorem ipsum',long_description: 'lorem ipsum and more',host: "Jenka", audio_url: "http://www.kboo.fm/sites/default/files/episode_audio/kboo_episode.2.131025.0800.2709.mp3") 
+    ability.should be_able_to(:create, episode)
+  end
+
+  it "does not allow user who are not admins or staff to create episodes" do
+    listener = User.create(:email => 'admin@test.com', :password => 'password', :password_confirmation => 'password', :role => 'listener')
+    ability = Ability.new(listener)
+    episode = Episode.new(title: 'test title',short_description: 'lorem ipsum',long_description: 'lorem ipsum and more',host: "Jenka", audio_url: "http://www.kboo.fm/sites/default/files/episode_audio/kboo_episode.2.131025.0800.2709.mp3") 
+    ability.should_not be_able_to(:create, episode)
+  end
 end
