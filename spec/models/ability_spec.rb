@@ -36,7 +36,6 @@ describe Ability do
     ability.should be_able_to(:create, admin)
   end
 
-  # NEEDS MORE TESTING
   it "lets hosts edit their own programs" do
     user = FactoryGirl.create(:user)
     program = FactoryGirl.create(:program)
@@ -44,10 +43,6 @@ describe Ability do
     ability = Ability.new(user)
     ability.should be_able_to(:manage, program)
   end
-
-  # it "doesn't let hosts edit somebody else's programs" do
-
-  # end
 
   it "lets staff edit anybody's programs" do
     staff = User.create(:email => 'staff@test.com', :password => 'password', :password_confirmation => 'password', :role => 'staff')

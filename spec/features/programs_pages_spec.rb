@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 describe 'Program pages' do
-  subject { page }
-
   describe 'index page' do
     it 'should show all the programs' do
       program = FactoryGirl.create(:program)
@@ -21,8 +19,9 @@ describe 'Program pages' do
       
   describe 'new page' do
     it 'should create a program' do
+      login
       category = FactoryGirl.create(:category) 
-      admin = FactoryGirl.create(:admin) 
+      # admin = FactoryGirl.create(:admin) 
       program = FactoryGirl.build(:program)
       visit new_program_path
       fill_in 'Title',          with: program.title
@@ -30,9 +29,14 @@ describe 'Program pages' do
       fill_in 'Time',           with: program.time
       fill_in 'Description',    with: program.description
       select  category.name,    from: 'program_category_id'
-      select  admin.email,      from: 'program_hosts_attributes_0_user_id'
+      select  User.first.email,      from: 'program_hosts_attributes_0_user_id'
       click_button 'Save Program'
       page.should have_content program.title
+    end
+
+    it 'should not let non-admins visit it' do
+      visit new_program_path
+      page.should have_content 'You are not authorized to access this page'
     end
   end
 
