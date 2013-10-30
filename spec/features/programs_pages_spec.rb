@@ -19,9 +19,9 @@ describe 'Program pages' do
       
   describe 'new page' do
     it 'should create a program' do
-      login
+      user = FactoryGirl.create(:admin)
+      login_as(user)
       category = FactoryGirl.create(:category) 
-      # admin = FactoryGirl.create(:admin) 
       program = FactoryGirl.build(:program)
       visit new_program_path
       fill_in 'Title',          with: program.title
@@ -29,7 +29,7 @@ describe 'Program pages' do
       fill_in 'Time',           with: program.time
       fill_in 'Description',    with: program.description
       select  category.name,    from: 'program_category_id'
-      select  User.first.email,      from: 'program_hosts_attributes_0_user_id'
+      select  user.email,       from: 'program_hosts_attributes_0_user_id'
       click_button 'Save Program'
       page.should have_content program.title
     end
@@ -42,7 +42,8 @@ describe 'Program pages' do
 
   describe 'edit page' do
     it 'should update a program' do
-      login
+      user = FactoryGirl.create(:admin)
+      login_as(user)
       FactoryGirl.create(:category) 
       program = FactoryGirl.create(:program)
       visit edit_program_path(program.id)
@@ -55,7 +56,8 @@ describe 'Program pages' do
 
   describe 'destroy' do
     it 'should delete the program' do
-      login
+      user = FactoryGirl.create(:admin)
+      login_as(user)
       program = FactoryGirl.create(:program)
       visit program_path(program.id)
       click_link 'Delete'

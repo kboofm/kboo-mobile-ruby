@@ -1,4 +1,7 @@
 FactoryGirl.define do
+  sequence :email do |n|
+    "email#{n}@factory.com"
+  end  
 
   factory :program do
     title       'Build a Rails app'
@@ -25,13 +28,16 @@ FactoryGirl.define do
   end
 
   factory :user do
-    email                 'admin@kboo.org'
+    email                 
     password              '12345678' 
     password_confirmation '12345678'
     factory :admin do
       role                'admin'
     end
   end
+  
+
+ 
 
   factory :episode do
     title    'title test'
