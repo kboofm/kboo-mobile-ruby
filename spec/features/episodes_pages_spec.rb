@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'Episodes pages' do
-  subject { page }
 
   describe 'list episodes' do
     it 'should display a recent episode' do
