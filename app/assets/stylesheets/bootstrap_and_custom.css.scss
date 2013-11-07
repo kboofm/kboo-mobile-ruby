@@ -11,12 +11,12 @@ footer {
   height: 30px;
 }
 
-.btnplay {
+/*.btnplay {
   content: image-url('play_btn_sm.png');
   display: block;
   text-align: center;
   margin: 0 auto;
-}
+}*/
 
 @media (max-width: 767px) {
   .navbar-fixed-top {
@@ -42,17 +42,17 @@ footer {
 }
 
 @media (max-width: 743px) {
-   .banner { 
+   .banner {
       content: image-url('cartoon_logo.png');
       text-align: center;
       margin: 0 auto;
    }
-}  
+}
 
 @media (min-width: 743px) {
-   .banner { 
+   .banner {
       content: image-url('banner.png');
       text-align: center;
       margin: 50px auto;
    }
-}  
+}
