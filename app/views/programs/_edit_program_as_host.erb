@@ -1,5 +1,7 @@
 <h1>Edit <%= @program.title %></h1>
 <%= form_for @program do |f| %>
+  <%= render 'errors' %>
+
   <%= f.label      :title %>
   <%= f.text_field :title, autofocus: true %>
   <%= f.label      :description %>
