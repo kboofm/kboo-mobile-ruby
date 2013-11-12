@@ -8,6 +8,15 @@ FactoryGirl.define do
     date        Date.today
     time        Time.now
     description 'Multi-threaded integration testing for humans'
+    category
+    
+    factory :program2 do
+      title       'Build ember app'
+      date        Date.today
+      time        Time.now
+      description 'manos arriba'
+      category
+    end  
   end 
 
   factory :episode_audio do
@@ -24,7 +33,7 @@ FactoryGirl.define do
   end
 
   factory :category do
-    name       'Technology'
+    sequence(:name) { |n| "Category#{n}" }
   end
 
   factory :user do
