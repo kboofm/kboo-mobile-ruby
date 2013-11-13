@@ -1,21 +1,35 @@
-<h1>Edit <%= @program.title %></h1>
-<%= form_for @program do |f| %>
-  <%= f.label             :title %>
-  <%= f.text_field        :title, autofocus: true %><br>
-  <%= f.label             :date %>
-  <%= f.date_field        :date %><br>
-  <%= f.label             :time %>
-  <%= f.time_field        :time %><br>
-  <%= f.label             :description %>
-  <%= f.text_area         :description %><br>
-  <%= f.label             :category %>
-  <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: :true %><br>
-  <%= f.label             :host %>
-  <%= f.fields_for :hosts, @program.hosts do |ff| %>
-    <%= render 'host_form', :f => ff %>
-    <%= ff.check_box :_destroy %>Remove Host<br>
+<h3 class='form-header'>Edit <%= @program.title %></h3>
+<div class='form'>
+  <%= form_for @program do |f| %>
+    <div class='form-group'>
+      <%= f.label             :title %>
+      <%= f.text_field        :title, autofocus: true, class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label             :date %>
+      <%= f.date_field        :date, class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label             :time %>
+      <%= f.time_field        :time, class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label             :description %>
+      <%= f.text_area         :description, rows: 3, class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= f.label             :category %>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, { include_blank: :true }, { class: 'form-control'}) %>
+    </div>
+    <div class='form-group'>
+      <%= f.label             :host %>
+      <%= f.fields_for :hosts, @program.hosts.new do |ff| %>
+        <%= render 'host_form', :f => ff %>
+        <%= ff.check_box :_destroy %>Remove Host
+      <% end %>
+    </div>
+    <div class='form-group'>
+      <%= f.submit 'Submit' %>
+    </div>
   <% end %>
-  
-  <%= f.submit 'Submit' %>
-<% end %>  
- 
+</div>
