@@ -18,7 +18,7 @@ class EpisodesController < ApplicationController
     respond_to do |format|
       format.html do
         @episode = Episode.new(episode_params)
-        if episode.save
+        if @episode.save
           flash[:success] = "Episode saved"
           redirect_to @episode
         else
