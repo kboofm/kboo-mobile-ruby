@@ -46,7 +46,6 @@ describe 'Episodes pages' do
       episode = FactoryGirl.create(:episode)
       login_as(FactoryGirl.create(:admin))
       visit episode_path(episode.id)
-      # save_and_open_page
       click_link 'Delete'
       page.should_not have_content episode.title
     end
