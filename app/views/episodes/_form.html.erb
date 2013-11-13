@@ -1,14 +1,13 @@
- <% if @episode.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@episode.errors.count, "error") %> prohibited this task from being saved:</h2>
-
-      <ul>
+<% if @episode.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@episode.errors.count, "error") %> prohibited this task from being saved:</h2>
+    <ul>
       <% @episode.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+    </ul>
+  </div>
+<% end %>
 
 <h3>Edit <%= @episode.title %></h3>
 <%= form_for @episode, :html => { :multipart => true }, class: 'form-horizontal' do |f| %>
