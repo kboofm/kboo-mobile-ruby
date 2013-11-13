@@ -1,6 +1,4 @@
 class Program < ActiveRecord::Base
-  
-
   has_many   :episodes
   belongs_to :category
   has_many :hosts

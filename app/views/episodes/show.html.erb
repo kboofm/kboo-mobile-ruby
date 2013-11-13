@@ -8,6 +8,7 @@
 <p>Short: <strong><%= @episode.short_description %></strong></p>
 <p>Program: <strong><%= @episode.program.title %></strong></p>
 <p>Description: <strong><%= @episode.long_description %></strong></p>
+<%= link_to 'Download', @episode.audio_url %>
 
 <% if current_user && (current_user.admin? || current_user.staff? || current_user.programs.include?(@episode) ) %>
   <%= link_to 'Edit', edit_episode_path %>

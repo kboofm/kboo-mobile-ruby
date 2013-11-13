@@ -2,6 +2,7 @@ require 'singleton'
 require 'open-uri'
 
 class OnAirNext < ActiveRecord::Base
+
   self.table_name = 'on_air_next'
   include ActiveRecord::Singleton
 

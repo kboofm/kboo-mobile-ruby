@@ -4,9 +4,10 @@
 <div class='recent_programs'>
   <% @episodes.each do |episode| %>
     <div class='panel'>
-      <p class='panel-header'><%= episode.title %></p>
+      <p class='panel-header'><%= episode.program.title %> - <%= episode.title %></p>
       <h4><%= episode.short_description %></h4>
       <p><%= "Host: #{episode.host}"%></p>
+      <%= link_to "Download", episode.audio_url %>
       <a  value="Play" onclick="updatePlayer('<%= episode.audio_url %>');" class="btnplay"></a>
     </div>
   <% end %>   
