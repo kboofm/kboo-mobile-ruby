@@ -9,14 +9,6 @@ FactoryGirl.define do
     time        Time.now
     description 'Multi-threaded integration testing for humans'
     category
-
-    factory :program2 do
-      title       'Build ember app'
-      date        Date.today
-      time        Time.now
-      description 'manos arriba'
-      category
-    end
   end    
 
   factory :episode_audio do
@@ -51,6 +43,6 @@ FactoryGirl.define do
     long_description  'A longer episode description'
     host              'Jenka'
     audio_url 'kboo_episode.2.131010.0930.14557.mp3'
+    program
   end  
 end
-
