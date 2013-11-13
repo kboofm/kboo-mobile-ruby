@@ -15,19 +15,19 @@ categories.each do |category|
 end
 
 program = Program.create(
-	title: "title title",
+	title: 'Program title',
 	category_id: Category.first.id,
-	description: "Lorem ipsum description",
+	description: 'Program description',
 	time: Time.current.strftime('%H:%M'),
 	date: Date.today
 	)  
 
 episode = Episode.create(
-  title: 'test title',
-  short_description: 'lorem ipsum',
-  long_description: 'lorem ipsum and more',
-  host: "Jenka",
-  audio_url: "http://www.kboo.fm/sites/default/files/episode_audio/kboo_episode.2.131025.0800.2709.mp3",
+  title: 'Episode title',
+  short_description: 'Short episode description',
+  long_description: 'A longer description of the episode',
+  host: 'Jenka',
+  audio_url: 'http://www.kboo.fm/sites/default/files/episode_audio/kboo_episode.2.131025.0800.2709.mp3',
   program_id: program.id
   ) 
 
