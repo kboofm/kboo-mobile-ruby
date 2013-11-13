@@ -32,8 +32,16 @@ describe 'Episodes pages' do
     end
   end
   
-
+  describe 'edit' do
+    it 'lets you update an episode' do
+      episode = FactoryGirl.create(:episode)
+      login_as(FactoryGirl.create(:admin))
+      visit edit_episode_path(episode.id)
+      fill_in 'Title', with: 'A brand new title'
+      click_button 'Submit'
+      page.should have_content 'A brand new title'
+    end
 
     # it 'lets you delete a program'
-
+  end
 end
