@@ -10,7 +10,6 @@
 <% end %>
 
 <div class='form'>
-  <h3 class='form-header'>Edit <%= @episode.title %></h3>
   <%= form_for @episode, :html => { :multipart => true } do |f| %>
     <div class='form-group'>
       <%= f.label             :program_id %>            
