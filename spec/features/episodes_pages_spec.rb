@@ -42,6 +42,13 @@ describe 'Episodes pages' do
       page.should have_content 'A brand new title'
     end
 
-    # it 'lets you delete a program'
+    it 'lets you delete an episode' do
+      episode = FactoryGirl.create(:episode)
+      login_as(FactoryGirl.create(:admin))
+      visit episode_path(episode.id)
+      # save_and_open_page
+      click_link 'Delete'
+      page.should_not have_content episode.title
+    end
   end
 end
