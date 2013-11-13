@@ -29,16 +29,9 @@ footer {
     top: auto;
   }
 
-  h3 {
-    text-align: center;
-  }
-  h4 {
-    text-align: center;
-  }
-  p {
-    text-align: center;
-  }
-
+  h3 { text-align: center; }
+  h4 { text-align: center; }
+  p  { text-align: center; }
 }
 
 @media (max-width: 743px) {
@@ -56,3 +49,16 @@ footer {
       margin: 50px auto;
    }
 }  
+
+
+/* Forms */
+.form {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
