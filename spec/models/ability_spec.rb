@@ -38,7 +38,7 @@ describe Ability do
       program1 = FactoryGirl.create(:program)
       Host.create(program_id: program1.id, user_id: user1.id)
       user2 = FactoryGirl.create(:user)
-      program2 = FactoryGirl.create(:program2)
+      program2 = FactoryGirl.create(:program)
       Host.create(program_id: program2.id, user_id: user2.id)
       ability = Ability.new(user1)
       ability.should_not be_able_to(:manage, program2)
