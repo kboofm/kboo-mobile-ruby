@@ -45,14 +45,11 @@ FactoryGirl.define do
     end
   end
   
-
- 
-
   factory :episode do
-    title    'title test'
-    short_description 'lorem ipsum'
-    long_description 'morem lorem ipsum'
-    host 'jenka'
+    title             'Episode title'
+    short_description 'Short episode description'
+    long_description  'A longer episode description'
+    host              'Jenka'
     audio_url 'kboo_episode.2.131010.0930.14557.mp3'
   end  
 end
