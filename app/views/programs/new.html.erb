@@ -1,18 +1,44 @@
 <h1>Create new program</h1>
-<%= form_for @program do |f| %>
-  <%= f.label             :title %>
-  <%= f.text_field        :title, placeholder: 'ex. A Deeper Look', autofocus: true %><br>
-  <%= f.label             :date %>  
-  <%= f.date_field        :date %><br>
-  <%= f.label             :time %>
-  <%= f.time_field        :time %><br>
-  <%= f.label             :description %>
-  <%= f.text_area         :description, placeholder: 'ex. Interview show focusing on challenging social...' %><br>
-  <%= f.label             :category %>
-  <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: :true %><br>
-  <%= f.label             :host %>
-  <%= f.fields_for :hosts, @program.hosts.new do |ff| %>
-    <%= render 'host_form', :f => ff %>
-  <% end %><br>
-  <%= f.submit 'Save Program' %>
+<%= form_for @program, class: 'form-horizontal' do |f| %>
+  <div class='control-group'>
+    <%= f.label             :title %>
+    <div class='controls'>
+      <%= f.text_field        :title, placeholder: 'ex. A Deeper Look', autofocus: true %><br>
+    </div>
+  </div>
+  <div class='control-group'>
+    <%= f.label             :date %>  
+    <div class='controls'>
+      <%= f.date_field        :date %>
+    <div>
+  </div>
+  <div class='control-group'>
+    <%= f.label             :time %>
+    <div class='controls'>
+      <%= f.time_field        :time %>
+    </div>
+  </div>
+  <div class='control-group'>
+    <%= f.label             :description %>
+    <div class='controls'>
+      <%= f.text_area         :description, placeholder: 'ex. Interview show focusing on challenging social...' %>
+    </div>
+  </div>
+  <div class='control-group'>
+    <%= f.label             :category %>
+    <div class='controls'>
+      <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: :true %>
+    </div>
+  </div>
+  <div class='control-group'>
+    <%= f.label             :host %>
+    <div class='controls'>
+      <%= f.fields_for :hosts, @program.hosts.new do |ff| %>
+        <%= render 'host_form', :f => ff %>
+      <% end %>
+    </div>
+  </div>
+  <div class='control-group'>
+    <%= f.submit 'Save Program' %>
+  </div>
 <% end %>  
