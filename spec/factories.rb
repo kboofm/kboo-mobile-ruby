@@ -9,14 +9,14 @@ FactoryGirl.define do
     time        Time.now
     description 'Multi-threaded integration testing for humans'
     category
-  end
 
-  factory :program2 do
-    title       'Build ember app'
-    date        Date.today
-    time        Time.now
-    description 'manos arriba'
-    category
+    factory :program2 do
+      title       'Build ember app'
+      date        Date.today
+      time        Time.now
+      description 'manos arriba'
+      category
+    end
   end    
 
   factory :episode_audio do
