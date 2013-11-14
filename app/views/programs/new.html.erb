@@ -1,3 +1,14 @@
+<% if @program.errors.any? %>
+  <div id='error_explanation'>
+    <h2><%= pluralize(@program.errors.count, 'error') %> prohibited this task from being saved:</h2>
+    <ul>
+      <% @program.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <h3 class='form-header'>Create Program</h3>
 <div class='form'>
   <%= form_for @program do |f| %>
@@ -28,7 +39,7 @@
       <% end %>
     </div>
     <div class='form-group'>
-      <%= f.submit 'Save Program' %>
+      <%= f.submit 'Save Program', class: 'btn btn-success' %>
     </div>
   <% end %>  
 </div>
