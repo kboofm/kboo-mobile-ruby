@@ -1,3 +1,4 @@
+<% provide(:title, "Edit #{@user.email}") %>
 <%= @user.email %>
 <%= form_for @user do |f| %> 
   <% if current_user.staff? %>

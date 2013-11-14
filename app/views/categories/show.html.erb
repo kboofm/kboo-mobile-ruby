@@ -1,3 +1,4 @@
+<% provide(:title, @category.name) %>
 <h1><%= @category.name %></h1>
 <h4>Episodes</h4>
 <% @category.programs.each do |program| %>

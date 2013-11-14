@@ -1,3 +1,4 @@
+<% provide(:title, @program.title) %>
 <h1><%= @program.title %></h1>
 <p>Date: <strong><%= @program.date.strftime('%a %b %d, %Y') %></strong></p>
 <p>Time: <strong><%= @program.time.strftime('%l:%M %p') %></strong></p>

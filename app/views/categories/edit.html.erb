@@ -1,3 +1,4 @@
+<% provide(:title, "Edit #{@category.name}") %>
 <h1>Edit <%= @category.name %></h1>
 <%= form_for @category do |f| %>
   <%= f.text_label :name %><br>

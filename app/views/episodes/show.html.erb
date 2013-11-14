@@ -1,3 +1,4 @@
+<% provide(:title, @episode.title) %>
 <h1><%= @episode.title %></h1>
 <p><% if @episode.image.exists? %>
       <%= image_tag @episode.image.url %>
