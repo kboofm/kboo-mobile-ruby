@@ -1,44 +1,34 @@
-<h1>Create new program</h1>
-<%= form_for @program, class: 'form-horizontal' do |f| %>
-  <div class='control-group'>
-    <%= f.label             :title %>
-    <div class='controls'>
-      <%= f.text_field        :title, placeholder: 'ex. A Deeper Look', autofocus: true %><br>
+<h3 class='form-header'>Create Program</h3>
+<div class='form'>
+  <%= form_for @program do |f| %>
+    <div class='form-group'>
+      <%= f.label             :title %>
+      <%= f.text_field        :title, placeholder: 'ex. A Deeper Look', autofocus: true, class: 'form-control' %>
     </div>
-  </div>
-  <div class='control-group'>
-    <%= f.label             :date %>  
-    <div class='controls'>
-      <%= f.date_field        :date %>
-    <div>
-  </div>
-  <div class='control-group'>
-    <%= f.label             :time %>
-    <div class='controls'>
-      <%= f.time_field        :time %>
+    <div class='form-group'>
+      <%= f.label             :date %>  
+      <%= f.date_field        :date, class: 'form-control' %>
     </div>
-  </div>
-  <div class='control-group'>
-    <%= f.label             :description %>
-    <div class='controls'>
-      <%= f.text_area         :description, placeholder: 'ex. Interview show focusing on challenging social...' %>
+    <div class='form-group'>
+      <%= f.label             :time %>
+      <%= f.time_field        :time, class: 'form-control' %>
     </div>
-  </div>
-  <div class='control-group'>
-    <%= f.label             :category %>
-    <div class='controls'>
-      <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: :true %>
+    <div class='form-group'>
+      <%= f.label             :description %>
+      <%= f.text_area         :description, placeholder: 'ex. Interview show focusing on challenging social...', rows: 3, class: 'form-control' %>
     </div>
-  </div>
-  <div class='control-group'>
-    <%= f.label             :host %>
-    <div class='controls'>
+    <div class='form-group'>
+      <%= f.label             :category %>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, { include_blank: :true }, { class: 'form-control' }) %>
+    </div>
+    <div class='form-group'>
+      <%= f.label             :host %>
       <%= f.fields_for :hosts, @program.hosts.new do |ff| %>
         <%= render 'host_form', :f => ff %>
       <% end %>
     </div>
-  </div>
-  <div class='control-group'>
-    <%= f.submit 'Save Program' %>
-  </div>
-<% end %>  
+    <div class='form-group'>
+      <%= f.submit 'Save Program' %>
+    </div>
+  <% end %>  
+</div>
