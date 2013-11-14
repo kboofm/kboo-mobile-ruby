@@ -23,7 +23,7 @@
     </div>
     <div class='form-group'>
       <%= f.label             :host %>
-      <%= f.fields_for :hosts, @program.hosts.new do |ff| %>
+      <%= f.fields_for :hosts, @program.hosts.each do |ff| %>
         <%= render 'host_form', :f => ff %>
         <%= ff.check_box :_destroy %>Remove Host
       <% end %>

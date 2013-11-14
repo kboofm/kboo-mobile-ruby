@@ -1,7 +1,11 @@
 @import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Marvel:400,400italic);
 
+/* Mixins, Variables, etc. */
+$hardGray: #4E4E4E;
+$softGray: #A8A8A8;
 
+/* Universale */
 html body {
   background-color: #7DD3F6 !important;
   margin-bottom: 60px;
@@ -50,6 +54,27 @@ footer {
    }
 }  
 
+/* On Air Next */
+.on-air-wrapper {
+  width: 80%;
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.on-air-header {
+  display: block;
+  padding: 8px;
+  .soft {
+    color: $softGray;
+  }
+  .hard {
+    color: $hardGray;
+    font-weight: bold;
+  }
+}
 
 /* Forms */
 .form {

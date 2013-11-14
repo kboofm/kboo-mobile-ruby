@@ -45,7 +45,7 @@ describe 'Program pages' do
       login_as(user)
       program = FactoryGirl.create(:program)
       visit edit_program_path(program.id)
-      fill_in 'Title',      with: 'Updating a Program title'
+      fill_in 'Title',                    with: 'Updating a Program title'
       select  "#{program.category.name}", from: 'program_category_id'
       click_button 'Submit' 
       page.should have_content 'Updating a Program title'
