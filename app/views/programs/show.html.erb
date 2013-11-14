@@ -1,20 +1,35 @@
 <% provide(:title, @program.title) %>
-<h1><%= @program.title %></h1>
-<p>Date: <strong><%= @program.date.strftime('%a %b %d, %Y') %></strong></p>
-<p>Time: <strong><%= @program.time.strftime('%l:%M %p') %></strong></p>
-<% if @program.category %>
-  <p>Category: <strong><%= @program.category.name %></strong></p>
-<% end %>
-<p>Description: <strong><%= @program.description %></strong></p>
-<% if @program.hosts.any? %>
-  <p>Hosts:</p>
-  <ul><% @program.hosts.each do |host| %>
-    <li><%= link_to host.user.email, user_path(host.user_id) %></li>
-  <% end %>
-  </ul>
-<% end %> 
+<div class='panel'>
+  <div class='info-wrapper'>
+    <h2><%= @program.title %></h2>
+    <span class='info-block'>
+      <span class='soft'>Date:</span> <span class='hard'><%= @program.date.strftime('%a %b %d, %Y') %></span>
+    </span>
+    <span class='info-block'>
+      <span class='soft'>Time:</span> <span class='hard'><%= @program.time.strftime('%l:%M %p') %></span>
+    </span>
+    <span class='info-block'>
+      <% if @program.category %>
+        <span class='soft'>Category:</span> <span class='hard'><%= @program.category.name %></span>
+      <% end %>
+    </span>
+    <span class='info-block'>
+      <span class='soft'>Description:</span> <span class='hard'><%= @program.description %></span>
+    </span>
+    <span class='info-block'>
+      <% if @program.hosts.any? %>
+        <span class='soft'>Hosts:</span>
+        <ul>
+          <% @program.hosts.each do |host| %>
+            <li class='hard'><%= link_to host.user.email, user_path(host.user_id) %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </span> 
 
-<% if current_user && (current_user.admin? || current_user.staff? || current_user.programs.include?(@program) ) %>
-  <%= link_to 'Edit', edit_program_path %>
-  <%= link_to 'Delete', program_path, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+    <% if current_user && (current_user.admin? || current_user.staff? || current_user.programs.include?(@program) ) %>
+      <%= link_to 'Edit', edit_program_path %>
+      <%= link_to 'Delete', program_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+</div>

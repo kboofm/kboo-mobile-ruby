@@ -20,7 +20,7 @@ Kboo::Application.routes.draw do
   resources :categories
   resources :episodes
   
-  get "static_pages/faq"
+  get 'static_pages/faq'
   get 'static_pages/about'
   get 'static_pages/board'
   get 'static_pages/committees'

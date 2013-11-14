@@ -4,8 +4,9 @@
 /* Mixins, Variables, etc. */
 $hardGray: #4E4E4E;
 $softGray: #A8A8A8;
+$error:    #B34040;
 
-/* Universale */
+/* Universal */
 html body {
   background-color: #7DD3F6 !important;
   margin-bottom: 60px;
@@ -13,6 +14,15 @@ html body {
 
 footer {
   height: 30px;
+}
+
+span.soft {
+  color: $softGray;
+}
+
+span.hard {
+  color: $hardGray;
+  font-weight: bold;
 }
 
 .btnplay {
@@ -67,13 +77,34 @@ footer {
 .on-air-header {
   display: block;
   padding: 8px;
-  .soft {
-    color: $softGray;
+}
+
+/* Information Panels */
+.header-wrapper {
+  text-align: center;
+}
+
+.panel {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.info-wrapper {
+  padding: 10px;
+  h2 {
+    margin-top: 0;
   }
-  .hard {
-    color: $hardGray;
-    font-weight: bold;
-  }
+}
+
+.info-block {
+  display: block;
+}
+
+.no-bullets li {
+  list-style: none;
 }
 
 /* Forms */
@@ -99,5 +130,9 @@ footer {
     outline: none;
     border: 2px solid #333333;
   }
+}
+
+.error {
+  color: $error;
 }
 

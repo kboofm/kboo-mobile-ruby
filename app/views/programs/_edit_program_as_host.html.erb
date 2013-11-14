@@ -1,6 +1,7 @@
 <h3 class='form-header'>Edit <%= @program.title %></h3>
 <div class='form'>
   <%= form_for @program do |f| %>
+    <%= render '/layouts/errors', :object => f.object %>
     <div class='form-group'>
       <%= f.label      :title %>
       <%= f.text_field :title, autofocus: true, class: 'form-control' %>
@@ -14,4 +15,3 @@
     </div>
   <% end %> 
 </div>
-    

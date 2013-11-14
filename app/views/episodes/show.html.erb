@@ -1,16 +1,28 @@
 <% provide(:title, @episode.title) %>
-<h1><%= @episode.title %></h1>
-<p><% if @episode.image.exists? %>
-      <%= image_tag @episode.image.url %>
-    <% end %>
-</p>
-<p>Airs: <strong><%= @episode.program.date.strftime('%a %m/%d/%Y') %> at <%= @episode.program.time.strftime('%I:%M%p') %></strong></p>
-<p>Short: <strong><%= @episode.short_description %></strong></p>
-<p>Program: <strong><%= @episode.program.title %></strong></p>
-<p>Description: <strong><%= @episode.long_description %></strong></p>
-<%= link_to 'Download', @episode.audio_url %>
+<div class='panel'>
+  <div class='info-wrapper'>
+    <h2><%= @episode.title %></h2>
+    <p><% if @episode.image.exists? %>
+          <%= image_tag @episode.image.url %>
+        <% end %>
+    </p>
+    <span class='info-block'>
+      <span class='soft'>Airs: </span> <span class='hard'><%= @episode.program.date.strftime('%a %m/%d/%Y') %> at <%= @episode.program.time.strftime('%I:%M%p') %></span>
+    </span>
+    <span class='info-block'>
+      <span class='soft'>Short: </span> <span class='hard'><%= @episode.short_description %></span>
+    </span>
+    <span class='info-block'>
+      <span class='soft'>Program: </span><span class='hard'><%= @episode.program.title %></span>
+    </span>
+    <span class='info-block'>
+      <span class='soft'>Description: </span> <span class='hard'><%= @episode.long_description %></span>
+    </span>
+    <%= link_to 'Download', @episode.audio_url %>
 
-<% if current_user && (current_user.admin? || current_user.staff? || current_user.programs.include?(@episode) ) %>
-  <%= link_to 'Edit', edit_episode_path %>
-  <%= link_to 'Delete', episode_path, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+    <% if current_user && (current_user.admin? || current_user.staff? || current_user.programs.include?(@episode) ) %>
+      <%= link_to 'Edit', edit_episode_path %>
+      <%= link_to 'Delete', episode_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+</div>

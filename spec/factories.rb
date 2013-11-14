@@ -1,7 +1,5 @@
 FactoryGirl.define do
-  sequence :email do |n|
-    "email#{n}@factory.com"
-  end  
+  sequence(:email) { |n| "email#{n}@factory.com" }
 
   factory :program do
     title       'Build a Rails app'

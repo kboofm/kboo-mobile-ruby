@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe EpisodesController do
 
-  context "POST create" do
-    context "with valid parameters" do
+  context 'POST create' do
+    context 'with valid parameters' do
       let(:valid_attributes) { { :title => 'test', 
                                  :short_description => 'short description',
                                  :long_description => 'long description',
@@ -23,7 +23,7 @@ describe EpisodesController do
       end
       
       describe 'response with a invalid API key' do
-        before { post :create, "123456", valid_parameters }
+        before { post :create, '123456', valid_parameters }
         it { should respond_with 401 }
       end
     end

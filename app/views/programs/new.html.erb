@@ -1,18 +1,9 @@
 <% provide(:title, 'New Program') %>
-<% if @program.errors.any? %>
-  <div id='error_explanation'>
-    <h2><%= pluralize(@program.errors.count, 'error') %> prohibited this task from being saved:</h2>
-    <ul>
-      <% @program.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-
 <h3 class='form-header'>Create Program</h3>
+
 <div class='form'>
   <%= form_for @program do |f| %>
+    <%= render '/layouts/errors', :object => f.object %>
     <div class='form-group'>
       <%= f.label             :title %>
       <%= f.text_field        :title, placeholder: 'ex. A Deeper Look', autofocus: true, class: 'form-control' %>
