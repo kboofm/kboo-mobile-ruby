@@ -1,13 +1,21 @@
 <% provide(:title, '') %>
-<h3>RECENT EPISODES</h3>
-<div class='recent_programs'>
-  <% @episodes.each do |episode| %>
-    <div class='panel'>
-      <p class='panel-header'><%= link_to episode.program.title, program_path(episode.program.id) %> - <%= link_to episode.title, episode_path(episode.id) %></p>
-      <h4><%= episode.short_description %></h4>
-      <span><%= "Host: #{episode.host}"%></span><br>
+<div class='header-wrapper'>
+  <h2>RECENT EPISODES</h2>
+</div>
+<div class='panel'>
+  <div class='info-wrapper'>
+    <% @episodes.each do |episode| %>
+      <span class='info-block'>
+        <h2><%= link_to episode.program.title, program_path(episode.program.id) %> - <%= link_to episode.title, episode_path(episode.id) %></h2>
+      </span>
+      <span class='info-block'>
+        <span class='soft'>Description: </span> <span class='hard'><%= episode.short_description %></span>
+      </span>
+      <span class='info-block'>
+        <span class='soft'>Host: </span> <span class='hard'><%= "#{episode.host}"%></span>
+      </span>
       <span><%= link_to 'Download', episode.audio_url %>
       <a  value='Play' onclick='updatePlayer("<%= episode.audio_url %>");' class='btnplay'></a>
-    </div>
-  <% end %>   
+    <% end %>   
+  </div>
 </div>
