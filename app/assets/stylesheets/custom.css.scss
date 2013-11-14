@@ -16,6 +16,15 @@ footer {
   height: 30px;
 }
 
+span.soft {
+  color: $softGray;
+}
+
+span.hard {
+  color: $hardGray;
+  font-weight: bold;
+}
+
 .btnplay {
   content: image-url('play_btn_sm.png');
   display: block;
@@ -68,13 +77,25 @@ footer {
 .on-air-header {
   display: block;
   padding: 8px;
-  .soft {
-    color: $softGray;
+}
+
+/* Information Panels */
+.panels {
+  width: 80%;
+  max-width: 960px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.info-wrapper {
+  padding: 10px;
+  h2 {
+    margin-top: 0;
   }
-  .hard {
-    color: $hardGray;
-    font-weight: bold;
-  }
+}
+
+.info-block {
+  display: block;
 }
 
 /* Forms */
