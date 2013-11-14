@@ -103,6 +103,10 @@ span.hard {
   display: block;
 }
 
+.no-bullets li {
+  list-style: none;
+}
+
 /* Forms */
 .form {
   width: 80%;
