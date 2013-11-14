@@ -33,7 +33,7 @@ describe Ability do
       ability.should be_able_to(:manage, program)
     end
 
-    it 'doesn't let a host edit somebody else's program' do
+    it 'does not let a host edit somebody else\'s program' do
       user1 = FactoryGirl.create(:user)
       program1 = FactoryGirl.create(:program)
       Host.create(program_id: program1.id, user_id: user1.id)
@@ -60,14 +60,14 @@ describe Ability do
       ability.should be_able_to(:create, admin)
     end
 
-    it 'lets staff edit anybody's programs' do
+    it 'lets staff edit anybody\'s programs' do
       staff = User.create(:email => 'staff@test.com', :password => 'password', :password_confirmation => 'password', :role => 'staff')
       ability = Ability.new(staff)
       program = Program.new(:title => 'This is a test program', :description => 'A program to test functionality')
       ability.should be_able_to(:edit, program)
     end
 
-    it 'lets admins edit anybody's programs' do
+    it 'lets admins edit anybody\'s programs' do
       admin = User.create(:email => 'admin@test.com', :password => 'password', :password_confirmation => 'password', :role => 'admin')
       ability = Ability.new(admin)
       program = Program.new(:title => 'This is a test program', :description => 'A program to test functionality')
