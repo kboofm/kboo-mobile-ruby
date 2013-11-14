@@ -7,10 +7,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
   
   helper_method :on_air_next
+  helper_method :on_air_now
   
   def on_air_next
     OnAirNext.instance
   end  
+
+  def on_air_now
+    OnAirNow.instance
+  end
 
   def format_html?
     request.format.html?
