@@ -4,7 +4,7 @@
 <% if current_user.admin? %>
   <ul>
   <% @users.each do |user| %>
-    <li><%= "#{user.email} #{user.role}"%> <%= link_to "Edit", edit_user_path(user) %></li>
+    <li><%= "#{user.email} #{user.role}"%> <%= link_to 'Edit', edit_user_path(user) %></li>
   <% end %>  
   </ul>
 <% else %>
@@ -15,7 +15,7 @@
   <ul>
   <% @users.each do |user| %>
     <% if user.role == 'listener' || 'contributor' %>
-      <li><%= "#{user.email} #{user.role}"%> <%= link_to "Edit", edit_user_path(user) %></li>
+      <li><%= "#{user.email} #{user.role}"%> <%= link_to 'Edit', edit_user_path(user) %></li>
     <% end %>  
   <% end %>  
   </ul>
