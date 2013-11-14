@@ -1,6 +1,7 @@
 <% provide(:title, "Edit #{@category.name}") %>
 <h1>Edit <%= @category.name %></h1>
 <%= form_for @category do |f| %>
+  <%= render '/layouts/errors', :object => f.object %>
   <%= f.text_label :name %><br>
   <%= f.text_field :name %><br>
   <%= f.submit "Submit" %>
