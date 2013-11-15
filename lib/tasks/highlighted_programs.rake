@@ -1,5 +1,5 @@
 desc 'Fetch highlighted upcoming programs'
 
-task :fetch_on_air_programs => :environment do
-  HighlightedShows.instance.fetch
+task :highlighted_programs => :environment do
+  ProgramHighlights.instance.fetch
 end

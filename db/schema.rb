@@ -78,6 +78,8 @@ ActiveRecord::Schema.define(version: 20131114193719) do
   end
 
   create_table "program_highlights", force: true do |t|
+    t.string   "program_title"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
