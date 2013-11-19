@@ -49,20 +49,20 @@ span.hard {
 }
 
 @media (max-width: 743px) {
-   .banner { 
+   .banner {
       content: image-url('cartoon_logo.png');
       text-align: center;
       margin: 0 auto;
    }
-}  
+}
 
 @media (min-width: 743px) {
-   .banner { 
+   .banner {
       content: image-url('banner.png');
       text-align: center;
       margin: 50px auto;
    }
-}  
+}
 
 /* On Air Next */
 .on-air-wrapper {
@@ -91,6 +91,7 @@ span.hard {
   margin: 0 auto;
   background-color: white;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .info-wrapper {
