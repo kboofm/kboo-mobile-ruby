@@ -5,16 +5,21 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
-  
+
   helper_method :on_air_next
   helper_method :on_air_now
-  
+  helper_method :program_highlights
+
   def on_air_next
     OnAirNext.instance
-  end  
+  end
 
   def on_air_now
     OnAirNow.instance
+  end
+
+  def program_highlights
+    ProgramHighlights.instance
   end
 
   def format_html?
@@ -23,5 +28,5 @@ class ApplicationController < ActionController::Base
 
   def format_json?
   	request.format.json?
-  end	
+  end
 end
