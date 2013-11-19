@@ -1,21 +1,15 @@
 <% provide(:title, '') %>
 <div class='header-wrapper'>
-  <h2>RECENT EPISODES</h2>
+  <h2>UPCOMING HIGHLIGHTS</h2>
 </div>
-<div class='panel'>
-  <div class='info-wrapper'>
-    <% @episodes.each do |episode| %>
+
+<% program_highlights.highlights.each do |program| %>
+  <div class='panel'>
+    <div class='info-wrapper'>
       <span class='info-block'>
-        <h2><%= link_to episode.program.title, program_path(episode.program.id) %> - <%= link_to episode.title, episode_path(episode.id) %></h2>
+        <h2><%= link_to program[:title], program[:url], target: '_blank' %></h2>
       </span>
-      <span class='info-block'>
-        <span class='soft'>Description: </span> <span class='hard'><%= episode.short_description %></span>
-      </span>
-      <span class='info-block'>
-        <span class='soft'>Host: </span> <span class='hard'><%= "#{episode.host}"%></span>
-      </span>
-      <span><%= link_to 'Download', episode.audio_url %>
-      <a  value='Play' onclick='updatePlayer("<%= episode.audio_url %>");' class='btnplay'></a>
-    <% end %>   
+    </div>
   </div>
-</div>
+<% end %>
+
