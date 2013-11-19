@@ -13,9 +13,8 @@ class ProgramHighlights < ActiveRecord::Base
     highlights = []
     program_title = doc.css(".title a")
     program_title.each do |program|
-      highlights.push({title: program['title'], url: program["http://www.kboo.fm" + 'href']} )
+      highlights.push({title: program['title'], url: "http://www.kboo.fm" + program['href'] } )
     end
-
     self.update(:highlights => highlights)
   end
 end
