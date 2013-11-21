@@ -1,5 +1,4 @@
 @import 'bootstrap';
-@import url(http://fonts.googleapis.com/css?family=Marvel:400,400italic);
 
 /* Mixins, Variables, etc. */
 $hardGray: #4E4E4E;
@@ -8,7 +7,6 @@ $error:    #B34040;
 
 /* Universal */
 html body {
-  /*background-color: #7DD3F6;*/
   background: #99ccff; /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover,  #99ccff 0%, #60abf8 55%, #0076ed 100%); /* FF3.6+ */
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#99ccff), color-stop(55%,#60abf8), color-stop(100%,#0076ed)); /* Chrome,Safari4+ */
@@ -17,14 +15,10 @@ html body {
   background: -ms-radial-gradient(center, ellipse cover,  #99ccff 0%,#60abf8 55%,#0076ed 100%); /* IE10+ */
   background: radial-gradient(ellipse at center,  #99ccff 0%,#60abf8 55%,#0076ed 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ccff', endColorstr='#0076ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  /*margin-bottom: 60px;*/
   height: 100%;
 }
 
-footer {
-  height: 30px;
-}
-
+/*Color of fonts on 'Airing Next', 'Description' and subsequent fields*/
 span.soft {
   color: #24519B;
 }
@@ -34,8 +28,32 @@ span.hard {
   font-weight: bold;
 }
 
+
+/* Fixed-Bottom Nav Menu */
+
+.navbar {
+  background-color: rgba(43,47,75,0.9);
+  border: none;
+}
+
+.col-xs-3 {
+  text-align: center;
+  height: 55px;
+  border-right: 1px solid;
+}
+
+.glyphicon {
+  margin-top: 7px;
+}
+.item {
+  color: white;
+  opacity: .8;
+  margin-top: 8px;
+}
+
+/* Fixed-Bottom Nav Menu */
+
 .btnplay {
-  /*content: image-url('play_btn_sm.png');*/
   display: block;
   text-align: center;
   margin: 0 auto;
@@ -45,6 +63,26 @@ span.hard {
   margin-top: -44px;
   float: right;
 }
+
+/*Tablet to PC CSS styling*/
+
+@media (min-width: 743px) {
+   .banner {
+      content: image-url('kboo_v1.png');
+      opacity: .9;
+      max-width: 80%;
+      text-align: center;
+      margin: 50px auto;
+   }
+
+   h2 a {
+     color: #428bca;
+     font-size: .8em;
+     text-decoration: none;
+   }
+}
+
+/*Mobile CSS styling*/
 
 @media (max-width: 767px) {
   .navbar-fixed-top {
@@ -66,7 +104,7 @@ span.hard {
 
 @media (max-width: 743px) {
    .banner {
-      content: image-url('transp_logo_sm.png');
+      content: image-url('kboo_v2.png');
       opacity: .9;
       max-width: 80%;
       margin: 0 auto;
@@ -74,7 +112,6 @@ span.hard {
    }
 
    .btnplay {
-/*   content: image-url('play_btn_sm.png');*/
    display: block;
    text-align: center;
    margin: 0 auto;
@@ -86,20 +123,7 @@ span.hard {
    }
 }
 
-@media (min-width: 743px) {
-   .banner {
-      content: image-url('transparent_logo.png');
-      opacity: .9;
-      text-align: center;
-      margin: 50px auto;
-   }
-
-   h2 a {
-     color: #428bca;
-     font-size: .8em;
-     text-decoration: none;
-   }
-}
+/*Where the heck is this HR rule that I couldn't find?!*/
 
 hr {
   opacity: 0;
@@ -137,11 +161,6 @@ hr {
   -webkit-box-shadow: 0px 3px 14px -1px #1A1919;
   margin:0 auto;
   border-radius: 1px;
-}
-
-.navbar {
-  background-color: rgba(43,47,75,0.9);
-  border: none;
 }
 
 .info-wrapper {
@@ -189,38 +208,4 @@ hr {
 
 .error {
   color: $error;
-}
-/* Footer */
-html,
-body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
-}
-
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
-
-/* Set the fixed height of the footer here */
-
-.col-xs-3 {
-  text-align: center;
-  height: 55px;
-  border-right: 1px solid;
-}
-
-.glyphicon {
-  margin-top: 7px;
-}
-.item {
-  color: white;
-  opacity: .8;
-  margin-top: 8px;
 }
