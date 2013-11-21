@@ -14,8 +14,8 @@
       <span class='info-block'>
         <span class='soft'>Host: </span> <span class='hard'><%= "#{episode.host}"%></span>
       </span>
-      <span><%= link_to 'Download', episode.audio_url %>
-      <a  value='Play' onclick='updatePlayer("<%= episode.audio_url %>");' class='btnplay'></a>
-    <% end %>   
+      <span><span class="glyphicon glyphicon-cloud-download"></span><%= link_to '  Download', episode.audio_url %>
+      <a  value='Play' onclick='updatePlayer("<%= episode.audio_url %>");' class='btnplay'></a></span>
+    <% end %>
   </div>
 </div>
