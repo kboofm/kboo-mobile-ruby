@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131030194159) do
+ActiveRecord::Schema.define(version: 20131122011635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,24 @@ ActiveRecord::Schema.define(version: 20131030194159) do
     t.datetime "updated_at"
   end
 
+  create_table "on_air_nows", force: true do |t|
+    t.string   "program_title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "program_highlights", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "highlights"
+  end
+
+  create_table "program_schedules", force: true do |t|
+    t.text     "programs"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "programs", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
@@ -83,6 +101,14 @@ ActiveRecord::Schema.define(version: 20131030194159) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "schedules", force: true do |t|
+    t.string   "program_title"
+    t.string   "url"
+    t.string   "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

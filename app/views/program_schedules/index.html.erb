@@ -1,9 +1,9 @@
-<% provide(:title, '') %>
+<% provide(:title, 'Program Schedule') %>
 <div class='header-wrapper'>
-  <h2>UPCOMING HIGHLIGHTS</h2>
+  <h2><%= "SCHEDULE FOR #{Date.today.strftime('%m/%d/%Y')}" %></h2>
 </div>
 
-<% program_highlights.highlights.each do |program| %>
+<% program_schedules.programs.each do |program| %>
   <div class='panel'>
     <div class='info-wrapper'>
       <span class='info-block'>
@@ -12,4 +12,3 @@
     </div>
   </div>
 <% end %>
-
