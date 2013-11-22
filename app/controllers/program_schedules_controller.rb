@@ -1,5 +1,4 @@
-class ProgramSchedulesController < ActionController::Base
+class ProgramSchedulesController < ApplicationController
   def index
-    @schedule = ProgramSchedules.all
   end
 end
