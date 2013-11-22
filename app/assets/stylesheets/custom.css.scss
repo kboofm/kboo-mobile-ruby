@@ -118,7 +118,11 @@ span.hard {
    height: 84px;
    width: 73%;
    background-color: rgba(253, 253, 255, 0.1);
-   margin-top: -48px;
+   margin-top: -46px;
+     -webkit-margin-top: -46px;
+     -moz-margin-top: -46px;
+     -o-margin-top: -46px;
+     -ms-margin-top: -46px;
    float: right;
    }
 }
