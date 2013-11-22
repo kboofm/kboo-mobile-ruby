@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   helper_method :on_air_now
   helper_method :program_highlights
   helper_method :program_schedules
-
+  
   def on_air_next
     OnAirNext.instance
   end
