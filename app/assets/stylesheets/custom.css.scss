@@ -52,17 +52,6 @@ span.hard {
 
 /* Fixed-Bottom Nav Menu */
 
-.btnplay {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  height: 74px;
-  width: 90%;
-  background-color: rgba(253, 253, 255, 0.1);
-  margin-top: -44px;
-  float: right;
-}
-
 /*Tablet to PC CSS styling*/
 
 @media (min-width: 743px) {
@@ -110,20 +99,6 @@ span.hard {
       margin-top: 20px;
    }
 
-   .btnplay {
-   display: block;
-   text-align: center;
-   margin: 0 auto;
-   height: 84px;
-   width: 61%;
-   background-color: rgba(253, 253, 255, 0.1);
-   margin-top: -83px;
-     -webkit-margin-top: -83px;
-     -moz-margin-top: -83px;
-     -o-margin-top: -83px;
-     -ms-margin-top: -83px;
-   float: right;
-   }
 }
 
 /*Where the heck is this HR rule that I couldn't find?!*/

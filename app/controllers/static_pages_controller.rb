@@ -9,13 +9,13 @@ class StaticPagesController < ApplicationController
   def faq
   end
 
-  def staff 
+  def staff
   end
 
   def board
   end
 
-  def committies 
+  def committies
   end
 
   def governance
@@ -49,6 +49,10 @@ class StaticPagesController < ApplicationController
   end
 
   def advertise
+  end
+
+  def player
+    render :footer => false
   end
 
 end
