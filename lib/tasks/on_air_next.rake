@@ -1,4 +1,5 @@
-desc 'Fetch "On Air Next" programs'
-task :fetch_on_air_next_programs => :environment do
+desc 'Fetch "On Air" programs'
+task :fetch_on_air_programs => :environment do
   OnAirNext.instance.fetch
+  OnAirNow.instance.fetch
 end

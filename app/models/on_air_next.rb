@@ -9,7 +9,7 @@ class OnAirNext < ActiveRecord::Base
   def fetch
     url = "http://kboo.fm/"
     doc = Nokogiri::HTML(open(url))
-    on_air_next_program = doc.at_css(".program a").text
+    on_air_next_program = doc.at_css(".program_time").next.text
     self.update(:program_title => "#{on_air_next_program}")
   end
 end

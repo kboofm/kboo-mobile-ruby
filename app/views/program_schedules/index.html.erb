@@ -1,0 +1,14 @@
+<% provide(:title, 'Program Schedule') %>
+<div class='header-wrapper'>
+  <h2><%= "SCHEDULE FOR #{Date.today.strftime('%m/%d/%Y')}" %></h2>
+</div>
+
+<% program_schedules.programs.each do |program| %>
+  <div class='panel'>
+    <div class='info-wrapper'>
+      <span class='info-block'>
+        <h2><%= link_to program[:title], program[:url], target: '_blank' %></h2>
+      </span>
+    </div>
+  </div>
+<% end %>

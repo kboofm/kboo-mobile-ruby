@@ -19,6 +19,7 @@ Kboo::Application.routes.draw do
   resources :programs
   resources :categories
   resources :episodes
+  resources :program_schedules, only: [:index]
 
   get 'static_pages/faq'
   get 'static_pages/about'
