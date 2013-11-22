@@ -1,23 +1,26 @@
 @import 'bootstrap';
-@import url(http://fonts.googleapis.com/css?family=Marvel:400,400italic);
 
 /* Mixins, Variables, etc. */
 $hardGray: #4E4E4E;
-$softGray: #A8A8A8;
+$softGray: #2269E0;
 $error:    #B34040;
 
 /* Universal */
 html body {
-  background-color: #7DD3F6 !important;
-  margin-bottom: 60px;
+  background: #99ccff; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #99ccff 0%, #60abf8 55%, #0076ed 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#99ccff), color-stop(55%,#60abf8), color-stop(100%,#0076ed)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #99ccff 0%,#60abf8 55%,#0076ed 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #99ccff 0%,#60abf8 55%,#0076ed 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #99ccff 0%,#60abf8 55%,#0076ed 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #99ccff 0%,#60abf8 55%,#0076ed 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ccff', endColorstr='#0076ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  height: 100%;
 }
 
-footer {
-  height: 30px;
-}
-
+/*Color of fonts on 'Airing Next', 'Description' and subsequent fields*/
 span.soft {
-  color: $softGray;
+  color: #24519B;
 }
 
 span.hard {
@@ -25,12 +28,49 @@ span.hard {
   font-weight: bold;
 }
 
-.btnplay {
-  content: image-url('play_btn_sm.png');
-  display: block;
-  text-align: center;
-  margin: 0 auto;
+/* Fixed-Bottom Nav Menu */
+
+.navbar {
+  background-color: rgba(43,47,75,0.9);
+  border: none;
 }
+
+.col-xs-3 {
+  text-align: center;
+  height: 55px;
+  border-right: 1px solid;
+}
+
+.glyphicon {
+  margin-top: 7px;
+}
+.item {
+  color: white;
+  opacity: .8;
+  margin-top: 8px;
+}
+
+/* Fixed-Bottom Nav Menu */
+
+/*Tablet to PC CSS styling*/
+
+@media (min-width: 743px) {
+   .banner {
+      content: image-url('kboo_v1.png');
+      opacity: .9;
+      max-width: 80%;
+      text-align: center;
+      margin: 50px auto;
+   }
+
+   h2 a {
+     color: #428bca;
+     font-size: .8em;
+     text-decoration: none;
+   }
+}
+
+/*Mobile CSS styling*/
 
 @media (max-width: 767px) {
   .navbar-fixed-top {
@@ -38,38 +78,35 @@ span.hard {
     top: auto;
   }
 
-  .navbar-fixed-bottom {
-    position: relative;
-    top: auto;
-  }
-
+  h2 { text-align: center; }
   h3 { text-align: center; }
   h4 { text-align: center; }
   p  { text-align: center; }
+
+  h2 a {
+    color: #428bca;
+    font-size: .7em;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 743px) {
    .banner {
-      content: image-url('cartoon_logo.png');
-      text-align: center;
-      margin: 0 auto;
-   }
+      content: image-url('kboo_v2.png');
+      opacity: .9;
+      max-width: 80%;
 }
 
-@media (min-width: 743px) {
-   .banner {
-      content: image-url('banner.png');
-      text-align: center;
-      margin: 50px auto;
-   }
-}
+hr {
+  opacity: 0;
+
 
 /* On Air Next */
 .on-air-wrapper {
-  width: 80%;
+  width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  background-color: white;
+  background-color: rgba(255,255,255,0.3);
   text-align: center;
   border-radius: 5px;
   margin-bottom: 5px;
@@ -78,20 +115,25 @@ span.hard {
 .on-air-header {
   display: block;
   padding: 8px;
+  margin-top: 20px;
 }
 
 /* Information Panels */
 .header-wrapper {
+  color: rgba(43, 47, 75, 0.9);
+  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.8);
   text-align: center;
+  margin-top: -43px;
 }
 
 .panel {
-  width: 80%;
-  max-width: 960px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  background-color: rgba(255,255,255,0.4);
+  border-top: 1px solid white;
+  box-shadow: 0px 3px 14px -1px #1A1919;
+    -moz-box-shadow:  0px 3px 14px -1px #1A1919;
+  -webkit-box-shadow: 0px 3px 14px -1px #1A1919;
+  margin:0 auto;
+  border-radius: 1px;
 }
 
 .info-wrapper {
@@ -103,7 +145,10 @@ span.hard {
 
 .info-block {
   display: block;
+  font-size: 1em;
+  text-align: center;
 }
+
 
 .no-bullets li {
   list-style: none;
@@ -137,4 +182,3 @@ span.hard {
 .error {
   color: $error;
 }
-
