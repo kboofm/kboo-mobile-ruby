@@ -1,6 +1,6 @@
 <% provide(:title, 'Program Schedule') %>
 <div class='header-wrapper'>
-  <h2><%= Date.now %></h2>
+  <h2><%= "SCHEDULE FOR #{Date.today.strftime('%m/%d/%Y')}" %></h2>
 </div>
 
 <% program_schedules.programs.each do |program| %>
