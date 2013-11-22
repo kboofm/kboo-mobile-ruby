@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   helper_method :on_air_next
   helper_method :on_air_now
   helper_method :program_highlights
+  helper_method :program_schedules
 
   def on_air_next
     OnAirNext.instance
@@ -20,6 +21,10 @@ class ApplicationController < ActionController::Base
 
   def program_highlights
     ProgramHighlights.instance
+  end
+
+  def program_schedules
+    ProgramSchedules.instance
   end
 
   def format_html?
