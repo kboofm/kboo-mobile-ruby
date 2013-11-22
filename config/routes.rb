@@ -19,7 +19,7 @@ Kboo::Application.routes.draw do
   resources :programs
   resources :categories
   resources :episodes
-  
+
   get 'static_pages/faq'
   get 'static_pages/about'
   get 'static_pages/board'
@@ -30,6 +30,7 @@ Kboo::Application.routes.draw do
   get 'static_pages/staff'
   get 'static_pages/story'
   get 'static_pages/strategic_plan'
+  get 'static_pages/player', as: 'player'
 
   root 'episodes#index'
 end
