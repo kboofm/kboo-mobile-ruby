@@ -1,18 +1,24 @@
 <nav class="navbar navebar-default navbar-fixed-bottom">
     <div class="row">
-      <a href="#"><div class="col-xs-3">
-        <span class="glyphicon glyphicon-heart-empty"></span>
-        <div class="item">Highlights</div>
-      </div></a>
-      <a href="#"><div class="col-xs-3">
-        <span class="glyphicon glyphicon-book"></span>
-        <div class="item">Episodes</div>
-      </div></a>
-      <a href="#"><div class="col-xs-3">
-        <span class="glyphicon glyphicon-headphones"></span>
-        <div class="item">Live</div>
-      </div></a>
-        <a href="#"><div class="col-xs-3">
+      <%= link_to root_path do %>
+        <div class="col-xs-3">
+          <span class="glyphicon glyphicon-home"></span>
+          <div class="item">Home</div>
+        </div>
+      <% end %>
+      <%= link_to "#" do %>
+        <div class="col-xs-3">
+          <span class="glyphicon glyphicon-headphones"></span>
+          <div class="item">Live</div>
+        </div>
+      <% end %>
+      <%= link_to "#" do %>
+        <div class="col-xs-3">
+          <span class="glyphicon glyphicon-fire"></span>
+          <div class="item">Highlights</div>
+        </div>
+      <% end %>
+        <a href="https://kboo.fm/membershipform" target='_blank'><div class="col-xs-3">
           <span class="glyphicon glyphicon-usd"></span>
         <div class="item">Donate</div>
       </div></a>
