@@ -2,14 +2,6 @@ require 'spec_helper'
 
 describe 'Episodes pages' do
 
-  describe 'index' do
-    it 'should display a recent episode' do
-      episode = FactoryGirl.create(:episode)
-      visit root_path
-      page.should have_content episode.title
-    end
-  end
-
   describe 'new' do
     it 'lets you create a program with valid info' do
       episode = FactoryGirl.build(:episode)
