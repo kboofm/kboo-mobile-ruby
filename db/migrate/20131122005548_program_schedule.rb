@@ -4,5 +4,6 @@ class ProgramSchedule < ActiveRecord::Migration
       t.text :title
       t.text :host
       t.date :time
+    end
   end
 end
