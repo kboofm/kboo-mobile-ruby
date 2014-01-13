@@ -8,15 +8,6 @@
     <div class='info-wrapper'>
       <span class='info-block'>
         <h2><%= link_to program[:title], program[:url], target: '_blank' %></h2>
-      </span>
-      <span class='info-block'>
-        <span class='soft'>Description: </span> <span class='hard'><%= episode.short_description %></span>
-      </span>
-      <span class='info-block'>
-        <span class='soft'>Host: </span> <span class='hard'><%= "#{episode.host}"%></span>
-      </span>
-      <span><span class="glyphicon glyphicon-cloud-download"></span><%= link_to '  Download', episode.audio_url %>
-      <a  value='Play' onclick='updatePlayer("<%= episode.audio_url %>");' class='btnplay'></a></span>
-  </div>
+      </span>   
 <% end %>
 

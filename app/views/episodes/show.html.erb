@@ -9,15 +9,7 @@
     <span class='info-block'>
       <span class='soft'>Airs: </span> <span class='hard'><%= @episode.program.date.strftime('%a %m/%d/%Y') %> at <%= @episode.program.time.strftime('%I:%M%p') %></span>
     </span>
-    <span class='info-block'>
-      <span class='soft'>Short: </span> <span class='hard'><%= @episode.short_description %></span>
-    </span>
-    <span class='info-block'>
-      <span class='soft'>Program: </span><span class='hard'><%= @episode.program.title %></span>
-    </span>
-    <span class='info-block'>
-      <span class='soft'>Description: </span> <span class='hard'><%= @episode.long_description %></span>
-    </span>
+   
     <%= link_to 'Download', @episode.audio_url %>
 
     <% if current_user && (current_user.admin? || current_user.staff? || current_user.programs.include?(@episode) ) %>
