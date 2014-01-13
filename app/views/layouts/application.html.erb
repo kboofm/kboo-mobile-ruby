@@ -13,13 +13,13 @@
     <div class='wrapper' id='mobile-wrapper'>
       
     </div>
-
     <div class='container'>
       <%= flash[:notice] %>
       <%= flash[:alert] %>
       <%= flash[:success] %>
 
       <%= yield %>
+      <%= render 'layouts/jplayer' %>
 
       <%= render 'layouts/footer' %>
     </div>
