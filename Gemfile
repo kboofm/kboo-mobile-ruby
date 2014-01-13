@@ -15,7 +15,7 @@ gem 'devise'
 gem 'will_paginate'
 gem 'cancan'
 gem 'jplayer-rails'
-gem 'paperclip', '~> 2.0.0'
+gem 'paperclip', '~> 2.8.0'
 gem 'acts_as_singleton'
 gem 'nokogiri'
 
