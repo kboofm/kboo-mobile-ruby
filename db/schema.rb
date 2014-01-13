@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20131122011635) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "api_keys", force: true do |t|
     t.string   "access_token"
     t.datetime "created_at"
@@ -45,7 +42,6 @@ ActiveRecord::Schema.define(version: 20131122011635) do
     t.string   "title"
     t.string   "short_description"
     t.text     "long_description"
-    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
