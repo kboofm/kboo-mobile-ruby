@@ -1,8 +1,16 @@
 <% provide(:title, '') %>
 <div class='header-wrapper'>
-  <h2>UPCOMING HIGHLIGHTS</h2>
+  
 </div>
-
+ <!-- <div class='panel'> -->
+    <!-- <div class='info-wrapper'> -->
+      <!-- <span class='info-block'> -->
+       <h2> 
+        <%= render 'layouts/on_air_now' %>
+        <%= render 'layouts/on_air_next' %>
+        <center>UPCOMING HIGHLIGHTS</center>
+      </h2>   
+      <!-- </span> -->
 <% program_highlights.highlights.each do |program| %>
   <div class='panel'>
     <div class='info-wrapper'>
