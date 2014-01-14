@@ -1,26 +1,21 @@
 <nav class="navbar navebar-default navbar-fixed-bottom">
     <div class="row">
       <%= link_to root_path do %>
-        <div class="col-xs-3">
-          <span class="glyphicon glyphicon-home"></span>
-          <div class="item">Home</div>
+        <div class="col-xs-4">
+          <center><span class="glyphicon glyphicon-home"></span>
+          <div class="item">Home</div></center>
         </div>
       <% end %>
-      <%= link_to player_path, :target => "_blank" do %>
-        <div class="col-xs-3">
-          <span class="glyphicon glyphicon-headphones"></span>
-          <div class="item">Live</div>
-        </div>
-      <% end %>
+     
       <%= link_to "#" do %>
-        <div class="col-xs-3">
-          <span class="glyphicon glyphicon-fire"></span>
-          <div class="item">Highlights</div>
+        <div class="col-xs-4">
+          <center><span class="glyphicon glyphicon-fire"></span>
+          <div class="item">Schedule</div></center>
         </div>
       <% end %>
-        <a href="https://kboo.fm/membershipform" target='_blank'><div class="col-xs-3">
-          <span class="glyphicon glyphicon-usd"></span>
-        <div class="item">Donate</div>
+        <a href="https://kboo.fm/membershipform" target='_blank'><div class="col-xs-4">
+          <center><span class="glyphicon glyphicon-usd"></span>
+        <div class="item">Donate</div></center>
       </div></a>
     </div>
 </nav>
