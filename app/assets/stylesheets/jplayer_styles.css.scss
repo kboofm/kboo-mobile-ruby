@@ -146,7 +146,7 @@
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .jp-play {
-    background-image: url('play_2x.png');
+    background-image: url('play.png');
     background-size: auto auto;
   }
 }
@@ -162,7 +162,7 @@
 }
 .jp-mute,
 .jp-unmute {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   right: 55px;
