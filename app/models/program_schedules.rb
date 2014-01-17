@@ -26,8 +26,7 @@ class ProgramSchedules < ActiveRecord::Base
     times_of_programs.each_with_index do |time, index|
       programs[index][:times] = time
     end
-    binding.pry
-    self.update(:programs => programs)
 
+    self.update(:programs => programs)
   end
 end
