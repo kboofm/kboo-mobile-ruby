@@ -1,0 +1,9 @@
+<% program_schedules.programs.each do |program| %>
+    <div>
+        <h2>
+          <% ProgramSchedules.instance[:programs].each do |program| %>
+          <%= p program[:title] %>
+          <% end %>
+        </h2>
+    </div>   
+<% end %>
