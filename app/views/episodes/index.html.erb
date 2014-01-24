@@ -1,15 +1,16 @@
 <% provide(:title, '') %>
 <div class='header-wrapper'>
   
-</div>
+</div>      
  <!-- <div class='panel'> -->
     <!-- <div class='info-wrapper'> -->
       <!-- <span class='info-block'> -->
-       <h2> 
-        <%= render 'layouts/on_air_now' %>
-        <%= render 'layouts/jplayer' %>
+      <div class="play_btn pause_btn"></div>
+       <h2 class='dynamic_hdrs'> 
+        <%= render 'layouts/on_air_now' %>        
         <%= render 'layouts/on_air_next' %>
         <center>UPCOMING HIGHLIGHTS</center>
+<!--         <%= render 'layouts/jplayer' %>  -->
       </h2>   
       <!-- </span> -->
 <% program_highlights.highlights.each do |program| %>

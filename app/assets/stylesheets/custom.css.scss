@@ -23,7 +23,7 @@ span.hard {
 
 /* Fixed-Bottom Nav Menu */
 
-.navbar {
+/*.navbar {
   background-color: rgba(43,47,75,0.9);
   border: none;
 }
@@ -41,7 +41,7 @@ span.hard {
   color: white;
   opacity: .8;
   margin-top: 8px;
-}
+}*/
 
 /* Fixed-Bottom Nav Menu */
 
@@ -49,11 +49,26 @@ span.hard {
 
 @media (min-width: 743px) {
    .banner {
-      content: image-url('kboo_v1.png');
-      opacity: .9;
-      max-width: 80%;
-      text-align: center;
-      margin: 50px auto;
+      background: image-url('kboo_v1.png')center no-repeat;
+      height:380px;
+      display:inherit;
+      margin: 0 auto;
+      margin-top: 20px;
+      clear: both;
+   }
+
+   .play_btn {
+    background: image-url('play_btn_lg.png')center no-repeat;
+    display: block;
+    margin: 0 auto;
+    height:201px;
+    width: 201px;
+    margin-top: 166px;
+   }
+
+   .dynamic_hdrs {
+    margin-top: 40px;
+    border: 1px solid black;
    }
 
    h2 a {
@@ -112,7 +127,6 @@ span.hard {
 .on-air-header {
   display: block;
   padding: 8px;
-  margin-top: 80px;
 }
 
 /* Information Panels */
