@@ -11,7 +11,7 @@
 
 ### To Run:
 
-- `rake fetch_on_air_programs`, `rake highlighted_programs`, `rake schedules` should be run regularly to keep the content up to date.
+- `rake fetch_on_air_programs`, `rake highlighted_programs`, `rake schedule` should be run regularly to keep the content up to date.
 - Start the server with `rails s`
 - The seed includes an admin login: admin@kboo.org, 12345678. Change the password, please!
 
