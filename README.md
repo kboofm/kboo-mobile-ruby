@@ -1,10 +1,15 @@
 # KBOO FM Mobile Player
 
+### To set up:
+
+- Have a Postgres server running
+- Configure database.yml appropriately
+- Install Ruby 2.0
+- Install gems with `bundle install`
+- Run `rake db:create && rake db:schema:load && rake db:seed` to set up the database
+
+
 ### To Run:
-
-- Rails 4.0 Ruby 2.0
-
-- bundle exec rake db:create && rake db:schema:load && rake db:seed
 
 - bundle exec rake fetch_on_air_programs
 
