@@ -1,17 +1,13 @@
 <% provide(:title, '') %>
-<div class='header-wrapper'>
-  
+
+  <div class="player-container">
+  <%= render 'layouts/on_air_now' %>
+  <%= render 'layouts/jplayer' %>
+  <%= render 'layouts/on_air_next' %>
 </div>
- <!-- <div class='panel'> -->
-    <!-- <div class='info-wrapper'> -->
-      <!-- <span class='info-block'> -->
-       <h2> 
-        <%= render 'layouts/on_air_now' %>
-        <%= render 'layouts/jplayer' %>
-        <%= render 'layouts/on_air_next' %>
-        <center>UPCOMING HIGHLIGHTS</center>
-      </h2>   
-      <!-- </span> -->
+  <center>UPCOMING HIGHLIGHTS</center>
+       
+     
 <% program_highlights.highlights.each do |program| %>
   <div class='panel'>
     <div class='info-wrapper'>
