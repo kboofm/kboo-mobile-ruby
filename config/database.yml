@@ -1,6 +1,7 @@
 development:
   adapter: postgresql
   database: kboo_development
+  host: localhost
 test:
   adapter: postgresql
   database: kboo_test
