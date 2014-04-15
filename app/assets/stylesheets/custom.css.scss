@@ -11,6 +11,14 @@ html body {
   height: 100%;
 }
 
+.player_container {
+  clear: both;
+  
+}
+.container {
+  position: static;
+}
+
 /*Color of fonts on 'Airing Next', 'Description' and subsequent fields*/
 span.soft {
   color: #24519B;
@@ -81,11 +89,6 @@ span.hard {
 /*Mobile CSS styling*/
 
 @media (max-width: 767px) {
-  .navbar-fixed-top {
-    position: relative;
-    top: auto;
-  }
-
   h2 { text-align: center; }
   h3 { text-align: center; }
   h4 { text-align: center; }
@@ -125,17 +128,15 @@ span.hard {
 }
 
 .on-air-header {
-  display: block;
   padding: 8px;
+<<<<<<< HEAD
+=======
+  margin-top: 10px;
+>>>>>>> 5b314b14f3580f80822a69a2943dbf7b6616a6c0
 }
 
 /* Information Panels */
-.header-wrapper {
-  color: rgba(43, 47, 75, 0.9);
-  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.8);
-  text-align: center;
-  margin-top: -116px;
-}
+
 
 .panel {
   background-color: rgba(255,255,255,0.4);

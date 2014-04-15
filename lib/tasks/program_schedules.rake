@@ -1,5 +1,5 @@
 desc 'Fetch schedule'
 
 task :schedule => :environment do
-  ProgramHighlights.instance.fetch
+  ProgramSchedules.instance.fetch
 end
