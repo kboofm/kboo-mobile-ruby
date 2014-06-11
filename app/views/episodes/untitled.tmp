@@ -1,14 +1,15 @@
 <% provide(:title, '') %>
 <div class='header-wrapper'>
   
+</div>      
+
+<div class="player-container">
+  <%= render 'layouts/on_air_now' %>
+  <%= render 'layouts/jplayer' %>
+  <%= render 'layouts/on_air_next' %>
 </div>
-  <div class="player-container">
-    <%= render 'layouts/on_air_now' %>
-    <%= render 'layouts/jplayer' %>
-    <%= render 'layouts/on_air_next' %>
-  </div>
-  <h2><center>UPCOMING HIGHLIGHTS</center></h2>
-       
+<center>UPCOMING HIGHLIGHTS</center>
+     
 <% program_highlights.highlights.each do |program| %>
   <div class='panel'>
     <div class='info-wrapper'>
@@ -24,7 +25,7 @@
   <div class='panel'>
     <div class='info-wrapper'>
       <span class='info-block'>
-        <h2><%= link_to "#{program[:title]}, #{program[:times]}", program[:url], target: '_blank' %></h2>
+        <h2><%= link_to program[:title] + ', ' + program[:times], program[:url], target: '_blank' %></h2>
       </span>   
     </div>
 <% end %>

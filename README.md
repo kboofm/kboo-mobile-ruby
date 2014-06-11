@@ -11,7 +11,7 @@
 
 ### To run:
 
-- `rake fetch_on_air_programs`, `rake highlighted_programs`, `rake schedules` should be run regularly to keep the content up to date.
+- `rake fetch_on_air_programs`, `rake highlighted_programs`, `rake schedule` should be run regularly to keep the content up to date.
 - Heroku has [instructions](https://devcenter.heroku.com/articles/scheduler#scheduling-jobs) on how to use their Scheduler add-on to run these tasks regularly.
 - Start the server with `rails s`
 - The seed includes an admin login: admin@kboo.org, 12345678. Change the password, please!

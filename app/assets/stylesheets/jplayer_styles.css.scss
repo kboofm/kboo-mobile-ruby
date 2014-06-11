@@ -1,28 +1,7 @@
 .jp-controls {
   text-align: center;
-<<<<<<< HEAD
-}
-#credits a {
-  color: #c0c8d6;
-  text-decoration: none;
-}
-#credits a:hover {
-  color: #a6b2c8;
-}
-/* GENERAL
------------------------------------------------ */
-.jp-jplayer {
-  margin-top: 20px;
-  width: 0px;
-  height: 0px;
-/*  background-color: #000000;*/
-  background-color: #7DD3F6 !important;
-}
-.jp-audio {
-=======
   width: auto;
   height: auto;
->>>>>>> 5b314b14f3580f80822a69a2943dbf7b6616a6c0
   margin: 0 auto;
   
   
@@ -61,7 +40,7 @@
 
 }
 .jp-box {
-  padding-top: 1em;
+  
   margin: 0 auto;
   display: inline-block;
   @media (min-width: 743px) {
@@ -71,7 +50,4 @@
     width: 100px;
   }
   
-}
-.jp-play:hover, .jp-pause:hover {
-  cursor: pointer;
 }
